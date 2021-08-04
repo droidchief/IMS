@@ -13,6 +13,7 @@
     <!--Begin  Page Level  CSS -->
     <link href="assets/plugins/morris-chart/morris.css" rel="stylesheet">
     <link href="assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+
     <!--End  Page Level  CSS -->
     <link href="assets/css/icons.css" rel="stylesheet">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +30,7 @@
 
         <!--logo-->
         <div class="logo">
-            <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
+            <a href="index.html"><img src="assets/images/logo.svg" alt="Logo"></a>
         </div>
 
         <div class="logo-icon text-center">
@@ -74,7 +75,7 @@
         <!-- header section start-->
         <div class="header-section">
 
-            <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+            <!-- <a class="toggle-btn"><i class="fa fa-bars"></i></a> -->
 
             <form class="searchform">
                 <input type="text" class="form-control" name="keyword" placeholder="Search..." />
@@ -259,523 +260,376 @@
         <!--body wrapper start-->
         <div class="wrapper">
 
-            <!--Start Page Title-->
-            <div class="page-title-box">
-                <h4 class="page-title">Dashboard</h4>
+            <h4>Dashboard</h4>
 
-                <div class="clearfix"></div>
-            </div>
-            <!--End Page Title-->
+            <div class="wrapper-content">
 
-            <!--Start row-->
-            <div class="row">
-                <div class="container">
-                    <div class="analytics-box">
+                <div class="col-md-10">
+                    <div class="row align-items-start">
 
-                    </div>
-                </div>
-            </div>
-            <!--End row-->
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-title">
+                                    <div>
+                                        <p>Sales</p>
+                                    </div>
+                                    <div>
+                                        <img src="assets/images/phone_icon.svg" alt="">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="col-md-4 paid-label">
+                                        <p>Paid</p>
+                                        <p>N 183m</p>
+                                    </div>
 
-            <!--Start row-->
-            <div class="row">
-                <!--Start info box-->
-                <div class="col-md-3 col-sm-6">
-                    <div class="info-box-main">
-                        <div class="info-stats">
-                            <p>1250</p>
-                            <span>Total Sales </span>
-                        </div>
-                        <div class="info-icon text-primary ">
-                            <i class="mdi mdi-cart"></i>
-                        </div>
-                        <div class="info-box-progress">
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100" style="width: 48%;">
+                                    <div class="col-md-4 total-label">
+                                        <p>Total</p>
+                                        <p>N 310m</p>
+                                    </div>
+
+                                    <div class="col-md-4 balance-label">
+                                        <p>Balance</p>
+                                        <p>N 127m</p>
+                                    </div>
+                                </div>
+
+                                <div class="progress" style="margin-top: 80px; margin-bottom: 0;">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 100%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 60%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <!--End info box-->
 
-                <!--Start info box-->
-                <div class="col-md-3 col-sm-6">
-                    <div class="info-box-main">
-                        <div class="info-stats">
-                            <p>2300</p>
-                            <span>Daily visitors</span>
-                        </div>
-                        <div class="info-icon text-info">
-                            <i class="mdi mdi-account-multiple"></i>
-                        </div>
-                        <div class="info-box-progress">
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100" style="width: 48%;">
+                        <div class="col-md-6 ">
+                            <div class="card">
+                                <div class="card-title">
+                                    <div>
+                                        <p>Purchase</p>
+                                    </div>
+                                    <div>
+                                        <img src="assets/images/purchase_icon.svg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 paid-label">
+                                    <p>Paid</p>
+                                    <p>N 183m</p>
+                                </div>
+
+                                <div class="col-md-4 total-label">
+                                    <p>Total</p>
+                                    <p>N 310m</p>
+                                </div>
+
+                                <div class="col-md-4 balance-label">
+                                    <p>Balance</p>
+                                    <p>N 127m</p>
+                                </div>
+
+                                <div class="progress" style="margin-top: 80px; margin-bottom: 0;">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 100%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 60%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <!--End info box-->
 
-                <!--Start info box-->
-                <div class="col-md-3 col-sm-6">
-                    <div class="info-box-main">
-                        <div class="info-stats">
-                            <p>5320</p>
-                            <span>Total Earning</span>
-                        </div>
-                        <div class="info-icon text-warning">
-                            <i class="fa fa-dollar"></i>
-                        </div>
-                        <div class="info-box-progress">
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100" style="width: 48%;">
+                    </div>
+
+                    <div style="margin-top: 65px;" class="middle-cards">
+
+                        <div style="margin: 5px;" class="card">
+                            <div class="card-title">
+                                <div>
+                                    <p>Ship 0223</p>
+                                </div>
+                                <div>
+                                    <img src="assets/images/shipping_icon.svg" alt="">
+                                </div>
+
+                            </div>
+
+                            <div style="display: flex; margin-top: 20px;">
+                                <div style="line-height: 10px; font-size: 12px; font-weight: 400; color: #2F3478;">
+                                    <p>To:</p>
+                                    <p>Dispatch:</p>
+                                    <p>Arrival:</p>
+                                </div>
+
+                                <div style="line-height: 10px; font-size: 12px; font-weight: 400; color: #2F3478; margin-left: 20px">
+                                    <p>Kano</p>
+                                    <p>12/07/2021</p>
+                                    <p style="color: #F47C7C;">12/07/2021</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End info box-->
 
-                <!--Start info box-->
-                <div class="col-md-3 col-sm-6">
-                    <div class="info-box-main">
-                        <div class="info-stats">
-                            <p>65</p>
-                            <span>Pending Orders</span>
+
                         </div>
-                        <div class="info-icon text-danger">
-                            <i class="mdi mdi-weight"></i>
-                        </div>
-                        <div class="info-box-progress">
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100" style="width: 48%;">
+
+                        <div style="margin: 5px;" class="card">
+                            <div class="card-title">
+                                <div>
+                                    <p>Ship 0223</p>
+                                </div>
+                                <div>
+                                    <img src="assets/images/shipping_icon.svg" alt="">
+                                </div>
+
+                            </div>
+
+                            <div style="display: flex; margin-top: 20px;">
+                                <div style="line-height: 10px; font-size: 12px; font-weight: 400; color: #2F3478;">
+                                    <p>To:</p>
+                                    <p>Dispatch:</p>
+                                    <p>Arrival:</p>
+                                </div>
+
+                                <div style="line-height: 10px; font-size: 12px; font-weight: 400; color: #2F3478; margin-left: 20px">
+                                    <p>Kano</p>
+                                    <p>12/07/2021</p>
+                                    <p style="color: #F47C7C;">12/07/2021</p>
                                 </div>
                             </div>
+
+
+                        </div>
+
+                        <div style="margin: 5px;" class="card">
+                            <div class="card-title">
+                                <div>
+                                    <p>Ship 0223</p>
+                                </div>
+                                <div>
+                                    <img src="assets/images/shipping_icon.svg" alt="">
+                                </div>
+
+                            </div>
+
+                            <div style="display: flex; margin-top: 20px;">
+                                <div style="line-height: 10px; font-size: 12px; font-weight: 400; color: #2F3478;">
+                                    <p>To:</p>
+                                    <p>Dispatch:</p>
+                                    <p>Arrival:</p>
+                                </div>
+
+                                <div style="line-height: 10px; font-size: 12px; font-weight: 400; color: #2F3478; margin-left: 20px">
+                                    <p>Kano</p>
+                                    <p>12/07/2021</p>
+                                    <p style="color: #F47C7C;">12/07/2021</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div style="margin: 5px;" class="card">
+                            <div class="card-title">
+                                <div>
+                                    <p>Ship 0223</p>
+                                </div>
+                                <div>
+                                    <img src="assets/images/shipping_icon.svg" alt="">
+                                </div>
+
+                            </div>
+
+                            <div style="display: flex; margin-top: 20px;">
+                                <div style="line-height: 10px; font-size: 12px; font-weight: 400; color: #2F3478;">
+                                    <p>To:</p>
+                                    <p>Dispatch:</p>
+                                    <p>Arrival:</p>
+                                </div>
+
+                                <div style="line-height: 10px; font-size: 12px; font-weight: 400; color: #2F3478; margin-left: 20px">
+                                    <p>Kano</p>
+                                    <p>12/07/2021</p>
+                                    <p style="color: #F47C7C;">12/07/2021</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div style="margin: 5px; display: flex;" class="card">
+                            <img src="assets/images/next_card_icon.svg" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="row" style="margin-top: 50px;">
+
+                        <h4 style="font-size: 14px;">Transactions</h4>
+                        <div class="col-lg-6">
+                            <div class=" table-responsive card">
+                                <style>
+                                    .m {
+                                        font-size: small !important;
+                                    }
+                                </style>
+                                <table class="table table-striped h6">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-nowrap m">Customer Name</th>
+                                            <th class="text-nowrap m">Account</th>
+                                            <th class="text-nowrap m">Paid</th>
+                                            <th class="text-nowrap m">Balance</th>
+                                            <th class="text-nowrap m">Pickup Location</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Kashim Sani Musa Isah</td>
+                                            <td>23,4747</td>
+                                            <td>78,8393030</td>
+                                            <td>78,8393030</td>
+                                            <td>Kano</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Kashim Sani Musa Isah</td>
+                                            <td>23,4747</td>
+                                            <td>78,8393030</td>
+                                            <td>78,8393030</td>
+                                            <td>Kano</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Kashim Sani Musa Isah</td>
+                                            <td>23,4747</td>
+                                            <td>78,8393030</td>
+                                            <td>78,8393030</td>
+                                            <td>Kano</td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class=" table-responsive card">
+                                <style>
+                                    .m {
+                                        font-size: small !important;
+                                    }
+                                </style>
+                                <table class="table table-striped h6">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-nowrap m">Customer Name</th>
+                                            <th class="text-nowrap m">Account</th>
+                                            <th class="text-nowrap m">Paid</th>
+                                            <th class="text-nowrap m">Balance</th>
+                                            <th class="text-nowrap m">Pickup Location</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Kashim Sani Musa Isah</td>
+                                            <td>23,4747</td>
+                                            <td>78,8393030</td>
+                                            <td>78,8393030</td>
+                                            <td>Kano</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Kashim Sani Musa Isah</td>
+                                            <td>23,4747</td>
+                                            <td>78,8393030</td>
+                                            <td>78,8393030</td>
+                                            <td>Kano</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Kashim Sani Musa Isah</td>
+                                            <td>23,4747</td>
+                                            <td>78,8393030</td>
+                                            <td>78,8393030</td>
+                                            <td>Kano</td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
+
                 </div>
-                <!--End info box-->
+
+
+
 
             </div>
-            <!--End row-->
 
 
+            <div class="right-side-bar col-md-2">
 
-            <!--Start row-->
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="white-box">
-                        <h2 class="header-title">Sales Analytics</h2>
-                        <ul class="list-inline text-center m-t-10">
-                            <li>
-                                <h5><i class="fa fa-circle m-r-5" style="color:#98C1D1;"></i>Iphone</h5>
-                            </li>
-                            <li>
-                                <h5><i class="fa fa-circle m-r-5" style="color: #23DBDE;"></i>Ipad</h5>
-                            </li>
-                            <li>
-                                <h5><i class="fa fa-circle m-r-5" style="color: #F6DDA0;"></i>Itouch</h5>
-                            </li>
-                        </ul>
-                        <div id="morris-area-chart" style="height:250px;"></div>
+                <button class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Transaction</button>
+
+                <button class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Customer</button>
+
+                <button class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Vendor</button>
+
+                <button class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Shipment</button>
+
+
+                <div class="right-card" style="margin-top: 50px;">
+                    <div class="right-card-title">
+                        <div>
+                            <p>123</p>
+                        </div>
+                        <div>
+                            <img src="assets/images/customer_icon.svg" alt="">
+                        </div>
                     </div>
+
+                    <p style="font-size: 10px; font-weight: bold; color: #2f347880;">Total International Customers</p>
+
                 </div>
 
-
-                <div class="col-md-6">
-                    <div class="white-box">
-                        <h2 class="header-title">Total Revenue </h2>
-                        <ul class="list-inline text-center m-t-10">
-                            <li>
-                                <h5><i class="fa fa-circle m-r-5" style="color:#03A9F3;"></i>Section A</h5>
-                            </li>
-                            <li>
-                                <h5><i class="fa fa-circle m-r-5" style="color: #FFAA00;"></i>Section B</h5>
-                            </li>
-                        </ul>
-                        <div id="morris2" style="height:250px;"></div>
-
+                <div class="right-card">
+                    <div class="right-card-title">
+                        <div>
+                            <p>54</p>
+                        </div>
+                        <div>
+                            <img src="assets/images/customer_icon.svg" alt="">
+                        </div>
                     </div>
-                </div>
-                <!-- /col-md-6-->
 
+                    <p style="font-size: 10px; font-weight: bold; color: #2f347880;">Total International Customers</p>
+
+                </div>
+
+                <div class="right-card">
+                    <div class="right-card-title">
+                        <div>
+                            <p>87</p>
+                        </div>
+                        <div>
+                            <img src="assets/images/vendors_icon.svg" alt="">
+                        </div>
+                    </div>
+
+                    <p style="font-size: 10px; font-weight: bold; color: #2f347880;">Total Vendors</p>
+
+                </div>
 
             </div>
-            <!--End row-->
-
-
-            <!--Start row-->
-            <div class="row">
-
-                <!-- Start inbox widget-->
-                <div class="col-md-4">
-                    <div class="white-box">
-                        <h2 class="header-title">Inbox</h2>
-                        <div class="inbox-widget inbox-scroll-list">
-
-                            <div class="inbox-inner">
-                                <a href="#">
-                                    <div class="inbox-item">
-                                        <div class="inbox-img">
-                                            <img src="assets/images/users/avatar-1.jpg" alt="" />
-                                        </div>
-
-                                        <div class="inbox-item-info">
-                                            <p class="author">John Doe</p>
-                                            <p class="inbox-message">Lorem Ipsum which looks....</p>
-                                            <p class="inbox-date">13:34 PM</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="inbox-inner">
-                                <a href="#">
-                                    <div class="inbox-item">
-                                        <div class="inbox-img">
-                                            <img src="assets/images/users/avatar-2.jpg" alt="" />
-                                        </div>
-
-                                        <div class="inbox-item-info">
-                                            <p class="author">John Doe</p>
-                                            <p class="inbox-message">Lorem Ipsum which looks....</p>
-                                            <p class="inbox-date">13:34 PM</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-
-                            <div class="inbox-inner">
-                                <a href="#">
-                                    <div class="inbox-item">
-                                        <div class="inbox-img">
-                                            <img src="assets/images/users/avatar-3.jpg" alt="" />
-                                        </div>
-
-                                        <div class="inbox-item-info">
-                                            <p class="author">John Doe</p>
-                                            <p class="inbox-message">Lorem Ipsum which looks....</p>
-                                            <p class="inbox-date">13:34 PM</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-
-                            <div class="inbox-inner">
-                                <a href="#">
-                                    <div class="inbox-item">
-                                        <div class="inbox-img">
-                                            <img src="assets/images/users/avatar-4.jpg" alt="" />
-                                        </div>
-
-                                        <div class="inbox-item-info">
-                                            <p class="author">John Doe</p>
-                                            <p class="inbox-message">Lorem Ipsum which looks....</p>
-                                            <p class="inbox-date">13:34 PM</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-
-
-                            <div class="inbox-inner">
-                                <a href="#">
-                                    <div class="inbox-item">
-                                        <div class="inbox-img">
-                                            <img src="assets/images/users/avatar-5.jpg" alt="" />
-                                        </div>
-
-                                        <div class="inbox-item-info">
-                                            <p class="author">John Doe</p>
-                                            <p class="inbox-message">Lorem Ipsum which looks....</p>
-                                            <p class="inbox-date">13:34 PM</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-
-                            <div class="inbox-inner">
-                                <a href="#">
-                                    <div class="inbox-item">
-                                        <div class="inbox-img">
-                                            <img src="assets/images/users/avatar-6.jpg" alt="" />
-                                        </div>
-
-                                        <div class="inbox-item-info">
-                                            <p class="author">John Doe</p>
-                                            <p class="inbox-message">Lorem Ipsum which looks....</p>
-                                            <p class="inbox-date">13:34 PM</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="inbox-inner">
-                                <a href="#">
-                                    <div class="inbox-item">
-                                        <div class="inbox-img">
-                                            <img src="assets/images/users/avatar-3.jpg" alt="" />
-                                        </div>
-
-                                        <div class="inbox-item-info">
-                                            <p class="author">John Doe</p>
-                                            <p class="inbox-message">Lorem Ipsum which looks....</p>
-                                            <p class="inbox-date">13:34 PM</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-                <!-- End inbox widget-->
-
-                <!--Start chat widget-->
-                <div class="col-md-4">
-                    <div class="white-box">
-                        <h2 class="header-title">Chat</h2>
-
-                        <div class="chat-widget">
-                            <ul class="chat-scroll-list">
-                                <li class="left">
-                                    <img src="assets/images/users/avatar-6.jpg" alt="" />
-                                    <div class="chat-info">
-                                        <a class="name" href="#">Jone Doe</a>
-                                        <span class="datetime">6:12</span>
-                                        <span class="message">
-                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                                        </span>
-                                    </div>
-                                </li>
-
-                                <li class="right">
-                                    <img src="assets/images/users/avatar-6.jpg" alt="" />
-                                    <div class="chat-info">
-                                        <a class="name" href="#">Jone Doe</a>
-                                        <span class="datetime">6:12</span>
-                                        <span class="message">
-                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                                        </span>
-                                    </div>
-                                </li>
-
-                                <li class="left">
-                                    <img src="assets/images/users/avatar-6.jpg" alt="" />
-                                    <div class="chat-info">
-                                        <a class="name" href="#">Jone Doe</a>
-                                        <span class="datetime">6:12</span>
-                                        <span class="message">
-                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                                        </span>
-                                    </div>
-                                </li>
-
-                                <li class="right">
-                                    <img src="assets/images/users/avatar-6.jpg" alt="" />
-                                    <div class="chat-info">
-                                        <a class="name" href="#">Jone Doe</a>
-                                        <span class="datetime">6:12</span>
-                                        <span class="message">
-                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                                        </span>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="input-group">
-                                    <input class="form-control" placeholder="Say something" type="text">
-                                    <span class="input-group-btn">
-                            <button class="btn btn-primary" type="button">Send</button>
-                            </span> </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!--End chat widget-->
-
-                <!-- Start timeline-->
-                <div class="col-md-4">
-                    <div class="white-box">
-                        <h2 class="header-title">Latest Activity</h2>
-                        <ul class="timeline timeline-compact">
-                            <li class="latest">
-                                <div class="timeline-date">Just Now</div>
-                                <div class="timeline-title">Create New Page</div>
-                                <div class="timeline-description">Lorem Ipsum generators on the tend to repeat.</div>
-                            </li>
-
-                            <li>
-                                <div class="timeline-date">Just Now</div>
-                                <div class="timeline-title">Back Up Theme</div>
-                                <div class="timeline-description">Lorem Ipsum generators on the tend to repeat.</div>
-                            </li>
-
-                            <li>
-                                <div class="timeline-date">Just Now</div>
-                                <div class="timeline-title">Changes In The Structure</div>
-                                <div class="timeline-description">Lorem Ipsum generators on the tend to repeat. </div>
-                            </li>
-
-                            <li>
-                                <div class="timeline-date">Just Now</div>
-                                <div class="timeline-title">New user register</div>
-                                <div class="timeline-description">Lorem Ipsum generators on the tend to repeat.</div>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-                <!-- End timeline-->
-
-
-                <!-- Start inbox widget-->
-                <div class="col-md-12">
-                    <div class="white-box">
-                        <h2 class="header-title"> Projects </h2>
-                        <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Project Name</th>
-                                        <th>Start Date</th>
-                                        <th>Deadline Date</th>
-                                        <th>Status</th>
-                                        <th>Progress</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Design new theme</td>
-                                        <td>10/10/2016</td>
-                                        <td>12/11/2016</td>
-                                        <td><span class="label label-warning">Pending</span></td>
-                                        <td>
-                                            <div class="progress progress-striped progress-sm">
-                                                <div class="progress-bar progress-bar-warning" style="width: 25%;"></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Website Redesign</td>
-                                        <td>10/10/2016</td>
-                                        <td>12/11/2016</td>
-                                        <td><span class="label label-success">In Progress</span></td>
-                                        <td>
-                                            <div class="progress progress-striped progress-sm">
-                                                <div class="progress-bar progress-bar-success" style="width: 25%;"></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Mockup Design</td>
-                                        <td>10/10/2016</td>
-                                        <td>12/11/2016</td>
-                                        <td><span class="label label-warning">Pending</span></td>
-                                        <td>
-                                            <div class="progress progress-striped progress-sm">
-                                                <div class="progress-bar progress-bar-primary" style="width: 25%;"></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Admin Panel design</td>
-                                        <td>10/10/2016</td>
-                                        <td>12/11/2016</td>
-                                        <td><span class="label label-success">In Progress</span></td>
-                                        <td>
-                                            <div class="progress progress-striped progress-sm">
-                                                <div class="progress-bar progress-bar-success" style="width: 25%;"></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Front End Design</td>
-                                        <td>10/10/2016</td>
-                                        <td>12/11/2016</td>
-                                        <td><span class="label label-danger">On Hold</span></td>
-                                        <td>
-                                            <div class="progress progress-striped progress-sm">
-                                                <div class="progress-bar progress-bar-danger" style="width: 25%;"></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>Software Testing</td>
-                                        <td>10/10/2016</td>
-                                        <td>12/11/2016</td>
-                                        <td><span class="label label-success">In Progress</span></td>
-                                        <td>
-                                            <div class="progress progress-striped progress-sm">
-                                                <div class="progress-bar progress-bar-success" style="width: 25%;"></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>7</td>
-                                        <td>Admin Panel design</td>
-                                        <td>10/10/2016</td>
-                                        <td>12/11/2016</td>
-                                        <td><span class="label label-danger">On Hold</span></td>
-                                        <td>
-                                            <div class="progress progress-striped progress-sm">
-                                                <div class="progress-bar progress-bar-danger" style="width: 25%;"></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td>Website Redesign</td>
-                                        <td>10/10/2016</td>
-                                        <td>12/11/2016</td>
-                                        <td><span class="label label-warning">Pending</span></td>
-                                        <td>
-                                            <div class="progress progress-striped progress-sm">
-                                                <div class="progress-bar progress-bar-warning" style="width: 25%;"></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- Start inbox widget-->
-            </div>
-            <!--End row-->
 
         </div>
-        <!-- End Wrapper-->
 
+    </div>
+    <!--End row-->
 
-        <!--Start  Footer -->
-        <footer class="footer-main"> 2021 &copy; Powered by Steamledge. </footer>
-        <!--End footer -->
+    </div>
+    <!-- End Wrapper-->
+
 
     </div>
     <!--End main content -->
-
 
 
     <!--Begin core plugin -->
