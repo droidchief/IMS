@@ -650,6 +650,7 @@ h5.left-nav-title {
     -moz-transition: all 0.2s ease-out 0s;
     -webkit-transition: all 0.2s ease-out 0s;
     transition: all 0.2s ease-out 0s;
+    display: none;
 }
 
 .toggle-btn:hover {
@@ -5292,4 +5293,17 @@ footer {
     border-top: 1px solid #eff0f4;
     text-align: center;
     font-size: 14px;
+}
+
+
+/*--------------------------------------------*/
+
+
+/*   Media Queries
+/*--------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+    .toggle-btn {
+        display: block;
+    }
 }
