@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300);
 body {
-    background: #2F3478;
+    background: #F6F6FC;
     font-family: 'Open Sans', sans-serif;
     color: #878686;
     line-height: 20px;
@@ -263,6 +263,7 @@ hr {
     height: 100%;
     overflow-y: auto;
     z-index: 100;
+    background-color: #2F3478;
 }
 
 .left-side-collapsed .sticky-left-side {
