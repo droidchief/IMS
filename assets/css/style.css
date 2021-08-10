@@ -5388,6 +5388,9 @@ footer {
     .toggle-btn {
         display: block;
     }
+    .middle-cards {
+        display: block;
+    }
 }
 
 
