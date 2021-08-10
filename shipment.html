@@ -496,21 +496,63 @@
                     <div class="row" style="margin-top: 50px; margin-bottom: 30px;">
 
                         <!-- Shipment Update Modal -->
-                        <div id="modal-small" class="modal fade" role="dialog">
-                            <div class="modal-dialog modal-sm">
+                        <div id="modal-normal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
 
                                 <!-- Modal content-->
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Modal Header</h4>
+                                        <h5 class="modal-title">Update Shipment</h5>
                                     </div>
-                                    <div class="modal-body">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                                            it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+
+
+                                    <div style="display: flex; justify-content: center;" class="modal-body">
+
+                                        <div>
+
+                                            <div style="margin: 10px;">
+                                                <input style="border: 1px solid #2F3478; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Container Name">
+                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            </div>
+
+                                            <div style="margin: 10px;">
+                                                <input style="border: 1px solid #2F3478; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="From">
+                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            </div>
+
+                                            <div style="margin: 10px;">
+                                                <input style="border: 1px solid #2F3478; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Dipatch Date">
+                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            </div>
+
+                                            <div style="margin: 10px;">
+                                                <input style="border: 1px solid #2F3478; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="To">
+                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            </div>
+
+                                            <div style="margin: 10px;">
+                                                <input style="border: 1px solid #2F3478; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Arrival Date">
+                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            </div>
+
+                                            <div style="margin: 10px;">
+                                                <input style="border: 1px solid #2F3478; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Total Products">
+                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            </div>
+
+                                            <div style="margin: 10px;">
+                                                <input style="border: 1px solid #2F3478; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Amount (N)">
+                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            </div>
+
+                                        </div>
+
                                     </div>
+
+
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button style="background-color: #2F3478; border-radius: 5px; color: whitesmoke;" type="button" class="btn" data-dismiss="modal">Update</button>
                                     </div>
                                 </div>
 
@@ -520,11 +562,12 @@
 
 
                         <div class="col-lg-12">
+
                             <h4 style="font-size: 14px;">Shipment History</h4>
 
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="white-box" style="">
+                                    <div class="white-box card">
                                         <div class="table-responsive">
                                             <table id="example" class="display table">
                                                 <thead>
@@ -547,7 +590,8 @@
                                                         <td>Nigeria</td>
                                                         <td>549 bale</td>
                                                         <td>83,090,209</td>
-                                                        <td><button style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important;" type="button" class="btn btn-success outline-btn"> <span>Update <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                        <td><button data-toggle="modal" data-target="#modal-normal" style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important; outline: none;"
+                                                                type="button" class="btn btn-success outline-btn"> <span>Update <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                         </span></button></td>
                                                     </tr>
                                                     <tr>
@@ -557,7 +601,8 @@
                                                         <td>Nigeria</td>
                                                         <td>549 bale</td>
                                                         <td>83,090,209</td>
-                                                        <td><button style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important;" type="button" class="btn btn-success outline-btn"> <span>Update <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                        <td><button data-toggle="modal" data-target="#modal-normal" style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important; outline: none;"
+                                                                type="button" class="btn btn-success outline-btn"> <span>Update <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                         </span></button></td>
                                                     </tr>
                                                     <tr>
@@ -567,7 +612,8 @@
                                                         <td>Nigeria</td>
                                                         <td>549 bale</td>
                                                         <td>83,090,209</td>
-                                                        <td><button style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important;" type="button" class="btn btn-success outline-btn"> <span>Update <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                        <td><button data-toggle="modal" data-target="#modal-normal" style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important; outline: none;"
+                                                                type="button" class="btn btn-success outline-btn"> <span>Update <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                         </span></button></td>
                                                     </tr>
                                                     <tr>
@@ -577,7 +623,8 @@
                                                         <td>Nigeria</td>
                                                         <td>549 bale</td>
                                                         <td>83,090,209</td>
-                                                        <td><button style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important;" type="button" class="btn btn-success outline-btn"> <span>Update <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                        <td><button data-toggle="modal" data-target="#modal-normal" style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important; outline: none;"
+                                                                type="button" class="btn btn-success outline-btn"> <span>Update <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                         </span></button></td>
                                                     </tr>
                                                     <tr>
@@ -587,7 +634,8 @@
                                                         <td>Nigeria</td>
                                                         <td>549 bale</td>
                                                         <td>83,090,209</td>
-                                                        <td><button style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important;" type="button" class="btn btn-success outline-btn"> <span>Update <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                        <td><button data-toggle="modal" data-target="#modal-normal" style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important; outline: none;"
+                                                                type="button" class="btn btn-success outline-btn"> <span>Update <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                         </span></button></td>
                                                     </tr>
 

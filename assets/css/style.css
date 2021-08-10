@@ -307,6 +307,22 @@ hr {
     display: none;
 }
 
+::placeholder {
+    color: rgb(107, 107, 107);
+    opacity: 1;
+    /* Firefox */
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgb(107, 107, 107);
+}
+
+ ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgb(107, 107, 107);
+}
+
 .left-side .searchform::after {
     content: '';
     display: block;
