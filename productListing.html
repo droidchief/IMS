@@ -373,52 +373,136 @@
 
             <h4>New Shipment</h4>
 
+            <div style="display: flex; justify-content: flex-end; margin-right: 50px;">
+                <a href="#">
+                    <button class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Product</button>
+                </a>
+
+                <a href="#">
+                    <button class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Bale Type</button>
+                </a>
+            </div>
+
+
             <div style="background-color: white; padding: 20px; height: 100vh;" class="wrapper-content">
 
-                <div style="display: flex; justify-content: center;">
+                <div style="display: flex; justify-content: center; margin-right: 300px;">
+                    <p style="font-size: 12px; font-weight: 500; color: #2f34787b;">Container Details</p>
+                    <p style="font-size: 12px; font-weight: 500; color: #2F3478; margin-left: 80px;">Product Listing</p>
+                </div>
 
+
+                <div style="display: flex; justify-content: space-evenly;">
                     <div>
+                        <div>
+                            <select style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 300px; padding-left: 5px; font-size: 13px; margin: 5px; color: rgb(184, 184, 184);" name=”color”>
+                                    <option value=”red”>Product Name</option>
+                                    <option value=”red”>Good Shampo</option>
+                                    <option value=”red”>Good Shampo</option>
+                                </select>
 
-                        <div style="display: flex; justify-content: center;">
-                            <p style="font-size: 12px; font-weight: 500; color: #2F3478;">Container Details</p>
-                            <p style="font-size: 12px; font-weight: 500; color: #2f34787b; margin-left: 15px;">Product Listing</p>
                         </div>
 
                         <div>
-
-                            <div>
-                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 300px; padding: 10px; font-size: 13px; margin: 5px;" type="text" placeholder="Container Number">
-                            </div>
-
-                            <div>
-                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 300px; padding: 10px; font-size: 13px; margin: 5px;" type="text" placeholder="From">
-                            </div>
-
-                            <div>
-                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 300px; padding: 10px; font-size: 13px; margin: 5px;" type="text" placeholder="Dispatch Date">
-                            </div>
-                            <div>
-                                <select style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 300px; padding-left: 5px; font-size: 13px; margin: 5px; color: rgb(184, 184, 184);" name=”color”>
-                                    <option value=”red”>Store A</option>
-                                    <option value=”purple”>Store B</option>
-                                    <option value=”purple”>International</option>
+                            <select style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 300px; padding-left: 5px; font-size: 13px; margin: 5px; color: rgb(184, 184, 184);" name=”color”>
+                                    <option value=”red”>Bale Type</option>
+                                    <option value=”red”>200Y(10Y)</option>
+                                    <option value=”red”>Good Shampo</option>
                                 </select>
-                            </div>
-                            <div>
-                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 300px; padding: 10px; font-size: 13px; margin: 5px;" type="text" placeholder="Arrival Date">
-                            </div>
 
+                        </div>
+
+                        <div>
+                            <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 300px; padding: 10px; font-size: 13px; margin: 5px;" type="text" placeholder="Buying Price">
+                        </div>
+
+                        <div>
+                            <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 300px; padding: 10px; font-size: 13px; margin: 5px;" type="text" placeholder="Selling Price">
+                        </div>
+
+                        <div>
+                            <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 300px; padding: 10px; font-size: 13px; margin: 5px;" type="text" placeholder="Quantity">
+                        </div>
+
+
+                        <div style="display: flex; justify-content: flex-end; margin-top: 10px;">
+                            <button style="border-radius: 5px; outline: none; background-color: #2F3478; color: white;" type="button" class="btn">Add</button>
                         </div>
                     </div>
 
 
+                    <div style="padding: 0 20px;" class=" table-responsive card">
+
+                        <style>
+                            .m {
+                                font-size: small !important;
+                            }
+                        </style>
+                        <table class="table table-striped table-hover h6">
+                            <thead>
+                                <tr>
+                                    <th class="text-nowrap m">Product Name</th>
+                                    <th class="text-nowrap m">Product Number</th>
+                                    <th class="text-nowrap m">Bale Type</th>
+                                    <th class="text-nowrap m">Buying Price</th>
+                                    <th class="text-nowrap m">Quantity</th>
+                                    <th class="text-nowrap m">Amount</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="color: #2F3478;">Good Shampo</td>
+                                    <td style="color: #2F3478;">2020SD795G</td>
+                                    <td style="color: #2F3478;">200Y(10Y)</td>
+                                    <td style="color: #2F3478;">470,000</td>
+                                    <td style="color: #2F3478;">102</td>
+                                    <td style="color: #2F3478;">47,940,000</td>
+                                </tr>
+
+                                <tr>
+                                    <td style="color: #2F3478;">Good Shampo</td>
+                                    <td style="color: #2F3478;">2020SD795G</td>
+                                    <td style="color: #2F3478;">200Y(10Y)</td>
+                                    <td style="color: #2F3478;">470,000</td>
+                                    <td style="color: #2F3478;">102</td>
+                                    <td style="color: #2F3478;">47,940,000</td>
+                                </tr>
+
+                                <tr>
+                                    <td style="color: #2F3478;">Good Shampo</td>
+                                    <td style="color: #2F3478;">2020SD795G</td>
+                                    <td style="color: #2F3478;">200Y(10Y)</td>
+                                    <td style="color: #2F3478;">470,000</td>
+                                    <td style="color: #2F3478;">102</td>
+                                    <td style="color: #2F3478;">47,940,000</td>
+                                </tr>
+
+                                <tr>
+                                    <td style="color: #2F3478;">Good Shampo</td>
+                                    <td style="color: #2F3478;">2020SD795G</td>
+                                    <td style="color: #2F3478;">200Y(10Y)</td>
+                                    <td style="color: #2F3478;">470,000</td>
+                                    <td style="color: #2F3478;">102</td>
+                                    <td style="color: #2F3478;">47,940,000</td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
 
                 </div>
 
-                <div style="display: flex; justify-content: flex-end; margin-right: 40px; margin-top: 20px;">
-                    <button style="border-radius: 5px;" type="button" class="btn btn-success">Next</button>
-                </div>
+                <div style="display: flex; justify-content: space-between; margin: 40px; margin-top: 50px;">
+                    <a href="containerDetails.html">
+                        <button style="border-radius: 5px; outline: none;" type="button" class="btn btn-warning">Previous</button>
+                    </a>
 
+                    <a href="#">
+                        <button style="border-radius: 5px; outline: none;" type="button" class="btn btn-success">Done</button>
+                    </a>
+                </div>
 
 
             </div>
