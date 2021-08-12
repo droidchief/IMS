@@ -308,7 +308,7 @@ hr {
 }
 
 ::placeholder {
-    color: rgb(107, 107, 107);
+    color: rgb(184, 184, 184);
     opacity: 1;
     /* Firefox */
 }
