@@ -15,12 +15,15 @@
     <link href="assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
     <link href="assets/plugins/datatables/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/plugins/datatables/css/jquery.dataTables-custom.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/jquery-toast/jquery.toast.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
 
-    <!--End  Page Level  CSS -->
+    <!-- BEGIN PAGE LEVEL STYLES -->
     <link href="assets/css/icons.css" rel="stylesheet">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
+    <!-- END PAGE LEVEL STYLES -->
 
 </head>
 
@@ -418,6 +421,65 @@
 
                         <div class="col-lg-12 card">
 
+
+                            <!-- Shipment Update Modal -->
+                            <div id="modal-normal" class="modal fade" role="dialog">
+                                <div class="modal-dialog modal-sm">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h5 class="modal-title">Update Shipment</h5>
+                                        </div>
+
+
+                                        <div style="display: flex; justify-content: center;" class="modal-body">
+
+                                            <div>
+
+                                                <div style="margin: 10px;">
+                                                    <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Product Name">
+                                                    <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                </div>
+
+                                                <div style="margin: 10px;">
+                                                    <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Bale Type">
+                                                    <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                </div>
+
+                                                <div style="margin: 10px;">
+                                                    <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Selling Price">
+                                                    <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                </div>
+
+                                                <div style="margin: 10px;">
+                                                    <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Buying Price">
+                                                    <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                </div>
+
+                                                <div style="margin: 10px;">
+                                                    <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Quantity">
+                                                    <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+
+                                        <div class="modal-footer" style="display: flex; justify-content: center;">
+                                            <div>
+                                                <button style="background-color: #2F3478; border-radius: 5px; color: whitesmoke;" class="btn" data-dismiss="modal" id="sa-close">Update</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- END Shipment Update Modal -->
+
                             <div>
                                 <ul class="nav nav-pills">
                                     <li class="active"><a data-toggle="pill" href="#home">Products</a></li>
@@ -455,9 +517,17 @@
                                                             <td style="color: #2F3478;">200Y(10Y)</td>
                                                             <td style="color: #2F3478;">470,000</td>
                                                             <td style="color: #2F3478;">102</td>
-                                                            <td><button data-toggle="modal" data-target="#modal-normal" style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important; outline: none;"
-                                                                    type="button" class="btn btn-success outline-btn"> <span><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                        </span></button></td>
+                                                            <td>
+                                                                <div class="dropdown">
+                                                                    <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                                    </button>
+                                                                    <ul style="background-color: #03a9f3; color: white;" class="dropdown-menu pull-right">
+                                                                        <li data-toggle="modal" data-target="#modal-normal" style="display: flex; justify-content: space-between; padding: 0 5px 0 10px;">
+                                                                            Edit <span><i style="margin: 5px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
                                                         </tr>
 
                                                         <tr>
@@ -466,9 +536,17 @@
                                                             <td style="color: #2F3478;">200Y(10Y)</td>
                                                             <td style="color: #2F3478;">470,000</td>
                                                             <td style="color: #2F3478;">102</td>
-                                                            <td><button data-toggle="modal" data-target="#modal-normal" style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important; outline: none;"
-                                                                    type="button" class="btn btn-success outline-btn"> <span><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                    </span></button></td>
+                                                            <td>
+                                                                <div class="dropdown">
+                                                                    <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                                    </button>
+                                                                    <ul style="background-color: #03a9f3; color: white;" class="dropdown-menu pull-right">
+                                                                        <li data-toggle="modal" data-target="#modal-normal" style="display: flex; justify-content: space-between; padding: 0 5px 0 10px;">
+                                                                            Edit <span><i style="margin: 5px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
                                                         </tr>
 
                                                         <tr>
@@ -477,9 +555,17 @@
                                                             <td style="color: #2F3478;">200Y(10Y)</td>
                                                             <td style="color: #2F3478;">470,000</td>
                                                             <td style="color: #2F3478;">102</td>
-                                                            <td><button data-toggle="modal" data-target="#modal-normal" style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important; outline: none;"
-                                                                    type="button" class="btn btn-success outline-btn"> <span><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                    </span></button></td>
+                                                            <td>
+                                                                <div class="dropdown">
+                                                                    <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                                    </button>
+                                                                    <ul style="background-color: #03a9f3; color: white;" class="dropdown-menu pull-right">
+                                                                        <li data-toggle="modal" data-target="#modal-normal" style="display: flex; justify-content: space-between; padding: 0 5px 0 10px;">
+                                                                            Edit <span><i style="margin: 5px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
                                                         </tr>
 
                                                         <tr>
@@ -488,9 +574,17 @@
                                                             <td style="color: #2F3478;">200Y(10Y)</td>
                                                             <td style="color: #2F3478;">470,000</td>
                                                             <td style="color: #2F3478;">102</td>
-                                                            <td><button data-toggle="modal" data-target="#modal-normal" style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important; outline: none;"
-                                                                    type="button" class="btn btn-success outline-btn"> <span><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                    </span></button></td>
+                                                            <td>
+                                                                <div class="dropdown">
+                                                                    <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                                    </button>
+                                                                    <ul style="background-color: #03a9f3; color: white;" class="dropdown-menu pull-right">
+                                                                        <li data-toggle="modal" data-target="#modal-normal" style="display: flex; justify-content: space-between; padding: 0 5px 0 10px;">
+                                                                            Edit <span><i style="margin: 5px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
                                                         </tr>
 
 
@@ -526,7 +620,7 @@
             </div>
 
 
-            <div class="col-md-4" style="display: flex; justify-content: center;">
+            <div class="col-md-4" style="display: flex; justify-content: center; overflow-y: hidden;">
 
                 <div>
                     <a href="containerDetails.html">
@@ -721,16 +815,19 @@
     <script src="assets/plugins/moment/moment.js"></script>
     <script src="assets/js/jquery.slimscroll.js "></script>
     <script src="assets/js/jquery.nicescroll.js"></script>
+    <script src="assets/js/jquery.slimscroll.js" type="text/javascript"></script>
     <script src="assets/js/functions.js"></script>
     <!-- End core plugin -->
 
-    <!--Begin Page Level Plugin-->
-    <script src="assets/plugins/morris-chart/morris.js"></script>
-    <script src="assets/plugins/morris-chart/raphael-min.js"></script>
-    <script src="assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
-    <script src="assets/pages/dashboard.js"></script>
-    <script src="assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
-    <script src="assets/pages/table-data.js"></script>
+    <script src="assets/plugins/jquery-toast/jquery.toast.min.js"></script>
+    <script src="assets/pages/notifications.js"></script>
+
+    <script src="assets/plugins/sweetalert/sweet-alert.js"></script>
+    <script src="assets/pages/jquery.sweet-alert.custom.js"></script>
+
+    <script src="helper.js"></script>
+
+
     <!--End Page Level Plugin-->
 
 
