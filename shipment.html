@@ -15,12 +15,14 @@
     <link href="assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
     <link href="assets/plugins/datatables/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/plugins/datatables/css/jquery.dataTables-custom.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
 
     <!--End  Page Level  CSS -->
     <link href="assets/css/icons.css" rel="stylesheet">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
+
 
 </head>
 
@@ -501,7 +503,7 @@
 
                         <!-- Shipment Update Modal -->
                         <div id="modal-normal" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
+                            <div class="modal-dialog modal-sm">
 
                                 <!-- Modal content-->
                                 <div class="modal-content">
@@ -513,7 +515,7 @@
 
                                     <div style="display: flex; justify-content: center;" class="modal-body">
 
-                                        <div>
+                                        <div style="margin-left: 30px;">
 
                                             <div style="margin: 10px;">
                                                 <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Container Name">
@@ -573,8 +575,10 @@
                                     </div>
 
 
-                                    <div class="modal-footer">
-                                        <button style="background-color: #2F3478; border-radius: 5px; color: whitesmoke;" type="button" class="btn" data-dismiss="modal">Update</button>
+                                    <div class="modal-footer" style="display: flex; justify-content: center;">
+                                        <div>
+                                            <button style="background-color: #2F3478; border-radius: 5px; color: whitesmoke;" class="btn" data-dismiss="modal" id="sa-close">Update</button>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -730,6 +734,10 @@
     <script src="assets/pages/dashboard.js"></script>
     <script src="assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
     <script src="assets/pages/table-data.js"></script>
+
+    <script src="assets/plugins/sweetalert/sweet-alert.js"></script>
+    <script src="assets/pages/jquery.sweet-alert.custom.js"></script>
+
     <!--End Page Level Plugin-->
 
 
