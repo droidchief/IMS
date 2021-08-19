@@ -386,7 +386,7 @@
 
             <div class="wrapper-content">
 
-                <!-- Shipment Update Modal -->
+                <!-- Product Edit Modal -->
                 <div id="modal-normal" class="modal fade" role="dialog">
                     <div class="modal-dialog modal-sm">
 
@@ -394,7 +394,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h5 class="modal-title">Update Shipment</h5>
+                                <h5 class="modal-title">Edit Product</h5>
                             </div>
 
 
@@ -442,7 +442,48 @@
 
                     </div>
                 </div>
-                <!-- END Shipment Update Modal -->
+                <!-- END Product Edit Modal -->
+
+                <!-- Add Product Modal -->
+                <div id="modal-add-product" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-sm">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h5 class="modal-title">Add New Product</h5>
+                            </div>
+
+
+                            <div style="display: flex; justify-content: center;" class="modal-body">
+
+                                <div>
+
+                                    <div style="margin: 10px;">
+                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Product Name">
+                                    </div>
+
+                                    <div style="margin: 10px;">
+                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Product Number">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="modal-footer" style="display: flex; justify-content: center;">
+                                <div>
+                                    <button style="background-color: #2F3478; border-radius: 5px; color: whitesmoke;" class="btn" data-dismiss="modal" id="sa-close">Add</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- END Add Product Modal -->
 
                 <div class="col-md-12">
 
@@ -476,13 +517,9 @@
                         </div>
 
                         <div style="margin-left: 142px;">
-                            <a href="containerDetails.html">
-                                <button class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Product</button>
-                            </a>
+                            <button data-toggle="modal" data-target="#modal-add-product" class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Product</button>
 
-                            <a href="containerDetails.html">
-                                <button class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Bale Type</button>
-                            </a>
+                            <button class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Bale Type</button>
                         </div>
 
                     </div>
