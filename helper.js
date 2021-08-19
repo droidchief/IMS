@@ -1,4 +1,5 @@
-function closeModal() {
-    var getId = $(".mike").val()
-    alert(getId)
-}
+// Back button
+let backButton = document.querySelector('.backButton');
+backButton.addEventListener('click', () => {
+    window.history.back();
+});
