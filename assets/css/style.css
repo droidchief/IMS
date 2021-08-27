@@ -5429,8 +5429,3 @@ footer {
  ::-webkit-scrollbar-thumb:hover {
     background: #b30000;
 }
-
-.hide-hover:hover {
-    background-color: #03a9f3;
-    color: white;
-}
