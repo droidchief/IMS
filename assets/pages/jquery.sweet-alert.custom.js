@@ -40,19 +40,19 @@
             $('#sa-params').click(function() {
                 swal({
                     title: "Are you sure?",
-                    text: "You will not be able to recover this imaginary file!",
+                    text: "You will not be able to undo this proccess!",
                     type: "warning",
                     showCancelButton: true,
                     confirmButtonColor: "#DD6B55",
-                    confirmButtonText: "Yes, delete it!",
-                    cancelButtonText: "No, cancel plx!",
+                    confirmButtonText: "Yes, accept!",
+                    cancelButtonText: "No, cancel",
                     closeOnConfirm: false,
                     closeOnCancel: false
                 }, function(isConfirm) {
                     if (isConfirm) {
-                        swal("Deleted!", "Your imaginary file has been deleted.", "success");
+                        swal("Accepted!", "Product moved successfully.", "success");
                     } else {
-                        swal("Cancelled", "Your imaginary file is safe :)", "error");
+                        swal("Cancelled", "Product move cancelled.", "error");
                     }
                 });
             });
