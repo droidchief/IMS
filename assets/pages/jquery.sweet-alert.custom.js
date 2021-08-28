@@ -70,7 +70,7 @@
             $('#sa-close').click(function() {
                 swal({
                     title: "Successfull!",
-                    text: "Row updated successfully.",
+                    text: "Task done successfully.",
                     timer: 2000,
                     showConfirmButton: false
                 });
