@@ -1318,6 +1318,15 @@ h5.left-nav-title {
     height: 20px;
 }
 
+.full-screen {
+    font-size: 20px;
+}
+
+.full-screen:hover {
+    cursor: pointer;
+    color: #2F3478;
+}
+
 
 /*--------------------------------------------*/
 
