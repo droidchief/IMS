@@ -15,6 +15,22 @@
     <link href="assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
     <link href="assets/plugins/morris-chart/morris.css" rel="stylesheet">
 
+    <link href="assets/plugins/datatables/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/datatables/css/jquery.dataTables-custom.css" rel="stylesheet" type="text/css" />
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500" rel="stylesheet" />
+    <link href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css" rel="stylesheet" />
+
+    <!-- PLUGINS CSS STYLE -->
+    <link href="assets/plugins/toaster/toastr.min.css" rel="stylesheet" />
+    <link href="assets/plugins/nprogress/nprogress.css" rel="stylesheet" />
+    <link href="assets/plugins/flag-icons/css/flag-icon.min.css" rel="stylesheet" />
+    <link href="assets/plugins/jvectormap/jquery-jvectormap-2.0.3.css" rel="stylesheet" />
+    <link href="assets/plugins/ladda/ladda.min.css" rel="stylesheet" />
+    <link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
+    <link href="assets/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" />
+
     <!--End  Page Level  CSS -->
     <link href="assets/css/icons.css" rel="stylesheet">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -407,7 +423,16 @@
                                 </select>
                             </div>
 
-                            <div id="morris1"></div>
+                            <!-- <div id="morris1"></div> -->
+
+                            <div class="col-12">
+                                <div class="card-default pb-5">
+                                    <div class="card-body" style="height: 300px;">
+                                        <canvas id="bar4"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+
 
                             <div style="display: flex; justify-content: center;">
                                 <p style="font-size: 12px;"><b>Days</b></p>
@@ -442,7 +467,14 @@
                             </div>
 
 
-                            <div id="morris3"></div>
+                            <!-- <div id="morris2"></div> -->
+                            <div class="col-12">
+                                <div class="card-default pb-5">
+                                    <div class="card-body" style="height: 300px;">
+                                        <canvas id="bar3"></canvas>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div style="display: flex; justify-content: center;">
                                 <p style="font-size: 12px;"><b>Months</b></p>
@@ -607,7 +639,7 @@
                         <div class="tab-content">
 
                             <div style="display: flex; justify-content: flex-end;">
-                                <i data-toggle="tooltip" data-placement="left" title="View Fullscreen" class="fa fa-compress full-screen" aria-hidden="true"></i>
+                                <i data-toggle="tooltip" data-placement="left" title="View Fullscreen" class="fa fa-compress full-screen" aria-hidden="true" onclick="openNav()"></i>
                             </div>
 
                             <div id="home" class="tab-pane fade in active">
@@ -672,7 +704,6 @@
 
                 </div>
             </div>
-
         </div>
 
     </div>
@@ -695,6 +726,9 @@
     <script src="assets/js/jquery.slimscroll.js "></script>
     <script src="assets/js/jquery.nicescroll.js"></script>
     <script src="assets/js/functions.js"></script>
+
+    <script src="assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="assets/pages/table-data.js"></script>
     <!-- End core plugin -->
 
     <!--Begin Page Level Plugin-->
@@ -707,6 +741,28 @@
     <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="assets/plugins/morris-chart/raphael-min.js"></script>
     <script src="assets/pages/morris-custom.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCn8TFXGg17HAUcNpkwtxxyT9Io9B_NcM" defer></script>
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/plugins/toaster/toastr.min.js"></script>
+    <script src="assets/plugins/slimscrollbar/jquery.slimscroll.min.js"></script>
+    <script src="assets/plugins/charts/Chart.min.js"></script>
+    <script src="assets/plugins/ladda/spin.min.js"></script>
+    <script src="assets/plugins/ladda/ladda.min.js"></script>
+    <script src="assets/plugins/jquery-mask-input/jquery.mask.min.js"></script>
+    <script src="assets/plugins/select2/js/select2.min.js"></script>
+    <script src="assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
+    <script src="assets/plugins/jvectormap/jquery-jvectormap-world-mill.js"></script>
+    <script src="assets/plugins/daterangepicker/moment.min.js"></script>
+    <script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="assets/plugins/jekyll-search.min.js"></script>
+    <script src="assets/js/sleek.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/date-range.js"></script>
+    <script src="assets/js/map.js"></script>
+    <script src="assets/js/custom.js"></script>
+
 
     <script src="helper.js"></script>
     <!--End Page Level Plugin-->
