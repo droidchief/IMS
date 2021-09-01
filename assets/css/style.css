@@ -293,7 +293,7 @@
         display: none;
     }
     
-    ::placeholder {
+     ::placeholder {
         color: rgb(184, 184, 184);
         opacity: 1;
         /* Firefox */
@@ -5232,7 +5232,7 @@
 /*--------------------------------------------*/
     /* width */
     
-    ::-webkit-scrollbar {
+     ::-webkit-scrollbar {
         width: 5px;
     }
     /* Track */
@@ -5307,4 +5307,24 @@
             top: 15px;
             right: 35px;
         }
+    }
+    /*--------------------------------------------*/
+    /*   Charts
+/*--------------------------------------------*/
+    
+    .chartWrapper {
+        /* w w w. j a v  a2 s.co  m*/
+        position: relative;
+    }
+    
+    .chartWrapper>canvas {
+        position: absolute;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+    }
+    
+    .chartAreaWrapper {
+        width: 600px;
+        overflow-x: scroll;
     }

@@ -1550,12 +1550,10 @@ if (barX !== null) {
                 "7 Jan",
                 "8 Jan",
                 "9 Jan",
-                "10 Jan",
-                "11 Jan",
-                "12 Jan"
+                "10 Jan"
             ],
             datasets: [{
-                label: "signup",
+                label: "₦",
                 data: [5, 6, 4.5, 5.5, 3, 6, 4.5, 6, 8, 3, 5.5, 4],
                 // data: [2, 3.2, 1.8, 2.1, 1.5, 3.5, 4, 2.3, 2.9, 4.5, 1.8, 3.4, 2.8],
                 backgroundColor: "#2F3478"
