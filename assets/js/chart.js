@@ -1541,18 +1541,18 @@ if (barX !== null) {
         type: "bar",
         data: {
             labels: [
-                "Jan",
-                "Feb",
-                "Mar",
-                "Apr",
-                "May",
-                "Jun",
-                "Jul",
-                "Aug",
-                "Sep",
-                "Oct",
-                "Nov",
-                "Dec"
+                "1 Jan",
+                "2 Jan",
+                "3 Jan",
+                "4 Jan",
+                "5 Jan",
+                "6 Jan",
+                "7 Jan",
+                "8 Jan",
+                "9 Jan",
+                "10 Jan",
+                "11 Jan",
+                "12 Jan"
             ],
             datasets: [{
                 label: "signup",
@@ -1665,7 +1665,7 @@ if (bar2 !== null) {
                 label: "signup",
                 data: [5, 7.5, 5.5, 6.5, 4, 9],
                 // data: [2, 3.2, 1.8, 2.1, 1.5, 3.5, 4, 2.3, 2.9, 4.5, 1.8, 3.4, 2.8],
-                backgroundColor: "#ffffff"
+                backgroundColor: "#2F3478"
             }]
         },
         options: {
