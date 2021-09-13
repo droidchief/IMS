@@ -537,99 +537,56 @@
 
                     </div>
                 </div>
-            </div>
-            <!--END Product Move Modal -->
 
 
-            <!-- Bale Type Modal -->
-            <div id="modal-bale-type" class="modal fade" role="dialog">
-                <div class="modal-dialog">
+                <div id="modal-update-acount" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-sm">
 
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h5 class="modal-title">Bale Type</h5>
-                        </div>
-
-
-                        <div style="overflow-y: scroll; height: 75vh;" class="modal-body">
-
-                            <div style="display: flex; justify-content: center;">
-                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Bale Type">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h5 class="modal-title">Update Account</h5>
                             </div>
 
-                            <hr>
 
-                            <div class="row" style="margin-top: 50px;">
-                                <div class="col-md-12">
-                                    <div class="white-box">
-                                        <div class="table-responsive">
-                                            <table class="display table">
-                                                <thead>
-                                                    <tr style="background-color: rgba(47, 52, 120, 0.2);">
-                                                        <th>Bale Type</th>
-                                                    </tr>
-                                                </thead>
+                            <div style="display: flex; justify-content: center;" class="modal-body">
 
-                                                <tbody>
-                                                    <tr>
-                                                        <td>200Y(10Y)</td>
-                                                    </tr>
+                                <div>
 
-                                                    <tr>
-                                                        <td>200Y(5Y)</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>200Y(10Y)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>200Y(5Y)</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>200Y(10Y)</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>200Y(5Y)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>200Y(10Y)</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>200Y(5Y)</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>200Y(10Y)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>200Y(5Y)</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>200Y(10Y)</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>200Y(5Y)</td>
-                                                    </tr>
-                                            </table>
-                                        </div>
+                                    <div style="margin: 10px;">
+                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Account Name">
                                     </div>
+
+                                    <div style="margin: 10px;">
+                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Phone Number">
+                                    </div>
+
+                                    <div style="margin: 10px;">
+                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Address">
+                                    </div>
+
+                                    <div style="margin: 10px;">
+                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Email">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="modal-footer" style="display: flex; justify-content: center;">
+                                <div>
+                                    <button style="background-color: #2F3478; border-radius: 5px; color: whitesmoke;" class="btn notification-success" data-dismiss="modal" id="sa-close">Update</button>
                                 </div>
                             </div>
-
                         </div>
 
                     </div>
-
                 </div>
             </div>
-            <!--END Bale Type Modal -->
+            <!--END Product Move Modal -->
 
             <div class="col-md-12">
 
@@ -704,24 +661,24 @@
                                                 <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                                     </button>
                                                 <ul class="dropdown-menu pull-right">
-                                                    <li data-toggle="modal" data-target="#modal-normal">
+                                                    <li data-toggle="modal" data-target="#modal-credit-acount">
                                                         <a href="#">
                                                                 Credit <span><i style="margin: 5px 0 5px 17px;" class="fa fa-sign-in" aria-hidden="true"></i></span>
                                                             </a>
                                                     </li>
-                                                    <li>
-                                                        <a href="productMove.html">
+                                                    <li data-toggle="modal" data-target="#modal-debit-acount">
+                                                        <a href="#">
                                                                 Debit <span><i style="margin: 5px;" class="fa fa-sign-out" aria-hidden="true"></i></span>
                                                             </a>
                                                     </li>
-                                                    <li>
-                                                        <a href="productMove.html">
-                                                                Manage <span><i style="margin: 5px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                    <li data-toggle="modal" data-target="#modal-update-acount">
+                                                        <a href="#">
+                                                            Manage <span><i style="margin: 5px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
                                                             </a>
                                                     </li>
                                                     <li>
-                                                        <a href="productMove.html">
-                                                                Statement <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
+                                                        <a href="accountDetails.html">
+                                                            Statement <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
                                                             </a>
                                                     </li>
                                                 </ul>
@@ -737,24 +694,24 @@
                                                 <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                                     </button>
                                                 <ul class="dropdown-menu pull-right">
-                                                    <li data-toggle="modal" data-target="#modal-normal">
+                                                    <li data-toggle="modal" data-target="#modal-credit-acount">
                                                         <a href="#">
                                                                 Credit <span><i style="margin: 5px 0 5px 17px;" class="fa fa-sign-in" aria-hidden="true"></i></span>
                                                             </a>
                                                     </li>
-                                                    <li>
-                                                        <a href="productMove.html">
+                                                    <li data-toggle="modal" data-target="#modal-debit-acount">
+                                                        <a href="#">
                                                                 Debit <span><i style="margin: 5px;" class="fa fa-sign-out" aria-hidden="true"></i></span>
                                                             </a>
                                                     </li>
-                                                    <li>
-                                                        <a href="productMove.html">
-                                                                Manage <span><i style="margin: 5px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                    <li data-toggle="modal" data-target="#modal-update-acount">
+                                                        <a href="#">
+                                                            Manage <span><i style="margin: 5px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
                                                             </a>
                                                     </li>
                                                     <li>
-                                                        <a href="productMove.html">
-                                                                Statement <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
+                                                        <a href="accountDetails.html">
+                                                            Statement <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
                                                             </a>
                                                     </li>
                                                 </ul>
@@ -770,24 +727,24 @@
                                                 <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                                     </button>
                                                 <ul class="dropdown-menu pull-right">
-                                                    <li data-toggle="modal" data-target="#modal-normal">
+                                                    <li data-toggle="modal" data-target="#modal-credit-acount">
                                                         <a href="#">
                                                                 Credit <span><i style="margin: 5px 0 5px 17px;" class="fa fa-sign-in" aria-hidden="true"></i></span>
                                                             </a>
                                                     </li>
-                                                    <li>
-                                                        <a href="productMove.html">
+                                                    <li data-toggle="modal" data-target="#modal-debit-acount">
+                                                        <a href="#">
                                                                 Debit <span><i style="margin: 5px;" class="fa fa-sign-out" aria-hidden="true"></i></span>
                                                             </a>
                                                     </li>
-                                                    <li>
-                                                        <a href="productMove.html">
-                                                                Manage <span><i style="margin: 5px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                    <li data-toggle="modal" data-target="#modal-update-acount">
+                                                        <a href="#">
+                                                            Manage <span><i style="margin: 5px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
                                                             </a>
                                                     </li>
                                                     <li>
-                                                        <a href="productMove.html">
-                                                                Statement <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
+                                                        <a href="accountDetails.html">
+                                                            Statement <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
                                                             </a>
                                                     </li>
                                                 </ul>
@@ -803,24 +760,24 @@
                                                 <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                                     </button>
                                                 <ul class="dropdown-menu pull-right">
-                                                    <li data-toggle="modal" data-target="#modal-normal">
+                                                    <li data-toggle="modal" data-target="#modal-credit-acount">
                                                         <a href="#">
                                                                 Credit <span><i style="margin: 5px 0 5px 17px;" class="fa fa-sign-in" aria-hidden="true"></i></span>
                                                             </a>
                                                     </li>
-                                                    <li>
-                                                        <a href="productMove.html">
+                                                    <li data-toggle="modal" data-target="#modal-debit-acount">
+                                                        <a href="#">
                                                                 Debit <span><i style="margin: 5px;" class="fa fa-sign-out" aria-hidden="true"></i></span>
                                                             </a>
                                                     </li>
-                                                    <li>
-                                                        <a href="productMove.html">
-                                                                Manage <span><i style="margin: 5px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                    <li data-toggle="modal" data-target="#modal-update-acount">
+                                                        <a href="#">
+                                                            Manage <span><i style="margin: 5px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
                                                             </a>
                                                     </li>
                                                     <li>
-                                                        <a href="productMove.html">
-                                                                Statement <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
+                                                        <a href="accountDetails.html">
+                                                            Statement <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
                                                             </a>
                                                     </li>
                                                 </ul>
@@ -871,16 +828,16 @@
                                                 <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                                     </button>
                                                 <ul class="dropdown-menu pull-right">
-                                                    <li data-toggle="modal" data-target="#modal-normal">
+                                                    <li data-toggle="modal" data-target="#modal-view">
                                                         <a href="#">
                                                                 View <span><i style="margin: 5px 0 5px 17px;" class="fa fa-eye" aria-hidden="true"></i></span>
                                                             </a>
                                                     </li>
                                                     <li>
-                                                        <a href="productMove.html">
-                                                                Reverse <span><i style="margin: 5px;" class="fa fa-sign-out" aria-hidden="true"></i></span>
+                                                        <li data-toggle="modal" data-target="#modal-reverse">
+                                                            Reverse <span><i style="margin: 5px;" class="fa fa-sign-out" aria-hidden="true"></i></span>
                                                             </a>
-                                                    </li>
+                                                        </li>
                                                 </ul>
                                             </div>
                                         </td>
