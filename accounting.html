@@ -492,110 +492,50 @@
                 <!-- END Add Product Modal -->
 
                 <!-- Product Move Modal -->
-                <div id="modal-product-move" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
+                <div id="modal-debit-acount" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-sm">
 
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h5 class="modal-title">Product Move</h5>
+                                <h5 class="modal-title">Debit Account</h5>
                             </div>
 
 
-                            <div style="overflow-y: scroll; height: 75vh;" class="modal-body">
+                            <div style="display: flex; justify-content: center;" class="modal-body">
 
-                                <div style="line-height: 10px; font-size: 12px; font-weight: 400; color: #2F3478; margin-left: 20px;">
-                                    <p>From: <b>Store A</b></p>
-                                    <p>Products: <b>47 bale</b></p>
-                                    <p>By: <b>Sufyan</b></p>
-                                </div>
-
-                                <div class="row" style="margin-top: 50px;">
-                                    <div class="col-md-12">
-                                        <div class="white-box">
-                                            <div class="table-responsive">
-                                                <table class="display table">
-                                                    <thead>
-                                                        <tr style="background-color: rgba(47, 52, 120, 0.2);">
-                                                            <th>Product Name</th>
-                                                            <th>Bale Type</th>
-                                                            <th>Quantity</th>
-                                                        </tr>
-                                                    </thead>
-
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Good Shampo</td>
-                                                            <td>200Y(10Y)</td>
-                                                            <td>102</td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>Good Shampo</td>
-                                                            <td>200Y(10Y)</td>
-                                                            <td>102</td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>Good Shampo</td>
-                                                            <td>200Y(10Y)</td>
-                                                            <td>102</td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>Good Shampo</td>
-                                                            <td>200Y(10Y)</td>
-                                                            <td>102</td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>Good Shampo</td>
-                                                            <td>200Y(10Y)</td>
-                                                            <td>102</td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>Good Shampo</td>
-                                                            <td>200Y(10Y)</td>
-                                                            <td>102</td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>Good Shampo</td>
-                                                            <td>200Y(10Y)</td>
-                                                            <td>102</td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>Good Shampo</td>
-                                                            <td>200Y(10Y)</td>
-                                                            <td>102</td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>Good Shampo</td>
-                                                            <td>200Y(10Y)</td>
-                                                            <td>102</td>
-                                                        </tr>
-
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="modal-footer">
                                 <div>
-                                    <button style="border-radius: 5px;" class="btn btn-success" data-dismiss="modal" id="sa-params">Accept</button>
+
+                                    <div style="margin: 10px;">
+
+                                        <select style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; font-size: 13px;" name=”color”>
+                                            <option value=”red”>Account Type</option>
+                                        </select>
+                                    </div>
+
+                                    <div style="margin: 10px;">
+                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Amount">
+                                    </div>
+
+                                    <div style="margin: 10px;">
+                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Remark">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="modal-footer" style="display: flex; justify-content: center;">
+                                <div>
+                                    <button style="background-color: #F47C7C; border-radius: 5px; color: whitesmoke;" class="btn notification-success" data-dismiss="modal" id="sa-close">Debit</button>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-
                 </div>
             </div>
             <!--END Product Move Modal -->
@@ -727,7 +667,7 @@
 
                         <button style="background-color: #1F78B4 !important;" data-toggle="modal" data-target="#modal-credit-acount" class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Credit</button>
 
-                        <button style="background-color: #F47C7C !important;" data-toggle="modal" data-target="#modal-add-product" class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Debit</button>
+                        <button style="background-color: #F47C7C !important;" data-toggle="modal" data-target="#modal-debit-acount" class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Debit</button>
                     </div>
 
                 </div>
