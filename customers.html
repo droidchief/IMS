@@ -387,7 +387,7 @@
 
             <div class="wrapper-content">
 
-                <!-- Product Edit Modal -->
+                <!-- Update Customer Modal -->
                 <div id="modal-normal" class="modal fade" role="dialog">
                     <div class="modal-dialog modal-sm">
 
@@ -437,24 +437,24 @@
 
                             <div class="modal-footer" style="display: flex; justify-content: center;">
                                 <div>
-                                    <button style="background-color: #2F3478; border-radius: 5px; color: whitesmoke;" class="btn" data-dismiss="modal" id="sa-close">Update</button>
+                                    <button style="background-color: #2F3478; border-radius: 5px; color: whitesmoke;" class="btn" data-dismiss="modal">Update</button>
                                 </div>
                             </div>
                         </div>
 
                     </div>
                 </div>
-                <!-- END Product Edit Modal -->
+                <!--END Update Customer Modal -->
 
-                <!-- Add Product Modal -->
-                <div id="modal-add-product" class="modal fade" role="dialog">
+                <!-- Add Customer Modal -->
+                <div id="modal-add-customer" class="modal fade" role="dialog">
                     <div class="modal-dialog modal-sm">
 
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h5 class="modal-title">Add New Product</h5>
+                                <h5 class="modal-title">Add Customer</h5>
                             </div>
 
 
@@ -463,11 +463,29 @@
                                 <div>
 
                                     <div style="margin: 10px;">
-                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Product Name">
+                                        <select style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; font-size: 13px;" name=”color”>
+                                            <option value=”red”>Location</option>
+                                        </select> <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                     </div>
 
                                     <div style="margin: 10px;">
-                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Product Number">
+                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Customer Name">
+                                        <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                    </div>
+
+                                    <div style="margin: 10px;">
+                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Address">
+                                        <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                    </div>
+
+                                    <div style="margin: 10px;">
+                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Phone Number">
+                                        <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                    </div>
+
+                                    <div style="margin: 10px;">
+                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Email">
+                                        <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                     </div>
 
                                 </div>
@@ -478,214 +496,17 @@
 
                             <div class="modal-footer" style="display: flex; justify-content: center;">
                                 <div>
-                                    <button style="background-color: #2F3478; border-radius: 5px; color: whitesmoke;" class="btn notification-success" data-dismiss="modal" id="sa-close">Add</button>
+                                    <button style="background-color: #2F3478; border-radius: 5px; color: whitesmoke;" class="btn" data-dismiss="modal" id="sa-close">Add Customer</button>
                                 </div>
                             </div>
                         </div>
 
                     </div>
                 </div>
-                <!-- END Add Product Modal -->
+                <!--END Add Customer Modal -->
 
-                <!-- Product Move Modal -->
-                <div id="modal-product-move" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h5 class="modal-title">Product Move</h5>
-                            </div>
-
-
-                            <div style="overflow-y: scroll; height: 75vh;" class="modal-body">
-
-                                <div style="line-height: 10px; font-size: 12px; font-weight: 400; color: #2F3478; margin-left: 20px;">
-                                    <p>From: <b>Store A</b></p>
-                                    <p>Products: <b>47 bale</b></p>
-                                    <p>By: <b>Sufyan</b></p>
-                                </div>
-
-                                <div class="row" style="margin-top: 50px;">
-                                    <div class="col-md-12">
-                                        <div class="white-box">
-                                            <div class="table-responsive">
-                                                <table class="display table">
-                                                    <thead>
-                                                        <tr style="background-color: rgba(47, 52, 120, 0.2);">
-                                                            <th>Product Name</th>
-                                                            <th>Bale Type</th>
-                                                            <th>Quantity</th>
-                                                        </tr>
-                                                    </thead>
-
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Good Shampo</td>
-                                                            <td>200Y(10Y)</td>
-                                                            <td>102</td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>Good Shampo</td>
-                                                            <td>200Y(10Y)</td>
-                                                            <td>102</td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>Good Shampo</td>
-                                                            <td>200Y(10Y)</td>
-                                                            <td>102</td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>Good Shampo</td>
-                                                            <td>200Y(10Y)</td>
-                                                            <td>102</td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>Good Shampo</td>
-                                                            <td>200Y(10Y)</td>
-                                                            <td>102</td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>Good Shampo</td>
-                                                            <td>200Y(10Y)</td>
-                                                            <td>102</td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>Good Shampo</td>
-                                                            <td>200Y(10Y)</td>
-                                                            <td>102</td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>Good Shampo</td>
-                                                            <td>200Y(10Y)</td>
-                                                            <td>102</td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>Good Shampo</td>
-                                                            <td>200Y(10Y)</td>
-                                                            <td>102</td>
-                                                        </tr>
-
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="modal-footer">
-                                <div>
-                                    <button style="border-radius: 5px;" class="btn btn-success" data-dismiss="modal" id="sa-params">Accept</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
             </div>
-            <!--END Product Move Modal -->
 
-
-            <!-- Bale Type Modal -->
-            <div id="modal-bale-type" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h5 class="modal-title">Bale Type</h5>
-                        </div>
-
-
-                        <div style="overflow-y: scroll; height: 75vh;" class="modal-body">
-
-                            <div style="display: flex; justify-content: center;">
-                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Bale Type">
-                            </div>
-
-                            <hr>
-
-                            <div class="row" style="margin-top: 50px;">
-                                <div class="col-md-12">
-                                    <div class="white-box">
-                                        <div class="table-responsive">
-                                            <table class="display table">
-                                                <thead>
-                                                    <tr style="background-color: rgba(47, 52, 120, 0.2);">
-                                                        <th>Bale Type</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>200Y(10Y)</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>200Y(5Y)</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>200Y(10Y)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>200Y(5Y)</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>200Y(10Y)</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>200Y(5Y)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>200Y(10Y)</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>200Y(5Y)</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>200Y(10Y)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>200Y(5Y)</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>200Y(10Y)</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>200Y(5Y)</td>
-                                                    </tr>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-            <!--END Bale Type Modal -->
 
             <div class="col-md-12">
 
@@ -721,7 +542,7 @@
 
 
                     <div style="margin-left: 265px;">
-                        <button data-toggle="modal" data-target="#modal-add-product" class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Customer</button>
+                        <button data-toggle="modal" data-target="#modal-add-customer" class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Customer</button>
                     </div>
 
                 </div>
