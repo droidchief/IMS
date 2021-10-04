@@ -390,67 +390,6 @@
             </div>
 
             <div class="wrapper-content">
-
-                <!-- Update Customer Modal -->
-                <div id="modal-normal" class="modal fade" role="dialog">
-                    <div class="modal-dialog modal-sm">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h5 class="modal-title">Update Customer</h5>
-                            </div>
-
-
-                            <div style="display: flex; justify-content: center;" class="modal-body">
-
-                                <div>
-
-                                    <div style="margin: 10px;">
-                                        <select style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; font-size: 13px;" name=”color”>
-                                            <option value=”red”>Location</option>
-                                        </select> <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                    </div>
-
-                                    <div style="margin: 10px;">
-                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Customer Name">
-                                        <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                    </div>
-
-                                    <div style="margin: 10px;">
-                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Address">
-                                        <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                    </div>
-
-                                    <div style="margin: 10px;">
-                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Phone Number">
-                                        <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                    </div>
-
-                                    <div style="margin: 10px;">
-                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Email">
-                                        <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <div class="modal-footer" style="display: flex; justify-content: center;">
-                                <div>
-                                    <button style="background-color: #2F3478; border-radius: 5px; color: whitesmoke;" class="btn" data-dismiss="modal">Update</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!--END Update Customer Modal -->
-
-                <!-- Add Customer Modal -->
                 <div id="modal-add-customer" class="modal fade" role="dialog">
                     <div class="modal-dialog modal-sm">
 
@@ -473,7 +412,7 @@
                                     </div>
 
                                     <div style="margin: 10px;">
-                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Customer Name">
+                                        <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Vendor Name">
                                         <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                     </div>
 
@@ -507,8 +446,6 @@
 
                     </div>
                 </div>
-                <!--END Add Customer Modal -->
-
             </div>
 
 
@@ -552,915 +489,237 @@
                 </div>
 
 
-                <div class="row" style="margin-top: 50px; margin-bottom: 30px; margin-left: 10px;">
-
-                    <div class="col-lg-12 card">
-
-                        <div>
-                            <ul class="nav nav-pills">
-                                <li class="active"><a data-toggle="pill" href="#home">All</a></li>
-                                <li><a data-toggle="pill" href="#menu1">National</a></li>
-                                <li><a data-toggle="pill" href="#menu2">International</a></li>
-                            </ul>
-
-                            <div class="row">
-
-                                <div style="display: flex; justify-content: space-around; background-color: #337ab7; margin: 20px 15px; border-radius: 10px;">
-                                    <h4 style="font-size: 14px; font-weight: 600; color: white !important;">Customers</h4>
-                                    <h4 style="font-size: 14px; font-weight: 600; color: white !important;">Debtors</h4>
-                                </div>
-
-                                <div class="tab-content">
-                                    <div id="home" class="tab-pane fade in active">
-
-                                        <!-- Product Table -->
-                                        <div class="row" style="overflow-y: scroll; height: 70vh;">
-                                            <div style="border-left: 2px solid #2f347898; border-radius: 5px;" class="col-md-6">
-                                                <div class="table-responsive">
-                                                    <table id="example" class="display table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Name</th>
-                                                                <th>Location</th>
-                                                                <th>Transaction</th>
-                                                                <th>Amount</th>
-                                                                <th>Debt</th>
-                                                                <th>Action</th>
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tbody>
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Hash</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Slui</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Ermg</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Jimm</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Joe</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Nazir</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Bello</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-
-                                            <div style="border-left: 2px solid #2f347898; border-radius: 5px;" class="col-md-6">
-                                                <div class="table-responsive">
-                                                    <table class="display table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Name</th>
-                                                                <th>Amount</th>
-                                                                <th>Paid</th>
-                                                                <th>Balance</th>
-                                                                <th>Due Date</th>
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tbody>
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <!-- END Product Table -->
-
-
-                                    </div>
-
-                                    <div id="menu1" class="tab-pane fade">
-
-                                        <!-- Store A Table -->
-                                        <div class="row" style="overflow-y: scroll; height: 70vh;">
-                                            <div style="border-left: 2px solid #2f347898; border-radius: 5px;" class="col-md-6">
-                                                <div class="table-responsive">
-                                                    <table id="example-editable" class="display table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Name</th>
-                                                                <th>Location</th>
-                                                                <th>Transaction</th>
-                                                                <th>Amount</th>
-                                                                <th>Debt</th>
-                                                                <th>Action</th>
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tbody>
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Hash</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Slui</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Ermg</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Jimm</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Joe</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Nazir</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Bello</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-
-                                            <div style="border-left: 2px solid #2f347898; border-radius: 5px;" class="col-md-6">
-                                                <div class="table-responsive">
-                                                    <table class="display table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Name</th>
-                                                                <th>Amount</th>
-                                                                <th>Paid</th>
-                                                                <th>Balance</th>
-                                                                <th>Due Date</th>
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tbody>
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <!-- END Store A Table -->
-
-                                    </div>
-
-                                    <div id="menu2" class="tab-pane fade">
-
-                                        <!-- Store B Table -->
-                                        <div class="row" style="overflow-y: scroll; height: 70vh;">
-                                            <div style="border-left: 2px solid #2f347898; border-radius: 5px;" class="col-md-6">
-                                                <div class="table-responsive">
-                                                    <table id="example3" class="display table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Name</th>
-                                                                <th>Location</th>
-                                                                <th>Transaction</th>
-                                                                <th>Amount</th>
-                                                                <th>Debt</th>
-                                                                <th>Action</th>
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tbody>
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Hash</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Slui</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Ermg</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Jimm</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Joe</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Nazir</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Bello</td>
-                                                                <td style="color: #2F3478;">National</td>
-                                                                <td style="color: #2F3478;">23</td>
-                                                                <td style="color: #2F3478;">23,898</td>
-                                                                <td style="color: #2F3478;">13,897</td>
-                                                                <td>
-                                                                    <div class="dropdown">
-                                                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        <ul class="dropdown-menu pull-right">
-                                                                            <li data-toggle="modal" data-target="#modal-normal">
-                                                                                <a href="#">
-                                                                                        Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-
-                                                                            <li>
-                                                                                <a href="customersDetails.html">
-                                                                                        View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
-                                                                                    </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-
-
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-
-                                            <div style="border-left: 2px solid #2f347898; border-radius: 5px;" class="col-md-6">
-                                                <div class="table-responsive">
-                                                    <table class="display table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Name</th>
-                                                                <th>Amount</th>
-                                                                <th>Paid</th>
-                                                                <th>Balance</th>
-                                                                <th>Due Date</th>
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tbody>
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td style="color: #2F3478;">Shampo</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">170,000</td>
-                                                                <td style="color: #2F3478;">470,000</td>
-                                                                <td style="color: #2F3478;">23/05/21</td>
-                                                            </tr>
-
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <!-- END Store B Table -->
-                                    </div>
-
-
-
-                                </div>
-                            </div>
-                        </div>
-
+                <div style="display: flex; margin: 40px 15px;">
+                    <div style="color: #2F3478; font-size: 13px;">
+                        <p>Customer Name:</p>
+                        <p>Number:</p>
+                        <p>Location:</p>
+                        <p>Address:</p>
+                        <p>Email:</p>
                     </div>
 
+                    <div style="color: #2F3478; font-size: 13px; margin-left: 30px;">
+                        <p>Customer 01</p>
+                        <p>892892822</p>
+                        <p>National</p>
+                        <p>Captown</p>
+                        <p>email@email.com</p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="row" style="overflow-y: scroll; height: 70vh;">
+                    <div class="col-md-12 card">
+                        <div class="table-responsive">
+                            <table id="example" class="display table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Purchase By</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th>Balance</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td style="color: #2F3478;">23/09/2021</td>
+                                        <td style="color: #2F3478;">Junaidap</td>
+                                        <td style="color: #2F3478;">23, 939</td>
+                                        <td style="color: #2F3478;">Paid</td>
+                                        <td style="color: #2F3478;">15, 290</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                    </button>
+                                                <ul class="dropdown-menu pull-right">
+                                                    <li data-toggle="modal" data-target="#modal-normal">
+                                                        <a href="#">
+                                                                Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                            </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="customersDetails.html">
+                                                                View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
+                                                            </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="color: #2F3478;">23/09/2021</td>
+                                        <td style="color: #2F3478;">Junaidap</td>
+                                        <td style="color: #2F3478;">23, 939</td>
+                                        <td style="color: #2F3478;">Paid</td>
+                                        <td style="color: #2F3478;">15, 290</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                    </button>
+                                                <ul class="dropdown-menu pull-right">
+                                                    <li data-toggle="modal" data-target="#modal-normal">
+                                                        <a href="#">
+                                                                Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                            </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="customersDetails.html">
+                                                                View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
+                                                            </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="color: #2F3478;">23/09/2021</td>
+                                        <td style="color: #2F3478;">Junaidap</td>
+                                        <td style="color: #2F3478;">23, 939</td>
+                                        <td style="color: #2F3478;">Paid</td>
+                                        <td style="color: #2F3478;">15, 290</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                    </button>
+                                                <ul class="dropdown-menu pull-right">
+                                                    <li data-toggle="modal" data-target="#modal-normal">
+                                                        <a href="#">
+                                                                Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                            </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="customersDetails.html">
+                                                                View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
+                                                            </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="color: #2F3478;">23/09/2021</td>
+                                        <td style="color: #2F3478;">Junaidap</td>
+                                        <td style="color: #2F3478;">23, 939</td>
+                                        <td style="color: #2F3478;">Paid</td>
+                                        <td style="color: #2F3478;">15, 290</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                    </button>
+                                                <ul class="dropdown-menu pull-right">
+                                                    <li data-toggle="modal" data-target="#modal-normal">
+                                                        <a href="#">
+                                                                Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                            </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="customersDetails.html">
+                                                                View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
+                                                            </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="color: #2F3478;">23/09/2021</td>
+                                        <td style="color: #2F3478;">Junaidap</td>
+                                        <td style="color: #2F3478;">23, 939</td>
+                                        <td style="color: #2F3478;">Paid</td>
+                                        <td style="color: #2F3478;">15, 290</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                    </button>
+                                                <ul class="dropdown-menu pull-right">
+                                                    <li data-toggle="modal" data-target="#modal-normal">
+                                                        <a href="#">
+                                                                Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                            </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="customersDetails.html">
+                                                                View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
+                                                            </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="color: #2F3478;">23/09/2021</td>
+                                        <td style="color: #2F3478;">Junaidap</td>
+                                        <td style="color: #2F3478;">23, 939</td>
+                                        <td style="color: #2F3478;">Paid</td>
+                                        <td style="color: #2F3478;">15, 290</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                    </button>
+                                                <ul class="dropdown-menu pull-right">
+                                                    <li data-toggle="modal" data-target="#modal-normal">
+                                                        <a href="#">
+                                                                Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                            </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="customersDetails.html">
+                                                                View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
+                                                            </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="color: #2F3478;">23/09/2021</td>
+                                        <td style="color: #2F3478;">Junaidap</td>
+                                        <td style="color: #2F3478;">23, 939</td>
+                                        <td style="color: #2F3478;">Paid</td>
+                                        <td style="color: #2F3478;">15, 290</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                    </button>
+                                                <ul class="dropdown-menu pull-right">
+                                                    <li data-toggle="modal" data-target="#modal-normal">
+                                                        <a href="#">
+                                                                Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                            </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="customersDetails.html">
+                                                                View <span><i style="margin: 5px;" class="fa fa-eye" aria-hidden="true"></i></span>
+                                                            </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
 
                 </div>
