@@ -1,0 +1,1742 @@
+/*
+  Theme Name: Spire | Creative Agency HTML5 Responsive Template
+  Theme URL: http://themewar.com/html/spire/
+  Author: ThemeWar
+  Author URI: http://www.themewar.com
+  Description: Creative Agency HTML5 Responsive Template
+  Version: 1.0
+*/
+/*=======================================================================
+[Table of contents]
+=========================================================================
+1. Home Page 
+    i. Header Area
+    ii. Main Menu
+    iii. Slider area
+    iv. Work Area
+    v. What We Do
+    vi. Pricing Area
+    vii. Big Dream Area
+    viii. What is Spire
+    ix. Team area
+    x. Testimonial Area
+    xi. Blog Area
+    xii. Subscribe Area
+    xiii. News Area
+    xiv. Client Area
+    xv. Call To Action
+    xvi. Contact Area
+    xvii. Footer Area
+2. Home Two
+    i. Blog Page
+    ii. Blog Details
+    iii. Project Page
+    iv. Service Page
+    v. News details page
+3. Element Page
+=========================================================================*/
+
+@media (min-width:1440px) and (max-width:2565px){
+    #homeSlider {
+        height: 632px !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    /* Header area */
+    .callHead {
+        font-size: 50px;
+        margin-top: 15px;
+    }
+    .mainMenu ul li {
+        padding-right: 22px;
+        padding-bottom: 27px;
+    }
+    .socialIcon {
+        text-align: center;
+    }
+    .mainMenu {
+        padding: 28px 0 0;
+    }
+    .mainMenu .hasChild:hover .dropDown {
+        top: 47px;
+    }
+    /* Work area */
+    .signleWork {
+        float: none;
+        margin-top: -2px;
+        width: 100%;
+    }
+    .chartBar {
+        text-align: center;
+    }
+    .chartBar canvas {
+        margin: 0 auto;
+        width: 280px;
+    }
+    .moreInDribble p {
+        margin-top: 40px;
+        padding: 0 40px;
+    }
+    /* what we do */
+    .serviceIcon {
+        padding: 37px 20px;
+    }
+    .singlePricing h1 {
+        font-size: 60px;
+    }
+    /* what is spire */
+    .iMacImg,.macImg {
+        height: auto;
+        width: 100%;
+    }
+    .iPhoneImg{
+        width: 423px;
+        margin: 0 auto;
+    }
+    .posRele {
+        display: table;
+        width: 100%;
+    }
+    .promoCont h1 {
+        font-size: 60px;
+    }
+    .marginTop {
+        margin-top: 40px;
+    }
+    /* Team Area */
+    .teamArea {
+        padding: 78px 0 30px;
+    }
+    .teamImg {
+        margin: 0 auto 16px;
+        width: 268px;
+    }
+    .singleTeam {
+        margin-bottom: 50px;
+    }
+    #testiCrousel .carousel-control.right {
+        right: 90px;
+    }
+    #testiCrousel .carousel-control.left {
+        left: 90px;
+    }
+    /* Blog area */
+    .blogContent {
+        padding: 35px 35px 0;
+    }
+    .blogContent h2 {
+        font-size: 35px;
+    }
+    .blogPostContent {
+        padding: 18px 0 10px;
+    }
+    .smallAuthor {
+        float: none !important;
+        margin: 0 auto 15px;
+    }
+    .blogPost {
+        margin-left: 0;
+        padding: 0 40px;
+        text-align: center;
+        width: 100%;
+    }
+    .subscribeForm input[type="email"] {
+        margin-left: 20px;
+        padding: 23px 0 23px 25px;
+        width: 250px;
+    }
+    .subscribeForm input[type="submit"] {
+        margin-left: 20px;
+        padding: 23px 25px;
+    }
+    .subCounter {
+        width: 280px;
+    }
+    .news {
+        padding: 40px 32px 0;
+    }
+    .news h2 a {
+        font-size: 32px;
+    }
+    .logoFirstRow {
+        margin-left: 0;
+    }
+    .callThreeTitle i {
+        font-size: 55px;
+        padding: 0 20px 0 10px;
+    }
+    .callThreeContent {
+        margin-left: 30px;
+    }
+    .callThreeWrap {
+        padding: 28px 30px 28px 20px;
+    }
+    .chartContent {
+        overflow: hidden;
+    }
+    .chartBarClient canvas {
+        margin: 0 auto;
+        width: 280px;
+    }
+    .copyText {
+        margin-right: 150px;
+    }
+    .footerSocial ul li {
+        margin-bottom: 10px;
+    }
+    /* Project Page */
+    .projectDtailsArea .noPaddingRight{
+        padding-right: 15px !important;
+    }
+    .projectDtailsArea .noPaddingLeft{
+        padding-left: 15px !important;
+    }
+    /* Service Page */
+    .serviceHeadingPara i {
+        font-size: 60px;
+        margin-right: 35px;
+    }
+    .serviceHeadingPara .ttlLine {
+        margin-bottom: 94px;
+        margin-right: 40px;
+    }
+    .servicePrice h5 {
+        width: 180px;
+    }
+    .servicePrice p {
+        margin-left: 20px;
+        padding: 18px 10px 22px;
+        width: 180px;
+    }
+    .servicePrice a {
+        margin-left: 20px;
+        width: 175px;
+        padding-bottom: 20px;
+        padding-top: 18px;
+    }
+    .servicePrice a .serviceRate {
+        font-size: 40px;
+    }
+    .servicePrice a i {
+        padding-top: 11px;
+    }
+    .servicePrice {
+        padding: 20px;
+    }
+    /* Element Page */
+    .chartSection canvas {
+        margin: 0 auto;
+        width: 285px;
+    }
+    .chartContent.photoSkill h1:after {
+        font-size: 45px;
+    }
+    .chartContent.photoSkill p {
+        bottom: 49px;
+    }
+    .defaultPagination li a.prePost {
+        margin-right: 40px;
+    }
+    .defaultPagination li a.nextPost {
+        margin-left: 40px;
+    }
+    .lineFive {
+        min-height: 245px;
+        padding-top: 155px;
+    }
+    .lineFive span {
+        left: -12px;
+        width: 103%;
+    }
+    .quoteStyle .blockquotePost blockquote {
+        padding: 30px 26px;
+    }
+    .fifthNav,.secondNav,.thirdNav {
+        margin: 0 auto;
+        width: 300px;
+    }
+    .secondNav .projectPostLink {
+        padding: 0;
+    }
+    .fifthNav .projectPostLink {
+        padding-right: 0;
+    }
+    .thirdNav .projectPostLink {
+        margin-top: 73px;
+        padding: 0;
+    }
+    .textStyle .noPaddingRight{
+        padding-right: 15px !important;
+    }
+    .textStyle .noPaddingLeft{
+        padding-left: 15px !important;
+    }
+    .servicePrice.blank {
+        padding: 18px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .socialIcon li:last-child{
+        padding-right: 0;
+    }
+    .socialIcon {
+        text-align: center;
+    }
+    /* Main Menu */
+    .menuBtn {
+        margin-top: 5px;
+    }
+    .mainMenu ul {
+        background: #5e68ca;
+        text-align: left;
+    }
+    .mainMenu ul li {
+        display: block;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+    .mainMenu ul li a {
+        border-bottom: 1px solid #717bd4;
+        color: #fff;
+        display: block;
+        font-size: 16px;
+        padding-bottom: 12px;
+        padding-left: 60px;
+        padding-top: 9px;
+    }
+    .mainMenu ul li a:after {
+        display: none;
+    }
+    .mainMenu ul li a:hover, .mainMenu ul li a:focus {
+        border-color: #717bd4;
+        color: #fff;
+        background: #3b448f;
+    }
+    .mainMenu {
+        background: transparent none repeat scroll 0 0;
+        height: 380px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        padding: 0;
+        top: 143px;
+    }
+    .mainMenu ul > li:last-child{
+        border-bottom: 0;
+    }
+    .mainMenu .dropDown {
+        background: #3b448f none repeat scroll 0 0;
+        left: 0;
+        opacity: 1;
+        padding: 0;
+        position: relative;
+        top: 0;
+        visibility: visible;
+        width: 100%;
+        border-radius: 0;
+        display: none;
+    }
+    .mainMenu .dropDown li {
+        padding: 0;
+    }
+    .mainMenu .dropDown li a {
+        padding: 10px 0;
+    }
+    .mainMenu .dropDown{
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
+    .mainMenu .hasChild:hover .dropDown {
+        top: 0px;
+    }
+    .hasChild > a:before {
+        content: "\f218";
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        font-family: Ionicons;
+        font-size: 16px;
+    }
+    .hasChild.active > a:before {
+        content: "\f209";
+    }
+    .mainMenu .dropDown li a:hover, .mainMenu .dropDown li a:focus {
+        color: #fff;
+        background: #5a68ce;
+    }
+    .mainMenu ul > li > a:hover, .mainMenu ul > li.active > a {
+        color: #fff;
+    }
+    .headerArea.fixHeader {
+        left: 0;
+        padding-top: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 99;
+        min-height: 75px;
+        padding-bottom: 15px;
+        -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    }
+    .fixHeader .socialIcon {
+        padding-top: 18px;
+    }
+    .fixHeader .logoArea {
+        padding-top: 20px;
+    }
+    .fixHeader .menuBtn {
+        margin-top: 22px;
+    }
+    .fixHeader .mainMenu {
+        top: 88px;
+    }
+    .headerArea.transparentHeader.fixHeader{
+        background: #fff;
+        box-shadow: none;
+    }
+    .transparentHeader.fixHeader .logoArea h1{
+        color: #5a68ce;
+    }
+    .transparentHeader.fixHeader .logoArea {
+        padding-bottom: 3px;
+        padding-top: 18px;
+    }
+    .transparentHeader .mainMenu ul > li {
+        padding-bottom: 0;
+    }
+    .transparentHeader .mainMenu {
+        padding: 0;
+        top: 109px;
+    }
+    .transparentHeader.fixHeader .mainMenu {
+        top: 89px;
+    }
+    .callHead {
+        font-size: 35px;
+    }
+    .callBtn {
+        padding: 16px 35px 22px;
+    }
+    .downArrow {
+        bottom: 60px;
+    }
+    /* Work Area */
+    .signleWork {
+        float: none;
+        margin-top: -2px;
+        width: 100%;
+    }
+    .workHover {
+        padding: 15px 30px;
+    }
+    .workHover h2 {
+        margin: 15px 0 16px;
+        font-size: 20px;
+    }
+    .chartBar canvas{
+        width: 210px;
+    }
+    .chartNumber {
+        font-size: 45px;
+        height: 34px;
+        top: 20px;
+    }
+    .chartContent p {
+        bottom: 45px;
+    }
+    .moreInDribble p {
+        margin-top: 30px;
+        padding: 0 10px;
+    }
+    /* What we do */
+    .serviceDetails {
+        width: 240px;
+    }
+    .serviceIcon {
+        padding: 37px 20px;
+    }
+    .serviceDetails h3 a {
+        font-size: 22px;
+    }
+    .callTwoDesc {
+        margin-left: 35px;
+    }
+    .callToTwoArea .callBtn {
+        margin-left: 0;
+    }
+    .infoIcon {
+        margin-left: 40px;
+    }
+    /* Pricing area */
+    .singlePricing h3 {
+        font-size: 22px;
+    }
+    .pricingInner {
+        padding: 29px 15px 27px;
+    }
+    .singlePricing h1 {
+        font-size: 45px;
+    }
+    .posRele {
+        display: table;
+        width: 100%;
+    }
+    /* What is spire */
+    .iMacImg,.macImg,.iPhoneImg {
+        height: auto;
+        width: 100%;
+    }
+    .iPhoneImg{
+        margin-bottom: 10px;
+        margin-top: 15px;
+    }
+    .promoCont h1 {
+        font-size: 40px;
+    }
+    .promoCont.third h1 {
+        padding-top: 0;
+    }
+    .marginTop {
+        margin-top: 100px;
+    }
+    /* Team Area */
+    .teamImg {
+        margin: 0 auto 16px;
+        width: 268px;
+    }
+    .singleTeam {
+        margin-bottom: 50px;
+    }
+    .teamArea {
+        padding: 78px 0 10px;
+    }
+    /* Blog Area */
+    .blogContent {
+        padding: 35px 15px 0;
+    }
+    .blogContent h2 {
+        font-size: 28px;
+    }
+    .bigAuthor {
+        top: 45px;
+    }
+    .blogPostContent {
+        padding: 18px 0 10px;
+    }
+    .smallAuthor {
+        width: 84px;
+        float: none !important;
+        margin: 0 auto;
+    }
+    .blogPost {
+        margin-left: 0;
+        padding-right: 0;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+    /* Subscribe Area */
+    .subscribContent h2 {
+        color: #fff;
+        float: none !important;
+        font-size: 40px;
+        margin-bottom: 20px;
+        padding-top: 6px;
+        text-align: center;
+    }
+    .subscribeForm input[type="email"] {
+        margin-left: 0;
+        width: 235px;
+    }
+    .subscribeForm input[type="submit"] {
+        margin-left: 15px;
+        padding: 23px 35px;
+    }
+    .subCounter {
+        width: 287px;
+    }
+    /* News area */
+    .news {
+        padding: 20px 10px 0;
+    }
+    .news h2 a {
+        font-size: 25px;
+    }
+    /* Client Area */
+    #clientTesti .carousel-control.right {
+        right: 0;
+    }
+    #clientTesti .carousel-control.left {
+        left: 0;
+    }
+    .clientTestiContent {
+        padding: 23px 20px 25px;
+    }
+    .logoFirstRow {
+        float: none !important;
+        margin: 0 auto;
+    }
+    .clientImg {
+        margin-bottom: 35px;
+    }
+    .logoSecondRow {
+        float: none !important;
+        margin: 35px auto 0;
+    }
+    .chartBarClient canvas {
+        margin: 0 auto;
+        width: 250px;
+    }
+    .callThreeTitle i {
+        padding: 0 15px 0 0;
+        font-size: 55px;
+    }
+    .callThreeTitle h2 {
+        font-size: 30px;
+        width: 338px;
+    }
+    .callThreeWrap {
+        padding: 28px 25px 28px 20px;
+    }
+    .callThreeContent {
+        margin-left: 40px;
+        margin-top: 8px;
+    }
+    .callThreeBtn.text-center.pull-right {
+        float: none !important;
+        display: table;
+        width: 100%;
+        clear: both;
+        padding-top: 20px;
+    }
+    .phoneContact h3 {
+        color: #34374c;
+        font-family: "Lato",sans-serif;
+        font-size: 22px;
+        font-weight: 400;
+        padding: 20px 0 35px;
+    }
+    .onlineChat a {
+        padding: 17px 30px 20px;
+    }
+    .footerSubScribe input {
+        padding: 10px 0 12px 10px;
+    }
+    .footerSubScribe button {
+        right: 5px;
+    }
+    .footerMenu {
+        float: none !important;
+    }
+    .footerSocial ul li {
+        margin-bottom: 15px;
+    }
+    .clientArea .chartContent {
+        overflow: hidden;
+    }
+    .copyText {
+        margin-right: 185px;
+    }
+    #backTo {
+        right: 30px;
+    }
+    /* Blog details */
+    .detailPara .ttlLine {
+        margin-bottom: 30px;
+    }
+    .blockquotePost blockquote {
+        padding: 30px 24px;
+    }
+    /* Project Page */
+    .projectDtailsArea .noPaddingRight{
+        padding-right: 15px !important;
+    }
+    .projectDtailsArea .noPaddingLeft{
+        padding-left: 15px !important;
+    }
+    /* service Page */
+    .serviceHeadingPara i {
+        font-size: 60px;
+        margin-right: 45px;
+    }
+    .serviceHeadingPara .ttlLine {
+        margin-bottom: 50px;
+        margin-right: 40px;
+    }
+    .servicePrice p {
+        margin-left: 30px;
+        padding: 18px 15px 22px;
+        width: 192px;
+        margin-bottom: 25px;
+    }
+    .servicePrice h5 {
+        width: 192px;
+    }
+    .servicePrice a {
+        clear: both;
+        display: table;
+        float: none;
+        margin: 0 auto;
+    }
+    /* News details page */
+    .newsDetailsArea .noPaddingRight{
+        padding-right: 15px !important;
+    }
+    .newsDetailContent {
+        padding-left: 0;
+    }
+    /* Element Page */
+    .chartSection canvas {
+        margin: 0 auto;
+        width: 220px;
+    }
+    .chartContent.photoSkill h1:after {
+        font-size: 45px;
+    }
+    .chartContent.photoSkill p {
+        bottom: 25px;
+    }
+    .defaultPagination li a.prePost {
+        margin-right: 40px;
+    }
+    .defaultPagination li a.nextPost {
+        margin-left: 40px;
+    }
+    .lineFive {
+        min-height: 200px;
+        padding-top: 125px;
+    }
+    .lineFive span {
+        left: -12px;
+        width: 103%;
+    }
+    .quoteStyle .blockquotePost blockquote {
+        padding: 30px 26px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+    /* Header Area */
+    .headerArea {
+        padding-top: 15px;
+        padding-bottom: 23px;
+    }
+    .socialIcon {
+        margin-top: 0;
+        padding-left: 0;
+        text-align: center;
+    }
+    .socialIcon li:last-child{
+        padding-right: 0;
+    }
+    .logoArea {
+        padding-top: 31px;
+    }
+    /* Main Menu */
+    .menuBtn {
+        margin-top: 33px;
+    }
+    .mainMenu ul {
+        background: #5e68ca;
+        text-align: left;
+    }
+    .mainMenu ul li {
+        display: block;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+    .mainMenu .col-lg-12{
+        padding-left: 0;
+    }
+    .mainMenu ul li a {
+        border-bottom: 1px solid #717bd4;
+        color: #fff;
+        display: block;
+        font-size: 16px;
+        padding-bottom: 12px;
+        padding-left: 60px;
+        padding-top: 9px;
+    }
+    .mainMenu ul li a:after {
+        display: none;
+    }
+    .mainMenu ul li a:hover, .mainMenu ul li a:focus {
+        border-color: #717bd4;
+        color: #fff;
+        background: #3b448f;
+    }
+    .mainMenu {
+        background: transparent none repeat scroll 0 0;
+        height: 304px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        padding: 0;
+        top: 143px;
+    }
+    .mainMenu ul > li:last-child{
+        border-bottom: 0;
+    }
+    .mainMenu .dropDown {
+        background: #3b448f none repeat scroll 0 0;
+        left: 0;
+        opacity: 1;
+        padding: 0;
+        position: relative;
+        top: 0;
+        visibility: visible;
+        width: 100%;
+        border-radius: 0;
+        display: none;
+    }
+    .mainMenu .dropDown li {
+        padding: 0;
+    }
+    .mainMenu .dropDown li a {
+        padding: 10px 0;
+    }
+    .mainMenu .dropDown{
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
+    .mainMenu .hasChild:hover .dropDown {
+        top: 0px;
+    }
+    .transparentHeader .mainMenu .hasChild:hover .dropDown {
+        top: 0;
+    }
+    .hasChild > a:before {
+        content: "\f218";
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        font-family: Ionicons;
+        font-size: 16px;
+    }
+    .hasChild.active > a:before {
+        content: "\f209";
+    }
+    .mainMenu .dropDown li a:hover, .mainMenu .dropDown li a:focus {
+        color: #fff;
+        background: #5a68ce;
+    }
+    .mainMenu ul > li > a:hover, .mainMenu ul > li.active > a {
+        color: #fff;
+    }
+    .headerArea.fixHeader {
+        left: 0;
+        padding-top: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 99;
+        min-height: 75px;
+        padding-bottom: 14px;
+        -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    }
+    .fixHeader .socialIcon{
+        display: none;
+    }
+    .fixHeader .logoArea {
+        padding-top: 20px;
+    }
+    .fixHeader .menuBtn {
+        margin-top: 22px;
+    }
+    .fixHeader .mainMenu {
+        top: 88px;
+    }
+    .headerArea.transparentHeader.fixHeader{
+        background: #fff;
+        box-shadow: none;
+    }
+    .transparentHeader.fixHeader .logoArea h1{
+        color: #5a68ce;
+    }
+    .transparentHeader.fixHeader .logoArea {
+        padding-bottom: 3px;
+        padding-top: 18px;
+    }
+    .transparentHeader .mainMenu ul > li {
+        padding-bottom: 0;
+    }
+    .transparentHeader .mainMenu .dropDown > li {
+        padding-bottom: 0;
+    }
+    .transparentHeader .mainMenu {
+        padding: 0;
+        top: 144px;
+    }
+    .transparentHeader.fixHeader .mainMenu {
+        top: 90px;
+    }
+    .callToFirstArea {
+        padding-bottom: 20px;
+        padding-top: 24px;
+    }
+    .callHead {
+        font-size: 45px;
+    }
+    .callToFirstArea .text-right,
+    .callToFirstArea .text-left{
+        text-align: center;
+    }
+    .callDesc {
+        margin-bottom: 20px;
+        padding-top: 20px;
+    }
+    /* Slider area */
+    .sliderArea div {
+        height: 400px !important;
+    }
+    .sliderImg img{
+        height: 100%;
+    }
+    .downArrow{
+        bottom: 90px;
+    }
+    /* Work Area */
+    #mixIt .noPadding{
+        padding: 0 15px 0 20px !important;
+    }
+    .workArea {
+        padding: 54px 0 79px;
+    }
+    .commonTittle {
+        padding: 0 0 56px;
+        font-size: 38px;
+    }
+    .mixiBtn li{
+        display: none;
+    }
+    .mixiBtn li:first-child{
+        display: block;
+        position: relative;
+    }
+    .mixiBtn li span{
+        float: left;
+    }
+    .mixiBtn li i{
+        float: right;
+        padding-left: 17px;
+    }
+    .mixiBtn li a {
+        padding: 12px 18px 14px;
+    }
+    .signleWork{
+        float: none;
+        height: 100%;
+        margin-top: -2px;
+        width: 100%;
+        border-right: 0;
+    }
+    .mixiBtn {
+        margin-bottom: 53px;
+    }
+    .hidden-lg.hidden-md.hidden-sm .chartContent{
+        margin-top: 36px;
+    }
+    .moreInDribble p {
+        margin-top: 33px;
+        padding: 0 90px;
+    }
+    .workHover {
+        padding: 15px 15px;
+    }
+    .workHover p {
+        margin-bottom: 20px;
+    }
+    .catBtn {
+        margin-top: 20px;
+    }
+    /* prettyPhoto styling for small screens */
+    .pp_pic_holder.pp_default { 
+        width: 100%!important; 
+        left: 0!important; 
+        overflow: hidden; 
+    }
+    div.pp_default .pp_content_container .pp_left {
+        padding-left: 0!important; 
+    }
+    div.pp_default .pp_content_container .pp_right { 
+        padding-right: 0!important; 
+    }
+    .pp_content { 
+        width: 100%!important; 
+        height: auto!important; 
+    }
+    .pp_fade { 
+        width: 100%!important; 
+        height: 100%!important; 
+    }
+    a.pp_expand, a.pp_contract, .pp_hoverContainer, .pp_gallery, .pp_top, .pp_bottom { 
+        display: none!important; 
+    }
+    #pp_full_res img { 
+        width: 100%!important; 
+        height: auto!important; 
+    }
+    .pp_details { 
+        background-color: #fff;
+        height: 42px;
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+        padding: 0;
+        width: 100% !important;
+    }
+    a.pp_close { 
+        right: 10px!important; 
+        top: 9px!important; 
+    }
+    /* What We Do */
+    .whatWeDoArea {
+        background: #f5f6ff;
+        padding: 52px 0 70px;
+    }
+    .serviceIcon i {
+        font-size: 45px;
+    }
+    .serviceDetails p {
+        color: #fff;
+        font-size: 14px;
+    }
+    .serviceDetails h3 a {
+        font-size: 20px;
+    }
+    .serviceDetails {
+        width: 195px;
+    }
+    .serviceIcon {
+        padding: 50px 25px 59px 20px;
+    }
+    .infoIcon {
+        float: none !important;
+        margin: 14px auto 0;
+        text-align: center;
+    }
+    .callTwoDesc {
+        margin-bottom: 38px;
+        margin-left: 20px;
+        margin-top: 22px;
+        width: 94%;
+    }
+    .callToTwoArea .col-lg-3.col-sm-3.col-xs-12{
+        text-align: center;
+    }
+    .callToTwoArea {
+        padding: 0 0 25px;
+    }
+    /* Pricing Area */
+    .pricingArea{
+        padding: 52px 0 70px;
+    }
+    .singlePricing.first {
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
+    .pricingInner {
+        padding: 29px 30px 27px;
+    }
+    .pricingCont p {
+        font-size: 14px;
+    }
+    /* Big Dream Area */
+    .bigDreamArea {
+        padding: 30px 0 23px;
+    }
+    #bigDream {
+        height: 450px !important;
+        top: -30px;
+    }
+    .bigDream {
+        height: 240px;
+        margin: 73px auto 0;
+        width: 290px;
+    }
+    .bigDream h1 {
+        font-size: 45px;
+        left: 0;
+        padding-top: 0;
+        top: -80px;
+    }
+    .bigDream a {
+        left: 0;
+        top: 11px;
+    }
+    /* What is Spire */
+    .whatSpireArea{
+        padding: 52px 0 64px;
+    }
+    .iMacImg {
+        float: none;
+        height: auto;
+        margin: 0 auto  10px;
+        width: 290px;
+    }
+    .posRele {
+        clear: both;
+        display: table;
+        position: relative;
+        width: 100%;
+    }
+    .promoCont h1 {
+        font-size: 45px;
+        margin-top: 0;
+        text-align: center;
+    }
+    .promoCont p {
+        color: #3f4360;
+        font-size: 18px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 14px;
+        text-align: center;
+    }
+    .iPhoneImg {
+        float: none;
+        height: auto;
+        margin: 100px auto 0;
+        text-align: center;
+        width: 170px;
+    }
+    .crossLine {
+        left: -6px;
+        top: 40px;
+        width: 102.7%;
+    }
+    .promoCont.second h1 {
+        padding-top: 13px;
+    }
+    .promoCont.second p{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .macImg {
+        float: none;
+        height: auto;
+        width: 290px;
+        margin: 0 auto;
+    }
+    /* Team area */
+    .promoCont.third h1 {
+        padding-top: 12px;
+    }
+    .marginTop {
+        margin-top: 105px;
+    }
+    .singleTeam {
+        margin-bottom: 54px;
+    }
+    .singleTeam:hover .teamImg img{
+        -webkit-transform: scale(1) rotate(0deg);
+        -moz-transform: scale(1) rotate(0deg);
+        -ms-transform: scale(1) rotate(0deg);
+        -o-transform: scale(1) rotate(0deg);
+        transform: scale(1) rotate(0deg);
+    }
+    .teamArea{
+        padding-bottom: 0;
+    }
+    .teamImg {
+        margin: 0 auto 16px;
+        width: 290px;
+    }
+    /* Testimonial Area */
+    .testimonialArea {
+        padding: 40px 0 58px;
+    }
+    .singleTestimonial {
+        margin: 0 auto;
+        padding: 50px 8px 70px;
+        width: 245px;
+    }
+    #testiCrousel .carousel-inner {
+        height: 540px;
+    }
+    #testiCrousel .carousel-control.right {
+        right: 40px;
+    }
+    #testiCrousel .carousel-control.left {
+        left: 40px;
+    }
+    #testiCrousel .carousel-control {
+        bottom: -10px;
+        top: auto;
+    }
+    /* Blog Area */
+    .blogArea {
+        padding: 53px 0 63px;
+    }
+    .blogContent {
+        padding: 36px 30px 18px;
+    }
+    .blogContent h2 {
+        font-size: 25px;
+    }
+    .blogBigThumb {
+        height: 280px;
+    }
+    .blogBigThumb > img {
+        height: 100%;
+    }
+    .bigAuthorImg {
+        margin: 0 auto;
+        width: 123px;
+    }
+    .bigAuthor {
+        left: 0;
+        margin: 0 auto;
+        right: 0;
+        top: 100px;
+    }
+    .blogContentArea {
+        margin-bottom: 15px;
+    }
+    .blogContentArea div.noPadding{
+        padding: 0 !important;
+    }
+    .blogPostContent {
+        padding: 18px 0 0 10px;
+        margin-bottom: 15px;
+    }
+    .blogPost {
+        margin-left: 13px;
+        padding-right: 0;
+        width: 183px;
+        padding-bottom: 10px;
+    }
+    .blogPost h5 a {
+        font-size: 16px;
+    }
+    .readMore {
+        margin-top: 45px;
+    }
+    /* Subscribe Area */
+    .subscribeForm input[type="email"] {
+        margin: 55px auto 15px;
+        width: 290px;
+    }
+    .subscribeForm {
+        text-align: center;
+    }
+    .subscribContent h2 {
+        float: none !important;
+        text-align: center;
+    }
+    .subCounter {
+        margin: 49px auto 10px;
+        padding: 13px 0;
+        width: 290px;
+        float: none !important;
+        display: table;
+        clear: both;
+    }
+    .subscribeForm {
+        float: none !important;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .subscribeForm input[type="submit"] {
+        margin-left: 0;
+    }
+    /* News Area */
+    .newsArea {
+        padding: 52px 0 60px;
+    }
+    .newsContent {
+        margin-bottom: 15px;
+    }
+    .news h2 a {
+        font-size: 25px;
+    }
+    .news {
+        padding: 105px 30px 0;
+    }
+    /* Client Area */
+    .clientArea {
+        padding: 55px 0 60px;
+        background-size: 100% 100%;
+    }
+    #clientTesti .carousel-control.right {
+        right: 30px;
+    }
+    #clientTesti .carousel-control.left {
+        left: 30px;
+    }
+    .clientTestiContent {
+        padding: 23px 20px 25px;
+    }
+    #cLogoCarousel .carousel-control {
+        background-image: none !important;
+        bottom: 0;
+        color: #fff;
+        font-size: 30px;
+        height: 28px;
+        opacity: 1;
+        text-shadow: none;
+        top: 12px;
+        width: 15px;
+    }
+    #cLogoCarousel .clientImg {
+        margin-bottom: 0;
+    }
+    #cLogoCarousel {
+        margin: 63px auto 73px;
+        position: relative;
+    }
+    #cLogoCarousel .carousel-control.right{
+        right: 45px;
+    }
+    #cLogoCarousel .carousel-control.left{
+        left: 45px;
+    }
+    .clientArea .chartContent {
+        float: none !important;
+    }
+    .chartBar canvas {
+        margin: 0 auto;
+        width: 290px;
+    }
+    /* Call To Action */
+    .callThreeContent {
+        clear: both;
+        display: table;
+        float: none !important;
+        margin: 0 auto;
+        text-align: center;
+        width: 225px;
+    }
+    .callThreeTitle h2 {
+        clear: both;
+        display: table;
+        float: none;
+        font-size: 25px;
+        margin: 20px auto 50px;
+        text-align: center;
+        width: 100%;
+    }
+    .callThreeWrap {
+        padding: 15px 20px 58px;
+    }
+    .callThreeTitle {
+        float: none !important;
+        text-align: center;
+    }
+    .callThreeTitle i {
+        float: none;
+    }
+    .callThreeBtn{
+        float: none !important;
+        text-align: center;
+        margin-top: 50px;
+    }
+    /* Contact Area */
+    .contactArea {
+        padding: 52px 0 30px;
+    }
+    .onlineChat{
+        margin-bottom: 20px;
+    }
+    .phoneContact{
+        margin-bottom: 20px;
+    }
+    div.noPadding{
+        padding: 0 15px !important;
+    }
+    /* Footer Area */
+    .footerAbout {
+        margin-top: 72px;
+    }
+    .footerSocial {
+        margin-top: 75px;
+    }.footerArea {
+        padding: 37px 0 70px;
+    }
+    .copyRight {
+        padding: 25px 0 30px;
+    }
+    #backTo {
+        right: 30px;
+        top: 82px;
+    }
+    .copyText {
+        margin-right: 0;
+    }
+    .footerLogo {
+        margin-top: 24px;
+    }
+    /* Home Two */
+    .videoContent h1 {
+        font-size: 50px;
+    }
+    .videoBgArea {
+        height: 520px;
+        overflow: hidden;
+    }
+    #videoPlayer {
+        height: 580px !important;
+    }
+    .videoContent {
+        padding-top: 185px;
+    }
+    .videoBgArea .downArrow {
+        bottom: 50px;
+    }
+    .videoContent a {
+        font-size: 45px;
+        height: 100px;
+        padding-top: 29px;
+        width: 100px;
+    }
+    /* Blog Page */
+    .defaultPagination li a.prePost {
+        margin-right: 10px;
+    }
+    .defaultPagination li a.nextPost {
+        margin-left: 10px;
+    }
+    /* Blog Details */
+    .detailPara .ttlLine {
+        margin-bottom: 30px;
+    }
+    .postTittle {
+        line-height: 1.3;
+    }
+    .videoIfram {
+        height: 250px;
+    }
+    .blockquotePost blockquote {
+        padding: 30px 10px;
+    }
+    .authorName {
+        text-align: right;
+        margin-right: 15px;
+    }
+    .socialShare {
+        margin: 40px auto 25px;
+    }
+    .commentForm textarea {
+        padding-left: 20px;
+        padding-top: 36px;
+    }
+    .commentForm button {
+        padding: 20px;
+        top: 45px;
+    }
+    .commentDate {
+        left: auto;
+        top: -22px;
+    }
+    .commentDate .dot {
+        display: none;
+    }
+    .breadContent h1 {
+        font-size: 35px;
+    }
+    /* Project Page */
+    .projectDtailsArea {
+        padding: 80px 0;
+    }
+    .projectDetails {
+        margin: 0 auto;
+        width: 290px;
+    }
+    .projectDtailsArea .noPaddingRight{
+        padding-right: 15px !important;
+    }
+    .projectPostLink {
+        margin: 25px auto;
+        width: 290px;
+    }
+    .projectDtailsArea .noPaddingLeft{
+        padding-left: 15px !important;
+    }
+    /* Service Page */
+    .serviceHeadingPara i {
+        font-size: 50px;
+        margin-right: 25px;
+    }
+    .serviceHeadingPara .ttlLine {
+        margin-bottom: 48px;
+        margin-right: 30px;
+    }
+    .servicePrice p {
+        clear: both;
+        display: table;
+        float: none;
+        margin: 15px auto;
+    }
+    .servicePrice h5 {
+        clear: both;
+        display: table;
+        float: none;
+        margin: 0 auto;
+    }
+    .servicePrice a {
+        clear: both;
+        display: table;
+        float: none;
+        margin: 0 auto;
+    }
+    /* News details page */
+    .newsDetailsArea .noPaddingRight{
+        padding-right: 15px !important;
+    }
+    .newsDetailContent {
+        margin-top: 35px;
+        padding-left: 0;
+    }
+    /* Element Page */
+    .lineFive {
+        min-height: 135px;
+        padding-top: 70px;
+        width: 100%;
+    }
+    .lineFive span {
+        left: -4px;
+        width: 103%;
+    }
+    .firstBtn {
+        text-align: center;
+    }
+    .callBtn.active {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .callBtn.blank {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .secontBtn {
+        text-align: center;
+        margin-top: 0;
+    }
+    .watch {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+    .thirdBtn .subscribeArea {
+        text-align: center;
+        width: 100%;
+    }
+    .thirdBtn input {
+        margin-right: 0;
+    }
+    .thirdBtn .active {
+        margin: 20px 0;
+    }
+    .fourthBtn {
+        text-align: center;
+        width: 100%;
+    }
+    .purchaseBtn.active {
+        margin: 0 0 20px;
+    }
+    .purchaseBtn.normal {
+        margin-bottom: 20px;
+    }
+    .purchaseBtn {
+        margin-top: 0;
+    }
+    .fifthBtn .menuBtn {
+        display: inline-block;
+        float: none !important;
+        margin-left: 25px;
+        margin-top: 0;
+    }
+    .fifthBtn .menuBtn.active {
+        display: inline-block;
+        float: none !important;
+        margin-left: 25px;
+        margin-top: 0;
+    }
+    .fifthBtn {
+        text-align: center;
+    }
+    .sixthBtn a {
+        float: none;
+        margin: 0 auto 15px;
+    }
+    .textStyle {
+        padding-top: 50px;
+    }
+    .textStyle .noPaddingLeft{
+        padding-left: 15px !important;
+    }
+    .textStyle .noPaddingRight{
+        padding-right: 15px !important;
+    }
+    .generalText {
+        margin-bottom: 40px;
+        margin-top: 10px;
+    }
+    .boldText {
+        margin-bottom: 40px;
+        margin-top: 30px;
+    }
+    .smallText {
+        margin-top: 40px;
+    }
+    .secondNav .projectPostLink {
+        padding: 0;
+    }
+    .thirdNav .projectPostLink {
+        padding: 0;
+    }
+    .fifthNav .projectPostLink {
+        padding-right: 0;
+    }
+    .defaultTable tbody tr td {
+        font-size: 16px;
+    }
+    .defaultTable tbody tr td.thirdCell {
+        padding-left: 16px;
+        padding-right: 20px;
+    }
+    .defaultTable tbody tr td h5 {
+        font-size: 16px;
+    }
+    .chartSection canvas {
+        margin: 0 auto;
+        width: 290px;
+    }
+    .chartContent {
+        margin-top: 40px;
+    }
+    .quoteStyle .blockquotePost blockquote {
+        padding: 30px 10px;
+    }
+
+}
+@media (min-width: 481px) and (max-width: 767px){
+    /* Work area */
+    #mixIt .noPadding{
+        text-align: center;
+    }
+    .signleWork {
+        float: none;
+        margin: -2px auto 0;
+        width: 390px;
+    }
+    /* What We Do */
+    .singleService {
+        border-radius: 5px;
+        margin: 0 auto 30px;
+        width: 450px;
+    }
+    .callTwoDesc {
+        float: none !important;
+        margin: 22px auto 38px;
+        text-align: center;
+        width: 65%;
+    }
+    .pricingCont p {
+        font-size: 16px;
+    }
+    .singlePricing {
+        margin: 0 auto 30px;
+        width: 450px;
+    }
+    .crossLine {
+        width: 102%;
+        top: 65px;
+    }
+    .serviceDetails {
+        width: 330px;
+        margin-left: 20px;
+    }
+    #testiCrousel .carousel-inner {
+        height: 550px;
+        padding-top: 35px;
+    }
+    #testiCrousel .carousel-control.right {
+        right: 25%;
+    }
+    #testiCrousel .carousel-control.left {
+        left: 25%;
+    }
+    .blogContentArea {
+        margin: 0 auto 15px;
+        width: 450px;
+    }
+    .blogContentArea div.noPadding{
+        padding: 0 !important;
+    }
+    .blogPostContent {
+        margin: 0 auto 15px;
+        padding: 18px 0 0 10px;
+        width: 450px;
+    }
+    .blogPost {
+        margin-left: 25px;
+        width: 283px;
+    }
+    .newsContent {
+        margin: 0 auto 15px;
+        width: 450px;
+    }
+    .clientTestimonila {
+        margin: 0 auto;
+        width: 290px;
+    }
+    #clientTesti .carousel-control.right {
+        right: 25%;;
+    }
+    #clientTesti .carousel-control.left {
+        left: 25%;;
+    }
+    #cLogoCarousel .carousel-control.right {
+        right: 25%;
+    }
+    #cLogoCarousel .carousel-control.left {
+        left: 25%;
+    }
+    .callThreeWrap {
+        width: 450px;
+        margin: 0 auto;
+    }
+    .onlineChat,.phoneContact {
+        margin: 0 auto 20px;
+        width: 450px;
+    }
+    .contactForm{
+        margin: 0 auto;
+        width: 450px;
+    }
+    .footerAbout,.footerSocial {
+        margin: 72px auto 0;
+        width: 450px;
+    }
+    .copyText {
+        text-align: center;
+        width: 100%;
+    }
+    /* Blog details */
+    .videoIfram {
+        height: 350px;
+    }
+    .blockquotePost blockquote {
+        padding: 30px 65px;
+    }
+    .authorName {
+        margin-right: 15px;
+        text-align: right;
+    }
+    /* Element Page */
+    .purchaseBtn.normal {
+        margin-bottom: 0;
+    }
+    .purchaseBtn.active {
+        margin: 0;
+    }
+}

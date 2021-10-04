@@ -1,0 +1,91 @@
+/*
+  Theme Name: Spire | Creative Agency HTML5 Responsive Template
+  Theme URL: http://themewar.com/html/spire/
+  Author: ThemeWar
+  Author URI: http://www.themewar.com
+  Description: Creative Agency HTML5 Responsive Template
+  Version: 1.0
+*/
+/*=======================================================================
+[Table of contents]
+=========================================================================
+1. Font Include
+2. Normalization
+3. Common Content
+4. Margin and padding settings
+========================================================================*/
+/* Font Include */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700,400italic);
+
+/* Normalization */
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+}  
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+    line-height: .9;
+    font-weight: 700;
+    color: #34374c;
+    font-family: 'Montserrat', sans-serif;
+}
+p{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #3f4360;
+    line-height: 1.2222;
+}
+ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a, a:hover,a:focus{
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+}
+a:hover,a:focus{
+    color: inherit;
+}
+a{
+    -webkit-transition: all 700ms ease;
+    -moz-transition: all 700ms ease;
+    -ms-transition: all 700ms ease;
+    -o-transition: all 700ms ease;
+    transition: all 700ms ease;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+/* Common Content */
+.commonTittle{
+    color: #34374c;
+    font-size: 49px;
+    padding: 0 0 75px;
+    text-align: center;
+}
+.white{
+    color: #fff !important;
+}
+.commonTittle.border{
+    border-bottom: 1px solid #d4d6e3;
+    margin-bottom: 35px;
+    padding-bottom: 26px;
+}
+
+/* Margin and padding settings */
+.noPaddingLeft{
+    padding-left: 0 !important;
+}
+.noPaddingRight{
+    padding-right: 0 !important;
+}
+.noPadding{
+    padding: 0 !important;
+}
