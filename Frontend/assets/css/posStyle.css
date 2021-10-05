@@ -77,6 +77,27 @@
 
 /*============================ Header Section ============================*/
 
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 3px 3px 5px #ebebeb;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
 .headerArea {
     min-height: 50px;
     background: #09A8FA;
@@ -4663,6 +4684,7 @@ hgroup h4 {
 
  ::-webkit-scrollbar {
     width: 5px;
+    display: none;
 }
 
 
