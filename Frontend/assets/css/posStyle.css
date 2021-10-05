@@ -78,10 +78,12 @@
 /*============================ Header Section ============================*/
 
 .headerArea {
-    min-height: 109px;
+    min-height: 50px;
     background: #09A8FA;
     padding-top: 28px;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
 .mainMenu.headerFix {
