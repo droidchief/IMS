@@ -9,7 +9,7 @@ if (backButton != null) {
 // Get current date and time
 var today = new Date();
 var date = today.getFullYear('y') + '-' + (today.getMonth('M') + 1) + '-' + today.getDate();
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+var time = today.getHours() + ":" + today.getMinutes()
 
 // Update current time and date in the UI
 var currentDate = document.getElementById("currentDate")
