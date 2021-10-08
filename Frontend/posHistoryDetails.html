@@ -124,8 +124,22 @@
 
     <div class="container">
         <div class="row">
-            <div style="background-color: white; margin-top: 120px;" class="col-md-6">
+
+            <div style="display: flex; align-items: center; margin-top: 120px; color: #1F78B4;">
+                <i style="font-size: 15px;" class="fa fa-long-arrow-left backButton" aria-hidden="true"></i>
+
+                <h4 style="margin-left: 20px;">History</h4>
+            </div>
+
+            <div style="background-color: white;" class="col-md-7">
                 <div style="display: flex;">
+
+                    <select style="border: 0.5px solid #000; border-radius: 5px; height: 23px; width: 78px; padding-left: 5px; font-size: 13px; margin: 20px; color: rgb(184, 184, 184);" name=”color”>
+                        <option value=”red”>Daily</option>
+                        <option value=”purple”>Monthly</option>
+                        <option value=”purple”>Yearly</option>
+                    </select>
+
                     <div style="margin: 10px;" class="card">
                         <div class="card-title">
                             <p style="color: #43A047; margin-right: 20px; font-size: 20px; font-weight: bold;">Toatal Sales</p>
@@ -157,11 +171,11 @@
                         <thead>
                             <tr style="background-color: #09A8FA; color: white;">
                                 <th>Date</th>
-                                <th>Total Sale</th>
-                                <th>Cash Sale</th>
-                                <th>Transfer</th>
-                                <th>Card</th>
-                                <th>Credit</th>
+                                <th>Ref Number</th>
+                                <th>Customer Name</th>
+                                <th>Item</th>
+                                <th>Amount</th>
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -170,9 +184,9 @@
                             <tr>
                                 <td style="color: rgba(0, 0, 0, 0.46);">12/12/12</td>
                                 <td style="color: rgba(0, 0, 0, 0.46);">470,000</td>
-                                <td style="color: rgba(0, 0, 0, 0.46);">270,000</td>
-                                <td style="color: rgba(0, 0, 0, 0.46);">670,000</td>
-                                <td style="color: rgba(0, 0, 0, 0.46);">970,000</td>
+                                <td style="color: rgba(0, 0, 0, 0.46);">Usmai</td>
+                                <td style="color: rgba(0, 0, 0, 0.46);">5(7)</td>
+                                <td style="color: rgba(0, 0, 0, 0.46);">Pending</td>
                                 <td style="color: rgba(0, 0, 0, 0.46);">170,000</td>
                                 <td>
                                     <i data-toggle="modal" data-target="#modal-normal" style="color: #09A8FA; cursor: pointer;" class="fa fa-eye" aria-hidden="true"></i>
@@ -182,9 +196,9 @@
                             <tr>
                                 <td style="color: rgba(0, 0, 0, 0.46);">12/12/12</td>
                                 <td style="color: rgba(0, 0, 0, 0.46);">470,000</td>
-                                <td style="color: rgba(0, 0, 0, 0.46);">270,000</td>
-                                <td style="color: rgba(0, 0, 0, 0.46);">670,000</td>
-                                <td style="color: rgba(0, 0, 0, 0.46);">970,000</td>
+                                <td style="color: rgba(0, 0, 0, 0.46);">Usmai</td>
+                                <td style="color: rgba(0, 0, 0, 0.46);">5(7)</td>
+                                <td style="color: rgba(0, 0, 0, 0.46);">Pending</td>
                                 <td style="color: rgba(0, 0, 0, 0.46);">170,000</td>
                                 <td>
                                     <i data-toggle="modal" data-target="#modal-normal" style="color: #09A8FA; cursor: pointer;" class="fa fa-eye" aria-hidden="true"></i>
@@ -193,9 +207,9 @@
                             <tr>
                                 <td style="color: rgba(0, 0, 0, 0.46);">12/12/12</td>
                                 <td style="color: rgba(0, 0, 0, 0.46);">470,000</td>
-                                <td style="color: rgba(0, 0, 0, 0.46);">270,000</td>
-                                <td style="color: rgba(0, 0, 0, 0.46);">670,000</td>
-                                <td style="color: rgba(0, 0, 0, 0.46);">970,000</td>
+                                <td style="color: rgba(0, 0, 0, 0.46);">Usmai</td>
+                                <td style="color: rgba(0, 0, 0, 0.46);">5(7)</td>
+                                <td style="color: rgba(0, 0, 0, 0.46);">Pending</td>
                                 <td style="color: rgba(0, 0, 0, 0.46);">170,000</td>
                                 <td>
                                     <i data-toggle="modal" data-target="#modal-normal" style="color: #09A8FA; cursor: pointer;" class="fa fa-eye" aria-hidden="true"></i>
@@ -205,9 +219,9 @@
                             <tr>
                                 <td style="color: rgba(0, 0, 0, 0.46);">12/12/12</td>
                                 <td style="color: rgba(0, 0, 0, 0.46);">470,000</td>
-                                <td style="color: rgba(0, 0, 0, 0.46);">270,000</td>
-                                <td style="color: rgba(0, 0, 0, 0.46);">670,000</td>
-                                <td style="color: rgba(0, 0, 0, 0.46);">970,000</td>
+                                <td style="color: rgba(0, 0, 0, 0.46);">Usmai</td>
+                                <td style="color: rgba(0, 0, 0, 0.46);">5(7)</td>
+                                <td style="color: rgba(0, 0, 0, 0.46);">Pending</td>
                                 <td style="color: rgba(0, 0, 0, 0.46);">170,000</td>
                                 <td>
                                     <i data-toggle="modal" data-target="#modal-normal" style="color: #09A8FA; cursor: pointer;" class="fa fa-eye" aria-hidden="true"></i>
@@ -224,7 +238,7 @@
 
 
 
-            <div style="background-color: white; margin-top: 120px;" class="col-md-6">
+            <div style="background-color: white; margin-top: 120px;" class="col-md-5">
 
                 <h4 style="font-size: 14px;">Debtors</h4>
 
