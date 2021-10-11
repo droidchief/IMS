@@ -20,6 +20,9 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
 
+    <link href="assets/plugins/datatables/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/datatables/css/jquery.dataTables-custom.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body class="sticky-header">
@@ -708,7 +711,7 @@
             </div>
 
 
-            <div class="row" style="margin: 230px 10px;">
+            <div class="row" style="margin: 230px 10px 0;">
 
                 <div class="col-md-6">
                     <div class="white-box">
@@ -834,10 +837,47 @@
                     </div>
                 </div>
 
+            </div>
+
+            <div class="row" style="overflow-y: scroll; height: 70vh;">
+                <div class="col-md-12 card">
+                    <div style="margin: 20px;" class="table-responsive">
+                        <table id="example" class="display table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Vendor</th>
+                                    <th>Dispatch Date</th>
+                                    <th>Arrival Date</th>
+                                    <th>Destination</th>
+                                    <th>Product</th>
+                                    <th>Amount</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td style="color: #2F3478;">23/09/2021</td>
+                                    <td style="color: #2F3478;">Bravo</td>
+                                    <td style="color: #2F3478;">23/09/2021</td>
+                                    <td style="color: #2F3478;">23/09/2021</td>
+                                    <td style="color: #2F3478;">Store A</td>
+                                    <td style="color: #2F3478;">Jungle Wraps</td>
+                                    <td style="color: #2F3478;">78, 893</td>
+
+                                    <td>
+                                        <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
 
             </div>
-
         </div>
 
     </div>
