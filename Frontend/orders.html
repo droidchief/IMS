@@ -448,6 +448,86 @@
             </div>
         </div>
 
+        <div id="modal-pending-order" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h5 class="modal-title">Pending Orders</h5>
+                    </div>
+
+                    <div style="overflow-y: scroll; height: 70vh;" class="modal-body">
+
+                        <div>
+
+                            <div class=" table-responsive card">
+                                <style>
+                                    .m {
+                                        font-size: small !important;
+                                    }
+                                </style>
+                                <table class="table table-striped table-hover h6">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-nowrap m">Date</th>
+                                            <th class="text-nowrap m">Ref Number</th>
+                                            <th class="text-nowrap m">Customer</th>
+                                            <th class="text-nowrap m">Order</th>
+                                            <th class="text-nowrap m">Quantity</th>
+                                            <th class="text-nowrap m">Amount</th>
+                                            <th class="text-nowrap m">Status</th>
+                                            <th class="text-nowrap m">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>22/03/2021</td>
+                                            <td>239it</td>
+                                            <td>Customer 09</td>
+                                            <td>10_1</td>
+                                            <td>90</td>
+                                            <td>23, 689</td>
+                                            <td>Pending</td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                        </button>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li data-toggle="modal" data-target="#modal-view-reciept">
+                                                            <a href="#">
+                                                                    View <span><i style="margin: 5px 0 5px 17px;" class="fa fa-eye" aria-hidden="true"></i></span>
+                                                                </a>
+                                                        </li>
+                                                        <li data-toggle="modal" data-target="#modal-reverse-acount">
+                                                            <a href="#">
+                                                                Reverse <span><i style="margin: 5px 0 5px 17px;" class="fa fa-sign-out" aria-hidden="true"></i></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <div style="line-height: 10px; font-size: 12px; font-weight: 400; color: #2F3478; margin-top: 30px;">
+                                <p>Quantity: <b>5</b></p>
+                                <p>Amount: <b>47, 898</b></p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
         <div id="modal-assign-order" class="modal fade" role="dialog">
             <div class="modal-dialog modal-sm">
 
@@ -610,7 +690,7 @@
 
 
 
-                        <div style="margin: 5px; display: flex;" class="card">
+                        <div data-toggle="modal" data-target="#modal-pending-order" style="margin: 5px; display: flex;" class="card">
                             <img src="assets/images/next_card_icon.svg" alt="">
                         </div>
 
