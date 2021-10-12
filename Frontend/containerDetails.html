@@ -73,7 +73,7 @@
             border: 0.5px solid #000;
             border-radius: 5px;
             height: 23px;
-            width: 78px;
+            width: 150px;
             padding-left: 5px;
             font-size: 13px;
             margin: 0;
@@ -89,10 +89,10 @@
                 var cols = "";
                 cols += '<td><select class="ss" id="item" name = "stock[]" required><option selected value="">Item...</option>uuu</option></select></td>';
                 cols += '<td><select class="ss" id="type" name = "type[]" required> <option selected value="">Form...</option> <option value="Injection">Injection</option> <option value="Tablet">Tablet</option>            <option value="Syrup">Syrup</option>           </select></td>';
-                cols += '<td><input type="text" required="required" placeholder ="Unit Price" class="form-control" name="uPrice[]" id="uPrice"></td>';
-                cols += '<td><input type="number" required="required" placeholder ="Quantity" class="form-control" name="quantity[]" id="quantity" ></td>';
-                cols += '<td><input type="text" required="required" placeholder ="Total Price" class="form-control" name="price[]" id="price" readonly = "readonly"></td>';
-                cols += '<td><a class="deleteRow"><button type="button" class="delete-row btn btn-outline-danger">Delete</button></a></td>';
+                cols += '<td><input class="ss" type="text" required="required" placeholder ="Unit Price" class="form-control" name="uPrice[]" id="uPrice"></td>';
+                cols += '<td><input class="ss" type="number" required="required" placeholder ="Quantity" class="form-control" name="quantity[]" id="quantity" ></td>';
+                cols += '<td><input class="ss" type="text" required="required" placeholder ="Total Price" class="form-control" name="price[]" id="price" readonly = "readonly"></td>';
+                cols += '<td><a class="deleteRow"><button type="button" class="btn btn-danger">Delete</button></a></td>';
                 newRow.append(cols);
 
                 $("table.order-list").append(newRow);
@@ -338,7 +338,7 @@
         <!--body wrapper start-->
         <div class="wrapper">
 
-            <div style="display: flex; align-items: center;">
+            <div style="display: flex; align-items: center; margin-top: 20px;">
                 <i style="margin-left: 20px; font-size: 15px;" class="fa fa-long-arrow-left backButton" aria-hidden="true"></i>
 
                 <h4>New Shipment</h4>
@@ -384,96 +384,90 @@
                                 </section>
 
                                 <h3>Product Listing</h3>
-                                <section style="display: flex;">
+                                <section>
 
-                                    <div class="container-fluid">
-                                        <form method="POST" action="processTransaction.php" name="addTransaction">
-                                            <br />
-                                            <table class="order-list table">
+                                    <form style="overflow-y: scroll; height: 52vh;" method="POST" action="processTransaction.php" name="addTransaction">
+                                        <table class="order-list table">
 
-                                                <thead class="thead-dark">
-                                                    <tr>
-                                                        <th scope="col">Product Name</th>
-                                                        <th scope="col">Bale Type</th>
-                                                        <th scope="col">Buying Price</th>
-                                                        <th scope="col">Quantity</th>
-                                                        <th scope="col">Amount</th>
-                                                        <th scope="col">Action</th>
-                                                    </tr>
-                                                </thead>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Product Name</th>
+                                                    <th scope="col">Bale Type</th>
+                                                    <th scope="col">Buying Price</th>
+                                                    <th scope="col">Quantity</th>
+                                                    <th scope="col">Amount</th>
+                                                    <th scope="col">Action</th>
+                                                </tr>
+                                            </thead>
 
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <select class="ss" id="item" name="stock[]" required>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <select class="ss" id="item" name="stock[]" required>
                                                                 <option selected value="">Item...</option>
 
                                                             </select>
-                                                        </td>
-                                                        <td><select class="ss" id="type" name="type[]" required>
+                                                    </td>
+                                                    <td><select class="ss" id="type" name="type[]" required>
                                                                 <option selected value="">Form...</option>
                                                                 <option value="Injection">Injection</option>
                                                                 <option value="Tablet">Tablet</option>
                                                                 <option value="Syrup">Syrup</option>
 
                                                             </select></td>
-                                                        <td>
-                                                            <input type="text" required placeholder="Unit Price" class="form-control" name="uPrice[]" id="uPrice">
-                                                        </td>
-                                                        <td><input type="number" required placeholder="Quantity" class="form-control" name="quantity[]" id="quantity">
-                                                        </td>
-                                                        <td> <input type="text" required placeholder="Total Price" class="form-control" name="price[]" id="price" readonly>
-                                                        </td>
-                                                        <td>
-                                                            <a class="deleteRow"> <button type="button" class="delete-row btn btn-outline-danger">Delete</button></a>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                                <tr>
-                                                    <td colspan="5" style="text-align: center;">
-                                                        <input class="btn btn-outline-primary" type="button" id="addrow" value="Add Transaction" />
+                                                    <td>
+                                                        <input class="ss" type="text" required placeholder="Unit Price" class="form-control" name="uPrice[]" id="uPrice">
+                                                    </td>
+                                                    <td><input class="ss" type="number" required placeholder="Quantity" class="form-control" name="quantity[]" id="quantity">
+                                                    </td>
+                                                    <td> <input class="ss" type="text" required placeholder="Total Price" class="form-control" name="price[]" id="price" readonly>
+                                                    </td>
+                                                    <td>
+                                                        <a class="deleteRow"> <button type="button" class="btn btn-danger">Delete</button></a>
                                                     </td>
                                                 </tr>
-                                                <th style="border:none"></th>
-                                                <tbody style="border:none"></tbody>
-                                                <tbody>
-                                                    <thead class="thead-dark">
-                                                        <tr>
-                                                            <th scope="col">Client</th>
-                                                            <th scope="col">Date</th>
-                                                            <th scope="col">Total of Transaction</th>
-                                                            <th scope="col">Total Paid</th>
-                                                            <th scope="col">Outstanding Balance</th>
-                                                        </tr>
-                                                    </thead>
+                                            </tbody>
+                                            <tr>
+                                                <td colspan="5" style="text-align: center;">
+                                                    <button style="border-radius: 5px; margin-top: 20px; outline: none;" class="btn btn-warning" type="button" id="addrow">Add Transaction</button>
+                                                </td>
+                                            </tr>
+                                            <th style="border:none"></th>
+                                            <tbody style="border:none"></tbody>
+                                            <tbody>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Total Amount</th>
+                                                        <th scope="col">Paid</th>
+                                                        <th scope="col">Balance</th>
+                                                        <th scope="col">Due Date</th>
+                                                    </tr>
+                                                </thead>
 
-                                                    <tfoot>
+                                                <tfoot>
 
-                                                        <tr>
-                                                            <td> <select class="custom-select" id="client" name="client" required>
-                                                                <option selected value="">Select...</option>
+                                                    <tr>
+                                                        <td><input type="text" class="form-control ss" id="total" name="totalAmount" placeholder="0" readonly="readonly" onkeyup="sum()" required>
+                                                        </td>
 
-                                                                <option value=""></option>
+                                                        <td>
+                                                            <input type="number" class="form-control ss" id="tPaid" name="totalPaid" placeholder="0" onkeyup="sum()" required>
+                                                        </td>
 
-                                                            </select></td>
-                                                            <td><input type="date" max="3000-12-31" min="1000-01-01" class="form-control" id="tDate" name="transactionDate" placeholder="date" required></td>
-                                                            <td><input type="text" class="form-control" id="total" name="totalTransaction" placeholder="Total Transaction" readonly="readonly" onkeyup="sum()" required>
-                                                            </td>
-                                                            <td><input type="number" class="form-control" id="tPaid" name="totalPaid" placeholder="Total Paid" onkeyup="sum()" required></td>
-                                                            <td><input type="text" class="form-control" id="oBalance" name="outstanding" placeholder="Outstanding" readonly="readonly" required></td>
-                                                        </tr>
-                                                    </tfoot>
-                                            </table>
-                                            <br />
-                                            <br />
-                                            <div class="text-right">
+                                                        <td><input type="text" class="form-control ss" id="oBalance" name="outstanding" placeholder="0" readonly="readonly" required></td>
 
-                                                <input type="SUBMIT" value="Process Transaction" name="processT" class="btn btn-primary" />
-                                            </div>
-                                            <input name="h" type="hidden" id="h" value="0" />
-                                        </form>
-                                        <br /> <br />
-                                    </div>
+                                                        <td><input type="date" max="3000-12-31" min="1000-01-01" class="form-control ss" id="tDate" name="transactionDate" placeholder="Due Date" required></td>
+                                                    </tr>
+                                                </tfoot>
+                                        </table>
+                                        <br />
+                                        <br />
+                                        <div class="text-right">
+
+                                            <input type="SUBMIT" value="Process Transaction" name="processT" class="btn btn-primary" />
+                                        </div>
+                                        <input name="h" type="hidden" id="h" value="0" />
+                                    </form>
                             </div>
 
                         </div>
