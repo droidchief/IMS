@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Omnicare - Add Transaction</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+        form {
+            margin: 20px 0;
+        }
+        
+        form input,
+        button {
+            padding: 5px;
+        }
+        
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid #cdcdcd;
+        }
+        
+        table th,
+        table td {
+            padding: 10px;
+            text-align: left;
+        }
+        
+        .bs-example {
+            margin: 20px;
+        }
+        
+        .hover:hover {
+            text-decoration: none;
+            background-color: #fafafa;
+        }
+    </style>
+    <script src="vendor/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("#addrow").on("click", function() {
+
+                var newRow = $("<tr>");
+                var cols = "";
+                cols += '<td><select class="custom-select" id="item" name = "stock[]" required><option selected value="">Item...</option>uuu</option></select></td>';
+                cols += '<td><select class="custom-select" id="type" name = "type[]" required> <option selected value="">Form...</option> <option value="Injection">Injection</option> <option value="Tablet">Tablet</option>            <option value="Syrup">Syrup</option>           </select></td>';
+                cols += '<td><input type="text" required="required" placeholder ="Unit Price" class="form-control" name="uPrice[]" id="uPrice"></td>';
+                cols += '<td><input type="number" required="required" placeholder ="Quantity" class="form-control" name="quantity[]" id="quantity" ></td>';
+                cols += '<td><input type="text" required="required" placeholder ="Total Price" class="form-control" name="price[]" id="price" readonly = "readonly"></td>';
+                cols += '<td><a class="deleteRow"><button type="button" class="delete-row btn btn-outline-danger">Delete</button></a></td>';
+                newRow.append(cols);
+
+                $("table.order-list").append(newRow);
+            });
+
+            $("table.order-list").on("change", 'input[id^="uPrice"], input[id^="quantity"]', function(event) {
+                calculateRow($(this).closest("tr"));
+                calculateGrandTotal();
+            });
+
+            $("table.order-list").on("click", "a.deleteRow", function(event) {
+                $(this).closest("tr").remove();
+                calculateGrandTotal();
+            });
+        });
+
+        function calculateRow(row) {
+            var price = +row.find('input[id^="uPrice"]').val();
+            var qty = +row.find('input[id^="quantity"]').val();
+            row.find('input[id^="price"]').val((price * qty).toFixed(2));
+        }
+
+        function calculateGrandTotal() {
+            var grandTotal = 0;
+            $("table.order-list").find('input[id^="price"]').each(function() {
+                grandTotal += +$(this).val();
+            });
+            $("#grandtotal").text(grandTotal.toFixed(2));
+            var total = document.getElementById('total');
+            total.value = grandTotal;
+
+        }
+
+        function sum() {
+            var total = document.getElementById('total').value;
+            var totalPaid = document.getElementById('tPaid').value;
+            if (total == "")
+                total = 0;
+            if (totalPaid == "")
+                totalPaid = 0;
+
+            var result = parseInt(total) - parseInt(totalPaid);
+            if (!isNaN(result)) {
+                document.getElementById('oBalance').value = result;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading"><img src="logo1.png" width="200" height="100" style="margin-bottom:-15px" />
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="client.php" class="list-group-item list-group-item-action bg-light"><i class="fa fa-user"
+                        style="font-size:24px"></i> Client</a>
+                <a href="stock.php" class="list-group-item list-group-item-action bg-light"><i
+                        class="fa fa-shopping-basket" style="font-size:24px"></i> Stock</a>
+                <a href="transaction.php" class="list-group-item list-group-item-action bg-dark" style="color:lightgray"><i class="fa fa-money" style="font-size:24px"></i> Transactions</a>
+                <a href="analysis.php" class="list-group-item list-group-item-action bg-light"><i
+                        class="fa fa-line-chart" style="font-size:24px"></i> Analsis</a>
+                <div class="dropdown">
+                    <a class="list-group-item list-group-item-action btn bg-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+                        <i class="fa fa-files-o fa-fw" style="font-size:24px"></i> Expenses
+                    </a>
+
+                    <div class="dropdown-menu">
+                        <h5 class="dropdown-header">Total Expenses</h5>
+                        <a class="dropdown-item" href="drug.php">Drug Cost</a>
+                        <a class="dropdown-item" href="cosmetic.php">Cosmetics Cost</a>
+                        <a class="dropdown-item" href="medical.php">Medical Equipment Cost</a>
+                        <a class="dropdown-item" href="other.php">Miscellaneous Cost</a>
+                        <a class="dropdown-item" href="employee.php">Employee Salary</a>
+                    </div>
+                </div>
+                <a href="user.php" class="list-group-item list-group-item-action bg-light"><i class="fa fa-users"
+                        style="font-size:24px"></i> Users</a>
+
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <a href="transaction.php">
+                    <button class="btn btn-primary">Go Back</button></a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                                <a class="dropdown-item" href="changePassword.php">Change Password</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Sign Out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container-fluid">
+                <form method="POST" action="processTransaction.php" name="addTransaction">
+                    <div class="card-header py-3">
+
+                        <h4 class="m-0 font-weight-bold text-secondary">Add new Transaction(s) </a>
+                        </h4>
+                    </div>
+                    <br />
+                    <table class="order-list table">
+
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Stock</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Unit Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Manage</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <select class="custom-select" id="item" name="stock[]" required>
+                                        <option selected value="">Item...</option>
+
+                                    </select>
+                                </td>
+                                <td><select class="custom-select" id="type" name="type[]" required>
+                                        <option selected value="">Form...</option>
+                                        <option value="Injection">Injection</option>
+                                        <option value="Tablet">Tablet</option>
+                                        <option value="Syrup">Syrup</option>
+
+                                    </select></td>
+                                <td>
+                                    <input type="text" required placeholder="Unit Price" class="form-control" name="uPrice[]" id="uPrice">
+                                </td>
+                                <td><input type="number" required placeholder="Quantity" class="form-control" name="quantity[]" id="quantity"></td>
+                                <td> <input type="text" required placeholder="Total Price" class="form-control" name="price[]" id="price" readonly></td>
+                                <td>
+                                    <a class="deleteRow"> <button type="button" class="delete-row btn btn-outline-danger">Delete</button></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tr>
+                            <td colspan="5" style="text-align: center;">
+                                <input class="btn btn-outline-primary" type="button" id="addrow" value="Add Transaction" />
+                            </td>
+                        </tr>
+                        <th style="border:none"></th>
+                        <tbody style="border:none"></tbody>
+                        <tbody>
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Client</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Total of Transaction</th>
+                                    <th scope="col">Total Paid</th>
+                                    <th scope="col">Outstanding Balance</th>
+                                </tr>
+                            </thead>
+
+                            <tfoot>
+
+                                <tr>
+                                    <td> <select class="custom-select" id="client" name="client" required>
+                                        <option selected value="">Select...</option>
+                                        
+                                        <option value=""></option>
+                                        
+                                    </select></td>
+                                    <td><input type="date" max="3000-12-31" min="1000-01-01" class="form-control" id="tDate" name="transactionDate" placeholder="date" required></td>
+                                    <td><input type="text" class="form-control" id="total" name="totalTransaction" placeholder="Total Transaction" readonly="readonly" onkeyup="sum()" required>
+                                    </td>
+                                    <td><input type="number" class="form-control" id="tPaid" name="totalPaid" placeholder="Total Paid" onkeyup="sum()" required></td>
+                                    <td><input type="text" class="form-control" id="oBalance" name="outstanding" placeholder="Outstanding" readonly="readonly" required></td>
+                                </tr>
+                            </tfoot>
+                    </table>
+                    <br />
+                    <br />
+                    <div class="text-right">
+
+                        <input type="SUBMIT" value="Process Transaction" name="processT" class="btn btn-primary" />
+                    </div>
+                    <input name="h" type="hidden" id="h" value="0" />
+                </form>
+                <br /> <br />
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+
+</html>

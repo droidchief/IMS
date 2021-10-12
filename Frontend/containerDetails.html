@@ -10,6 +10,10 @@
     <link rel="icon" href="assets/images/logo.png" type="image/png">
     <title>Kwari IMS</title>
 
+    <!-- <link href="transactionTable/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
     <!--Begin  Page Level  CSS -->
     <link href="assets/plugins/morris-chart/morris.css" rel="stylesheet">
     <link href="assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
@@ -23,6 +27,119 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
     <!--End  Page Level  CSS -->
+
+    <style type="text/css">
+        form {
+            margin: 20px 0;
+        }
+        
+        form input,
+        button {
+            padding: 5px;
+        }
+        
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid #cdcdcd;
+        }
+        
+        table th,
+        table td {
+            padding: 10px;
+            text-align: left;
+        }
+        
+        .bs-example {
+            margin: 20px;
+        }
+        
+        .hover:hover {
+            text-decoration: none;
+            background-color: #fafafa;
+        }
+    </style>
+
+    <script src="transactionTable/vendor/jquery-1.12.4.min.js"></script>
+
+    <style>
+        .ss {
+            border: 0.5px solid #000;
+            border-radius: 5px;
+            height: 23px;
+            width: 78px;
+            padding-left: 5px;
+            font-size: 13px;
+            margin: 0;
+            color: rgb(184, 184, 184);
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+
+            $("#addrow").on("click", function() {
+
+                var newRow = $("<tr>");
+                var cols = "";
+                cols += '<td><select class="ss" id="item" name = "stock[]" required><option selected value="">Item...</option>uuu</option></select></td>';
+                cols += '<td><select class="ss" id="type" name = "type[]" required> <option selected value="">Form...</option> <option value="Injection">Injection</option> <option value="Tablet">Tablet</option>            <option value="Syrup">Syrup</option>           </select></td>';
+                cols += '<td><input type="text" required="required" placeholder ="Unit Price" class="form-control" name="uPrice[]" id="uPrice"></td>';
+                cols += '<td><input type="number" required="required" placeholder ="Quantity" class="form-control" name="quantity[]" id="quantity" ></td>';
+                cols += '<td><input type="text" required="required" placeholder ="Total Price" class="form-control" name="price[]" id="price" readonly = "readonly"></td>';
+                cols += '<td><a class="deleteRow"><button type="button" class="delete-row btn btn-outline-danger">Delete</button></a></td>';
+                newRow.append(cols);
+
+                $("table.order-list").append(newRow);
+            });
+
+            $("table.order-list").on("change", 'input[id^="uPrice"], input[id^="quantity"]', function(event) {
+                calculateRow($(this).closest("tr"));
+                calculateGrandTotal();
+            });
+
+            $("table.order-list").on("click", "a.deleteRow", function(event) {
+                $(this).closest("tr").remove();
+                calculateGrandTotal();
+            });
+        });
+
+        function calculateRow(row) {
+            var price = +row.find('input[id^="uPrice"]').val();
+            var qty = +row.find('input[id^="quantity"]').val();
+            row.find('input[id^="price"]').val((price * qty).toFixed(2));
+        }
+
+        function calculateGrandTotal() {
+            var grandTotal = 0;
+            $("table.order-list").find('input[id^="price"]').each(function() {
+                grandTotal += +$(this).val();
+            });
+            $("#grandtotal").text(grandTotal.toFixed(2));
+            var total = document.getElementById('total');
+            total.value = grandTotal;
+
+        }
+
+        function sum() {
+            var total = document.getElementById('total').value;
+            var totalPaid = document.getElementById('tPaid').value;
+            if (total == "")
+                total = 0;
+            if (totalPaid == "")
+                totalPaid = 0;
+
+            var result = parseInt(total) - parseInt(totalPaid);
+            if (!isNaN(result)) {
+                document.getElementById('oBalance').value = result;
+            }
+        }
+    </script>
 
 </head>
 
@@ -52,7 +169,7 @@
                         <span>Dashboard</span></a>
                 </li>
                 <li><a href="product.html"><i class="fa fa-th" aria-hidden="true"></i>
-                    <span>Products</span></a></li>
+                        <span>Products</span></a></li>
 
                 <li class="menu-list">
                     <a href="#"> <i class="fa fa-exchange" aria-hidden="true"></i>
@@ -82,7 +199,8 @@
                 </li>
 
                 <li>
-                    <a href="accounting.html"> <i class="fa fa-calculator" aria-hidden="true"></i> <span>Accounting</span></a>
+                    <a href="accounting.html"> <i class="fa fa-calculator" aria-hidden="true"></i>
+                        <span>Accounting</span></a>
                 </li>
 
                 <li>
@@ -137,42 +255,48 @@
                             <ul class="dropdown-list normal-list">
                                 <li class="message-list message-scroll-list">
                                     <a href="#">
-                                        <span class="photo"> <img src="assets/images/users/avatar-8.jpg" class="img-circle" alt="img"></span>
+                                        <span class="photo"> <img src="assets/images/users/avatar-8.jpg"
+                                                class="img-circle" alt="img"></span>
                                         <span class="subject">John Doe</span>
                                         <span class="message"> New tasks needs to be done</span>
                                         <span class="time">15 minutes ago</span>
                                     </a>
 
                                     <a href="#">
-                                        <span class="photo"> <img src="assets/images/users/avatar-7.jpg" class="img-circle" alt="img"></span>
+                                        <span class="photo"> <img src="assets/images/users/avatar-7.jpg"
+                                                class="img-circle" alt="img"></span>
                                         <span class="subject">John Doe</span>
                                         <span class="message"> New tasks needs to be done</span>
                                         <span class="time">10 minutes ago</span>
                                     </a>
 
                                     <a href="#">
-                                        <span class="photo"> <img src="assets/images/users/avatar-6.jpg" class="img-circle" alt="img"></span>
+                                        <span class="photo"> <img src="assets/images/users/avatar-6.jpg"
+                                                class="img-circle" alt="img"></span>
                                         <span class="subject">John Doe</span>
                                         <span class="message"> New tasks needs to be done</span>
                                         <span class="time">20 minutes ago</span>
                                     </a>
 
                                     <a href="#">
-                                        <span class="photo"> <img src="assets/images/users/avatar-6.jpg" class="img-circle" alt="img"></span>
+                                        <span class="photo"> <img src="assets/images/users/avatar-6.jpg"
+                                                class="img-circle" alt="img"></span>
                                         <span class="subject">John Doe</span>
                                         <span class="message"> New tasks needs to be done</span>
                                         <span class="time">20 minutes ago</span>
                                     </a>
 
                                     <a href="#">
-                                        <span class="photo"> <img src="assets/images/users/avatar-6.jpg" class="img-circle" alt="img"></span>
+                                        <span class="photo"> <img src="assets/images/users/avatar-6.jpg"
+                                                class="img-circle" alt="img"></span>
                                         <span class="subject">John Doe</span>
                                         <span class="message"> New tasks needs to be done</span>
                                         <span class="time">20 minutes ago</span>
                                     </a>
 
                                     <a href="#">
-                                        <span class="photo"> <img src="assets/images/users/avatar-6.jpg" class="img-circle" alt="img"></span>
+                                        <span class="photo"> <img src="assets/images/users/avatar-6.jpg"
+                                                class="img-circle" alt="img"></span>
                                         <span class="subject">John Doe</span>
                                         <span class="message"> New tasks needs to be done</span>
                                         <span class="time">20 minutes ago</span>
@@ -244,11 +368,11 @@
 
                                         <div>
                                             <select style="border: 1px solid #2f34787b; border-radius: 5px; height: 50px; width: 225px; padding-left: 5px; font-size: 13px; margin: 0; color: rgb(184, 184, 184);" name=”color”>
-                                                        <option value=”red”>To</option>
-                                                        <option value=”red”>Store A</option>
-                                                        <option value=”purple”>Store B</option>
-                                                        <option value=”purple”>International</option>
-                                                    </select>
+                                                <option value=”red”>To</option>
+                                                <option value=”red”>Store A</option>
+                                                <option value=”purple”>Store B</option>
+                                                <option value=”purple”>International</option>
+                                            </select>
                                         </div>
 
                                         <div>
@@ -262,148 +386,93 @@
                                 <h3>Product Listing</h3>
                                 <section style="display: flex;">
 
-                                    <div>
+                                    <div class="container-fluid">
+                                        <form method="POST" action="processTransaction.php" name="addTransaction">
+                                            <br />
+                                            <table class="order-list table">
 
-                                        <div>
-                                            <select style="border: 1px solid #2f34787b; border-radius: 5px; height: 50px; width: 225px; padding-left: 5px; font-size: 13px; margin: 0; color: rgb(184, 184, 184);" name=”color”>
-                                                        <option value=”red”>Product Name</option>
-                                                        <option value=”red”>Store A</option>
-                                                        <option value=”purple”>Store B</option>
-                                                        <option value=”purple”>International</option>
-                                                    </select>
-                                        </div>
-
-                                        <div>
-                                            <select style="border: 1px solid #2f34787b; border-radius: 5px; height: 50px; width: 225px; padding-left: 5px; font-size: 13px; margin: 10px 0; color: rgb(184, 184, 184);" name=”color”>
-                                                        <option value=”red”>Bale Type</option>
-                                                        <option value=”red”>Store A</option>
-                                                        <option value=”purple”>Store B</option>
-                                                        <option value=”purple”>International</option>
-                                                    </select>
-                                        </div>
-
-                                        <div>
-                                            <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 50px; width: 225px; padding: 10px; font-size: 13px; margin: 0;" type="text" placeholder="Buying Price">
-                                        </div>
-
-                                        <div>
-                                            <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 50px; width: 225px; padding: 10px; font-size: 13px; margin: 10px 0;" type="text" placeholder="Selling Price">
-                                        </div>
-
-                                        <div>
-                                            <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 50px; width: 225px; padding: 10px; font-size: 13px; margin: 10px 0;" type="text" placeholder="Quantity">
-                                        </div>
-                                        <button style="background-color: #2F3478; border-radius: 5px; color: whitesmoke; outline: none;" class="btn notification-success">Add</button>
-
-                                    </div>
-
-                                    <div>
-                                        <div style="padding: 0 20px; margin-left: 15px; overflow-y: scroll; height: 40vh;" class=" table-responsive card">
-
-                                            <style>
-                                                .m {
-                                                    font-size: small !important;
-                                                }
-                                            </style>
-                                            <table class="table table-striped table-hover h6">
-                                                <thead>
+                                                <thead class="thead-dark">
                                                     <tr>
-                                                        <th class="text-nowrap m">Product Name</th>
-                                                        <th class="text-nowrap m">Product Number</th>
-                                                        <th class="text-nowrap m">Bale Type</th>
-                                                        <th class="text-nowrap m">Buying Price</th>
-                                                        <th class="text-nowrap m">Quantity</th>
-                                                        <th class="text-nowrap m">Amount</th>
-
+                                                        <th scope="col">Product Name</th>
+                                                        <th scope="col">Bale Type</th>
+                                                        <th scope="col">Buying Price</th>
+                                                        <th scope="col">Quantity</th>
+                                                        <th scope="col">Amount</th>
+                                                        <th scope="col">Action</th>
                                                     </tr>
                                                 </thead>
+
                                                 <tbody>
                                                     <tr>
-                                                        <td style="color: #2F3478;">Good Shampo</td>
-                                                        <td style="color: #2F3478;">2020SD795G</td>
-                                                        <td style="color: #2F3478;">200Y(10Y)</td>
-                                                        <td style="color: #2F3478;">470,000</td>
-                                                        <td style="color: #2F3478;">102</td>
-                                                        <td style="color: #2F3478;">47,940,000</td>
+                                                        <td>
+                                                            <select class="ss" id="item" name="stock[]" required>
+                                                                <option selected value="">Item...</option>
+
+                                                            </select>
+                                                        </td>
+                                                        <td><select class="ss" id="type" name="type[]" required>
+                                                                <option selected value="">Form...</option>
+                                                                <option value="Injection">Injection</option>
+                                                                <option value="Tablet">Tablet</option>
+                                                                <option value="Syrup">Syrup</option>
+
+                                                            </select></td>
+                                                        <td>
+                                                            <input type="text" required placeholder="Unit Price" class="form-control" name="uPrice[]" id="uPrice">
+                                                        </td>
+                                                        <td><input type="number" required placeholder="Quantity" class="form-control" name="quantity[]" id="quantity">
+                                                        </td>
+                                                        <td> <input type="text" required placeholder="Total Price" class="form-control" name="price[]" id="price" readonly>
+                                                        </td>
+                                                        <td>
+                                                            <a class="deleteRow"> <button type="button" class="delete-row btn btn-outline-danger">Delete</button></a>
+                                                        </td>
                                                     </tr>
-
-                                                    <tr>
-                                                        <td style="color: #2F3478;">Good Shampo</td>
-                                                        <td style="color: #2F3478;">2020SD795G</td>
-                                                        <td style="color: #2F3478;">200Y(10Y)</td>
-                                                        <td style="color: #2F3478;">470,000</td>
-                                                        <td style="color: #2F3478;">102</td>
-                                                        <td style="color: #2F3478;">47,940,000</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td style="color: #2F3478;">Good Shampo</td>
-                                                        <td style="color: #2F3478;">2020SD795G</td>
-                                                        <td style="color: #2F3478;">200Y(10Y)</td>
-                                                        <td style="color: #2F3478;">470,000</td>
-                                                        <td style="color: #2F3478;">102</td>
-                                                        <td style="color: #2F3478;">47,940,000</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td style="color: #2F3478;">Good Shampo</td>
-                                                        <td style="color: #2F3478;">2020SD795G</td>
-                                                        <td style="color: #2F3478;">200Y(10Y)</td>
-                                                        <td style="color: #2F3478;">470,000</td>
-                                                        <td style="color: #2F3478;">102</td>
-                                                        <td style="color: #2F3478;">47,940,000</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td style="color: #2F3478;">Good Shampo</td>
-                                                        <td style="color: #2F3478;">2020SD795G</td>
-                                                        <td style="color: #2F3478;">200Y(10Y)</td>
-                                                        <td style="color: #2F3478;">470,000</td>
-                                                        <td style="color: #2F3478;">102</td>
-                                                        <td style="color: #2F3478;">47,940,000</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td style="color: #2F3478;">Good Shampo</td>
-                                                        <td style="color: #2F3478;">2020SD795G</td>
-                                                        <td style="color: #2F3478;">200Y(10Y)</td>
-                                                        <td style="color: #2F3478;">470,000</td>
-                                                        <td style="color: #2F3478;">102</td>
-                                                        <td style="color: #2F3478;">47,940,000</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td style="color: #2F3478;">Good Shampo</td>
-                                                        <td style="color: #2F3478;">2020SD795G</td>
-                                                        <td style="color: #2F3478;">200Y(10Y)</td>
-                                                        <td style="color: #2F3478;">470,000</td>
-                                                        <td style="color: #2F3478;">102</td>
-                                                        <td style="color: #2F3478;">47,940,000</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td style="color: #2F3478;">Good Shampo</td>
-                                                        <td style="color: #2F3478;">2020SD795G</td>
-                                                        <td style="color: #2F3478;">200Y(10Y)</td>
-                                                        <td style="color: #2F3478;">470,000</td>
-                                                        <td style="color: #2F3478;">102</td>
-                                                        <td style="color: #2F3478;">47,940,000</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td style="color: #2F3478;">Good Shampo</td>
-                                                        <td style="color: #2F3478;">2020SD795G</td>
-                                                        <td style="color: #2F3478;">200Y(10Y)</td>
-                                                        <td style="color: #2F3478;">470,000</td>
-                                                        <td style="color: #2F3478;">102</td>
-                                                        <td style="color: #2F3478;">47,940,000</td>
-                                                    </tr>
-
-
                                                 </tbody>
-                                            </table>
-                                        </div>
+                                                <tr>
+                                                    <td colspan="5" style="text-align: center;">
+                                                        <input class="btn btn-outline-primary" type="button" id="addrow" value="Add Transaction" />
+                                                    </td>
+                                                </tr>
+                                                <th style="border:none"></th>
+                                                <tbody style="border:none"></tbody>
+                                                <tbody>
+                                                    <thead class="thead-dark">
+                                                        <tr>
+                                                            <th scope="col">Client</th>
+                                                            <th scope="col">Date</th>
+                                                            <th scope="col">Total of Transaction</th>
+                                                            <th scope="col">Total Paid</th>
+                                                            <th scope="col">Outstanding Balance</th>
+                                                        </tr>
+                                                    </thead>
 
+                                                    <tfoot>
+
+                                                        <tr>
+                                                            <td> <select class="custom-select" id="client" name="client" required>
+                                                                <option selected value="">Select...</option>
+
+                                                                <option value=""></option>
+
+                                                            </select></td>
+                                                            <td><input type="date" max="3000-12-31" min="1000-01-01" class="form-control" id="tDate" name="transactionDate" placeholder="date" required></td>
+                                                            <td><input type="text" class="form-control" id="total" name="totalTransaction" placeholder="Total Transaction" readonly="readonly" onkeyup="sum()" required>
+                                                            </td>
+                                                            <td><input type="number" class="form-control" id="tPaid" name="totalPaid" placeholder="Total Paid" onkeyup="sum()" required></td>
+                                                            <td><input type="text" class="form-control" id="oBalance" name="outstanding" placeholder="Outstanding" readonly="readonly" required></td>
+                                                        </tr>
+                                                    </tfoot>
+                                            </table>
+                                            <br />
+                                            <br />
+                                            <div class="text-right">
+
+                                                <input type="SUBMIT" value="Process Transaction" name="processT" class="btn btn-primary" />
+                                            </div>
+                                            <input name="h" type="hidden" id="h" value="0" />
+                                        </form>
+                                        <br /> <br />
                                     </div>
                             </div>
 
@@ -447,6 +516,10 @@
     <script src="assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
     <script src="assets/pages/table-data.js"></script>
     <script src="assets/pages/jquery.validate.min.js"></script>
+
+
+    <script src="transactionTable/vendor/jquery/jquery.min.js"></script>
+    <script src="transactionTable/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
     <!--Begin Form Wizard (Progressive Page)-->

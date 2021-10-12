@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Modify" value="name:id;datatype:int,name:name;datatype:string,name:phone;datatype:string,name:email;datatype:string,name:business_name;datatype:string,name:contact_address;datatype:string" />
+</info>
