@@ -227,114 +227,60 @@
 
             <h5 style="display: flex; justify-content: center; margin: 60px 0 20px; color: #2F3478;">Create Order</h5>
 
-            <div class="col-md-3">
-                <div style="margin-left: 20px;">
-
-                    <div>
-                        <select style="border: 1px solid #2f34787b; border-radius: 5px; height: 50px; width: 225px; padding-left: 5px; font-size: 13px; margin: 0; color: rgb(184, 184, 184);" name=”color”>
-                                <option value=”red”>Store</option>
-                                <option value=”red”>Store A</option>
-                                <option value=”purple”>Store B</option>
-                                <option value=”purple”>International</option>
-                            </select>
-                    </div>
-
-                    <div style="margin-top: 10px;">
-                        <select style="border: 1px solid #2f34787b; border-radius: 5px; height: 50px; width: 225px; padding-left: 5px; font-size: 13px; margin: 0; color: rgb(184, 184, 184);" name=”color”>
-                                <option value=”red”>Shipment</option>
-                            </select>
-                    </div>
-
-                    <div style="margin-top: 10px;">
-                        <select style="border: 1px solid #2f34787b; border-radius: 5px; height: 50px; width: 225px; padding-left: 5px; font-size: 13px; margin: 0; color: rgb(184, 184, 184);" name=”color”>
-                                <option value=”red”>Product</option>
-                            </select>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-9">
-                <div class="row" style="overflow-y: scroll; height: 60vh; margin: 0 20px;">
-                    <div class="col-md-12 card">
-                        <div class="table-responsive">
-                            <table id="example" class="display table">
-                                <thead>
-                                    <tr>
-                                        <th>Product Name</th>
-                                        <th>Buying Price</th>
-                                        <th>Quantity</th>
-                                        <th>Amount</th>
-
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <tr>
-                                        <td style="color: #2F3478;">Junaidap</td>
-                                        <td style="color: #2F3478;">23, 939</td>
-                                        <td style="color: #2F3478;">78</td>
-                                        <td style="color: #2F3478;">15,290</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="color: #2F3478;">Junaidap</td>
-                                        <td style="color: #2F3478;">23, 939</td>
-                                        <td style="color: #2F3478;">78</td>
-                                        <td style="color: #2F3478;">15,290</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="color: #2F3478;">Junaidap</td>
-                                        <td style="color: #2F3478;">23, 939</td>
-                                        <td style="color: #2F3478;">78</td>
-                                        <td style="color: #2F3478;">15,290</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="color: #2F3478;">Junaidap</td>
-                                        <td style="color: #2F3478;">23, 939</td>
-                                        <td style="color: #2F3478;">78</td>
-                                        <td style="color: #2F3478;">15,290</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="color: #2F3478;">Junaidap</td>
-                                        <td style="color: #2F3478;">23, 939</td>
-                                        <td style="color: #2F3478;">78</td>
-                                        <td style="color: #2F3478;">15,290</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="color: #2F3478;">Junaidap</td>
-                                        <td style="color: #2F3478;">23, 939</td>
-                                        <td style="color: #2F3478;">78</td>
-                                        <td style="color: #2F3478;">15,290</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="color: #2F3478;">Junaidap</td>
-                                        <td style="color: #2F3478;">23, 939</td>
-                                        <td style="color: #2F3478;">78</td>
-                                        <td style="color: #2F3478;">15,290</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="color: #2F3478;">Junaidap</td>
-                                        <td style="color: #2F3478;">23, 939</td>
-                                        <td style="color: #2F3478;">78</td>
-                                        <td style="color: #2F3478;">15,290</td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
 
 
-                </div>
+            <div class="col-md-12">
+                <form style="overflow-y: scroll; height: 52vh;" method="POST" action="processTransaction.php" name="addTransaction">
+                    <table class="order-list table">
 
+                        <thead>
+                            <tr>
+                                <th scope="col">Product</th>
+                                <th scope="col">Store</th>
+                                <th scope="col">Buying Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <select class="ss" id="item" name="stock[]" required>
+                                            <option selected value="">Item...</option>
+
+                                        </select>
+                                </td>
+                                <td><select class="ss" id="type" name="type[]" required>
+                                            <option value="Injection">International</option>
+                                            <option value="Tablet">Store B</option>
+                                            <option value="Syrup">Store A</option>
+
+                                        </select></td>
+                                <td>
+                                    <input class="ss" type="text" required placeholder="Unit Price" class="form-control" name="uPrice[]" id="uPrice">
+                                </td>
+                                <td><input class="ss" type="number" required placeholder="Quantity" class="form-control" name="quantity[]" id="quantity">
+                                </td>
+                                <td> <input class="ss" type="text" required placeholder="Total Price" class="form-control" name="price[]" id="price" readonly>
+                                </td>
+                                <td>
+                                    <a class="deleteRow"> <button type="button" class="btn btn-danger">Delete</button></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tr>
+                            <td colspan="5" style="text-align: center;">
+                                <button style="border-radius: 5px; margin-top: 20px; outline: none;" class="btn btn-warning" type="button" id="addrow">Add Transaction</button>
+                            </td>
+                        </tr>
+
+                    </table>
+                    <br />
+                    <br />
+
+                </form>
             </div>
 
             <div style="float: right; margin: 30px 40px;">
