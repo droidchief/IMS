@@ -28,44 +28,6 @@
     <link href="assets/css/responsive.css" rel="stylesheet">
     <!--End  Page Level  CSS -->
 
-    <style type="text/css">
-        form {
-            margin: 20px 0;
-        }
-        
-        form input,
-        button {
-            padding: 5px;
-        }
-        
-        table {
-            width: 100%;
-            margin-bottom: 20px;
-            border-collapse: collapse;
-        }
-        
-        table,
-        th,
-        td {
-            border: 1px solid #cdcdcd;
-        }
-        
-        table th,
-        table td {
-            padding: 10px;
-            text-align: left;
-        }
-        
-        .bs-example {
-            margin: 20px;
-        }
-        
-        .hover:hover {
-            text-decoration: none;
-            background-color: #fafafa;
-        }
-    </style>
-
     <script src="transactionTable/vendor/jquery-1.12.4.min.js"></script>
 
     <style>
@@ -338,7 +300,7 @@
         <!--body wrapper start-->
         <div class="wrapper">
 
-            <div style="display: flex; align-items: center; margin-top: 20px;">
+            <div style="display: flex; align-items: center;">
                 <i style="margin-left: 20px; font-size: 15px;" class="fa fa-long-arrow-left backButton" aria-hidden="true"></i>
 
                 <h4>New Shipment</h4>
@@ -390,7 +352,7 @@
                                         <table class="order-list table">
 
                                             <thead>
-                                                <tr>
+                                                <tr style="background-color: #2f347825;">
                                                     <th scope="col">Product Name</th>
                                                     <th scope="col">Bale Type</th>
                                                     <th scope="col">Buying Price</th>
@@ -432,11 +394,10 @@
                                                     <button style="border-radius: 5px; margin-top: 20px; outline: none;" class="btn btn-warning" type="button" id="addrow">Add Transaction</button>
                                                 </td>
                                             </tr>
-                                            <th style="border:none"></th>
-                                            <tbody style="border:none"></tbody>
+
                                             <tbody>
                                                 <thead>
-                                                    <tr>
+                                                    <tr style="background-color: #2f347825;">
                                                         <th scope="col">Total Amount</th>
                                                         <th scope="col">Paid</th>
                                                         <th scope="col">Balance</th>
