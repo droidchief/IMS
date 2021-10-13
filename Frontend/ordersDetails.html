@@ -29,6 +29,81 @@
     <link href="assets/css/responsive.css" rel="stylesheet">
     <!-- END PAGE LEVEL STYLES -->
 
+    <script src="transactionTable/vendor/jquery-1.12.4.min.js"></script>
+
+    <style>
+        .ss {
+            border: 0.5px solid #000;
+            border-radius: 5px;
+            height: 23px;
+            width: 150px;
+            padding-left: 5px;
+            font-size: 13px;
+            margin: 0;
+            color: rgb(184, 184, 184);
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+
+            $("#addrow").on("click", function() {
+
+                var newRow = $("<tr>");
+                var cols = "";
+                cols += '<td><select class="ss" id="item" name = "stock[]" required><option selected value="">Item...</option>uuu</option></select></td>';
+                cols += '<td><select class="ss" id="type" name = "type[]" required> <option selected value="">Form...</option> <option value="Injection">Injection</option> <option value="Tablet">Tablet</option>            <option value="Syrup">Syrup</option>           </select></td>';
+                cols += '<td><input class="ss" type="text" required="required" placeholder ="Unit Price" class="form-control" name="uPrice[]" id="uPrice"></td>';
+                cols += '<td><input class="ss" type="number" required="required" placeholder ="Quantity" class="form-control" name="quantity[]" id="quantity" ></td>';
+                cols += '<td><input class="ss" type="text" required="required" placeholder ="Total Price" class="form-control" name="price[]" id="price" readonly = "readonly"></td>';
+                cols += '<td><a class="deleteRow"><button type="button" class="btn btn-danger">Delete</button></a></td>';
+                newRow.append(cols);
+
+                $("table.order-list").append(newRow);
+            });
+
+            $("table.order-list").on("change", 'input[id^="uPrice"], input[id^="quantity"]', function(event) {
+                calculateRow($(this).closest("tr"));
+                calculateGrandTotal();
+            });
+
+            $("table.order-list").on("click", "a.deleteRow", function(event) {
+                $(this).closest("tr").remove();
+                calculateGrandTotal();
+            });
+        });
+
+        function calculateRow(row) {
+            var price = +row.find('input[id^="uPrice"]').val();
+            var qty = +row.find('input[id^="quantity"]').val();
+            row.find('input[id^="price"]').val((price * qty).toFixed(2));
+        }
+
+        function calculateGrandTotal() {
+            var grandTotal = 0;
+            $("table.order-list").find('input[id^="price"]').each(function() {
+                grandTotal += +$(this).val();
+            });
+            $("#grandtotal").text(grandTotal.toFixed(2));
+            var total = document.getElementById('total');
+            total.value = grandTotal;
+
+        }
+
+        function sum() {
+            var total = document.getElementById('total').value;
+            var totalPaid = document.getElementById('tPaid').value;
+            if (total == "")
+                total = 0;
+            if (totalPaid == "")
+                totalPaid = 0;
+
+            var result = parseInt(total) - parseInt(totalPaid);
+            if (!isNaN(result)) {
+                document.getElementById('oBalance').value = result;
+            }
+        }
+    </script>
+
 </head>
 
 <body class="sticky-header">
@@ -284,7 +359,7 @@
             </div>
 
             <div style="float: right; margin: 30px 40px;">
-                <button style="border-radius: 5px; color: whitesmoke;" class="btn btn-success" data-dismiss="modal" id="sa-close">Assign Order</button>
+                <button style="border-radius: 5px; color: whitesmoke;" class="btn btn-success" data-dismiss="modal" id="sa-close">Done</button>
             </div>
 
 
@@ -325,6 +400,9 @@
 
     <script src="assets/plugins/sweetalert/sweet-alert.js"></script>
     <script src="assets/pages/jquery.sweet-alert.custom.js"></script>
+
+    <script src="transactionTable/vendor/jquery/jquery.min.js"></script>
+    <script src="transactionTable/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script src="helper.js"></script>
 
