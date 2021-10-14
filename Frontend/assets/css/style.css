@@ -488,8 +488,10 @@
     .custom-nav>li.active>a,
     .custom-nav>li.active>a:hover,
     .custom-nav>li.active>a:focus {
-        background-color: #232F3A;
-        color: #d8d4d4;
+        background-color: #FFF !important;
+        color: #2F3478;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
     }
     /*.custom-nav > li.menu-list.active > a {
 	background-image: url(../images/plus.png);
