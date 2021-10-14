@@ -247,6 +247,63 @@
             </div>
         </div>
 
+        <div id="modal-add-customer" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-sm">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h5 class="modal-title">Add Customer</h5>
+                    </div>
+
+
+                    <div style="display: flex; justify-content: center;" class="modal-body">
+
+                        <div>
+
+                            <div style="margin: 10px;">
+                                <select style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; font-size: 13px;" name=”color”>
+                                    <option value=”red”>Location</option>
+                                </select> <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            </div>
+
+                            <div style="margin: 10px;">
+                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Customer Name">
+                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            </div>
+
+                            <div style="margin: 10px;">
+                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Address">
+                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            </div>
+
+                            <div style="margin: 10px;">
+                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Phone Number">
+                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            </div>
+
+                            <div style="margin: 10px;">
+                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Email">
+                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="modal-footer" style="display: flex; justify-content: center;">
+                        <div>
+                            <button style="background-color: #2F3478; border-radius: 5px; color: whitesmoke;" class="btn" data-dismiss="modal" id="sa-close">Add Customer</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
 
         <!--body wrapper start-->
         <div class="wrapper">
@@ -568,19 +625,19 @@
                 </a>
 
                 <a href="#">
-                    <button class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Customer</button>
+                    <button data-toggle="modal" data-target="#modal-add-customer" class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Customer</button>
                 </a>
 
                 <a href="#">
-                    <button class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Vendor</button>
+                    <button data-toggle="modal" data-target="#modal-add-vendor" class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Vendor</button>
                 </a>
 
                 <a href="#">
-                    <button class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Store</button>
+                    <button data-toggle="modal" data-target="#modal-add-store" class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Store</button>
                 </a>
 
                 <a href="#">
-                    <button class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Account</button>
+                    <button data-toggle="modal" data-target="#modal-add-account" class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>Account</button>
                 </a>
 
 
