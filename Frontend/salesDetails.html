@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <title>Kwari IMS</title>
+
+    <!--Begin  Page Level  CSS -->
+    <link href="assets/plugins/morris-chart/morris.css" rel="stylesheet">
+    <link href="assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <link href="assets/plugins/morris-chart/morris.css" rel="stylesheet">
+
+    <link href="assets/plugins/datatables/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/datatables/css/jquery.dataTables-custom.css" rel="stylesheet" type="text/css" />
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500" rel="stylesheet" />
+    <link href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css" rel="stylesheet" />
+
+    <!-- PLUGINS CSS STYLE -->
+    <link href="assets/plugins/toaster/toastr.min.css" rel="stylesheet" />
+    <link href="assets/plugins/nprogress/nprogress.css" rel="stylesheet" />
+    <link href="assets/plugins/flag-icons/css/flag-icon.min.css" rel="stylesheet" />
+    <link href="assets/plugins/jvectormap/jquery-jvectormap-2.0.3.css" rel="stylesheet" />
+    <link href="assets/plugins/ladda/ladda.min.css" rel="stylesheet" />
+    <link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
+    <link href="assets/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" />
+
+    <!--End  Page Level  CSS -->
+    <link href="assets/css/icons.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+
+</head>
+
+<body class="sticky-header">
+
+
+    <!--Start left side Menu-->
+    <div class="left-side sticky-left-side">
+
+        <!--logo-->
+        <div class="logo">
+            <a href="index.html"><img src="assets/images/logo.svg" alt="Logo"></a>
+        </div>
+
+        <div class="logo-icon text-center">
+            <a href="index.html"><img src="assets/images/logo-icon.png" alt=""></a>
+        </div>
+        <!--logo-->
+
+        <div class="left-side-inner">
+            <!--Sidebar nav-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+
+
+                <li>
+                    <a href="index.html"> <i class="fa fa-th-large" aria-hidden="true"></i>
+                        <span>Dashboard</span></a>
+                </li>
+                <li><a href="product.html"><i class="fa fa-th" aria-hidden="true"></i>
+                    <span>Products</span></a></li>
+
+                <li class="menu-list">
+                    <a href="#"> <i class="fa fa-exchange" aria-hidden="true"></i>
+                        <span>Transactions</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="sales.html"> Sales</a></li>
+                        <li><a href="orders.html"> Orders</a></li>
+                        <li><a href="purchases.html"> Purchases</a></li>
+                        <li><a href="expenses.html"> Expenses</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="customers.html"> <i class="fa fa-male" aria-hidden="true"></i><span>Customers</span></a>
+                </li>
+
+                <li>
+                    <a href="vendors.html"> <i class="fa fa-compress" aria-hidden="true"></i><span>Vendors</span></a>
+                </li>
+
+                <li>
+                    <a href="stores.html"> <i class="fa fa-university" aria-hidden="true"></i> <span>Stores</span></a>
+                </li>
+
+                <li>
+                    <a href="shipment.html"> <i class="fa fa-truck" aria-hidden="true"></i> <span>Shipments</span></a>
+                </li>
+
+                <li>
+                    <a href="accounting.html"> <i class="fa fa-calculator" aria-hidden="true"></i> <span>Accounting</span></a>
+                </li>
+
+                <li>
+                    <a href="#"> <i class="fa fa-users" aria-hidden="true"></i><span>Users</span></a>
+                </li>
+
+
+
+
+            </ul>
+            <!--End sidebar nav-->
+
+        </div>
+    </div>
+    <!--End left side menu-->
+
+
+    <!-- main content start-->
+    <div class="main-content">
+
+        <!-- header section start-->
+        <div class="header-section">
+
+            <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+
+            <form class="searchform">
+                <input style="width: 400px;" type="text" class="form-control" name="keyword" placeholder="Search..." />
+            </form>
+
+            <!--notification menu start -->
+            <div class="menu-right">
+                <ul class="notification-menu">
+
+
+                    <li>
+                        <a data-toggle="popover" title="POS" data-placement="bottom" data-content="" style="background-color: white; border: none;" href="pos.html" class="btn btn-default">
+                            <img style="width: 22px; height: 22px; margin-top: 7px;" src="assets/images/ic_outline-point-of-sale.svg" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a data-toggle="popover" title="Sync" data-placement="bottom" data-content="Synchronize data with online server" style="background-color: white; border: none;" href="#" class="btn btn-default">
+                            <img style="width: 22px; height: 22px; margin-top: 7px;" src="assets/images/sync_icon.svg" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a data-toggle="popover" title="Notifications" data-placement="bottom" data-content="" href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i style="color: #2F3478;" class="fa fa-bell" aria-hidden="true"></i>
+                            <span class="badge">4</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">Notifications</h5>
+                            <ul class="dropdown-list normal-list">
+                                <li class="message-list message-scroll-list">
+                                    <a href="#">
+                                        <span class="photo"> <img src="assets/images/users/avatar-8.jpg" class="img-circle" alt="img"></span>
+                                        <span class="subject">John Doe</span>
+                                        <span class="message"> New tasks needs to be done</span>
+                                        <span class="time">15 minutes ago</span>
+                                    </a>
+
+                                    <a href="#">
+                                        <span class="photo"> <img src="assets/images/users/avatar-7.jpg" class="img-circle" alt="img"></span>
+                                        <span class="subject">John Doe</span>
+                                        <span class="message"> New tasks needs to be done</span>
+                                        <span class="time">10 minutes ago</span>
+                                    </a>
+
+                                    <a href="#">
+                                        <span class="photo"> <img src="assets/images/users/avatar-6.jpg" class="img-circle" alt="img"></span>
+                                        <span class="subject">John Doe</span>
+                                        <span class="message"> New tasks needs to be done</span>
+                                        <span class="time">20 minutes ago</span>
+                                    </a>
+
+                                    <a href="#">
+                                        <span class="photo"> <img src="assets/images/users/avatar-6.jpg" class="img-circle" alt="img"></span>
+                                        <span class="subject">John Doe</span>
+                                        <span class="message"> New tasks needs to be done</span>
+                                        <span class="time">20 minutes ago</span>
+                                    </a>
+
+                                    <a href="#">
+                                        <span class="photo"> <img src="assets/images/users/avatar-6.jpg" class="img-circle" alt="img"></span>
+                                        <span class="subject">John Doe</span>
+                                        <span class="message"> New tasks needs to be done</span>
+                                        <span class="time">20 minutes ago</span>
+                                    </a>
+
+                                    <a href="#">
+                                        <span class="photo"> <img src="assets/images/users/avatar-6.jpg" class="img-circle" alt="img"></span>
+                                        <span class="subject">John Doe</span>
+                                        <span class="message"> New tasks needs to be done</span>
+                                        <span class="time">20 minutes ago</span>
+                                    </a>
+                                </li>
+                                <li class="last"> <a href="#">All Messages</a> </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <img src="assets/images/users/avatar-6.jpg" alt="" /> Logout
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                            <li>
+                                <a href="#"> <i class="fa fa-wrench"></i> Settings </a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa fa-user"></i> Profile </a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa fa-info"></i> Help </a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa fa-lock"></i> Logout </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <!--notification menu end -->
+
+        </div>
+        <!-- header section end-->
+
+
+        <!--body wrapper start-->
+        <div class="wrapper">
+
+
+            <div style="display: flex; align-items: center;">
+                <i style="margin-left: 20px; font-size: 15px;" class="fa fa-long-arrow-left backButton" aria-hidden="true"></i>
+
+                <h4>Sales</h4>
+            </div>
+
+            <div style="margin: 50px 30px;" class="wrapper-content card">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5><u style="font-weight: 600; color: #2F3478;">All Sales</u></h5>
+
+                            <div style="margin-top: 50px; overflow-y: scroll; height: 60vh;" class="table-responsive">
+                                <table id="example" class="display table">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Customer</th>
+                                            <th>Amount</th>
+                                            <th>Payment Method</th>
+                                            <th>Status</th>
+                                            <th>Sales Agent</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td style="color: #2F3478;">11/12/12</td>
+                                            <td style="color: #2F3478;">Customer 01</td>
+                                            <td style="color: #2F3478;">90,833</td>
+                                            <td style="color: #2F3478;">Cash</td>
+                                            <td style="color: #2F3478;">Pending</td>
+                                            <td style="color: #2F3478;">Audi</td>
+                                            <td style="color: #2F3478;">
+                                                <a href="salesDetails.html">View</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="color: #2F3478;">12/12/12</td>
+                                            <td style="color: #2F3478;">Customer 02</td>
+                                            <td style="color: #2F3478;">90,833</td>
+                                            <td style="color: #2F3478;">Transfer</td>
+                                            <td style="color: #2F3478;">Pending</td>
+                                            <td style="color: #2F3478;">Jufi</td>
+                                            <td style="color: #2F3478;">
+                                                <a href="salesDetails.html">View</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="color: #2F3478;">13/12/12</td>
+                                            <td style="color: #2F3478;">Customer 03</td>
+                                            <td style="color: #2F3478;">90,833</td>
+                                            <td style="color: #2F3478;">Credit</td>
+                                            <td style="color: #2F3478;">Pending</td>
+                                            <td style="color: #2F3478;">Sify</td>
+                                            <td style="color: #2F3478;">
+                                                <a href="salesDetails.html">View</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="color: #2F3478;">14/12/12</td>
+                                            <td style="color: #2F3478;">Customer 04</td>
+                                            <td style="color: #2F3478;">90,833</td>
+                                            <td style="color: #2F3478;">Cash</td>
+                                            <td style="color: #2F3478;">Pending</td>
+                                            <td style="color: #2F3478;">Audi</td>
+                                            <td style="color: #2F3478;">
+                                                <a href="salesDetails.html">View</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="color: #2F3478;">12/12/12</td>
+                                            <td style="color: #2F3478;">Customer 02</td>
+                                            <td style="color: #2F3478;">90,833</td>
+                                            <td style="color: #2F3478;">Transfer</td>
+                                            <td style="color: #2F3478;">Pending</td>
+                                            <td style="color: #2F3478;">Jufi</td>
+                                            <td style="color: #2F3478;">
+                                                <a href="salesDetails.html">View</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="color: #2F3478;">13/12/12</td>
+                                            <td style="color: #2F3478;">Customer 03</td>
+                                            <td style="color: #2F3478;">90,833</td>
+                                            <td style="color: #2F3478;">Credit</td>
+                                            <td style="color: #2F3478;">Pending</td>
+                                            <td style="color: #2F3478;">Sify</td>
+                                            <td style="color: #2F3478;">
+                                                <a href="salesDetails.html">View</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="color: #2F3478;">13/12/12</td>
+                                            <td style="color: #2F3478;">Customer 03</td>
+                                            <td style="color: #2F3478;">90,833</td>
+                                            <td style="color: #2F3478;">Credit</td>
+                                            <td style="color: #2F3478;">Pending</td>
+                                            <td style="color: #2F3478;">Sify</td>
+                                            <td style="color: #2F3478;">
+                                                <a href="salesDetails.html">View</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="color: #2F3478;">14/12/12</td>
+                                            <td style="color: #2F3478;">Customer 04</td>
+                                            <td style="color: #2F3478;">90,833</td>
+                                            <td style="color: #2F3478;">Cash</td>
+                                            <td style="color: #2F3478;">Pending</td>
+                                            <td style="color: #2F3478;">Audi</td>
+                                            <td style="color: #2F3478;">
+                                                <a href="salesDetails.html">View</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="color: #2F3478;">12/12/12</td>
+                                            <td style="color: #2F3478;">Customer 02</td>
+                                            <td style="color: #2F3478;">90,833</td>
+                                            <td style="color: #2F3478;">Transfer</td>
+                                            <td style="color: #2F3478;">Pending</td>
+                                            <td style="color: #2F3478;">Jufi</td>
+                                            <td style="color: #2F3478;">
+                                                <a href="salesDetails.html">View</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="color: #2F3478;">13/12/12</td>
+                                            <td style="color: #2F3478;">Customer 03</td>
+                                            <td style="color: #2F3478;">90,833</td>
+                                            <td style="color: #2F3478;">Credit</td>
+                                            <td style="color: #2F3478;">Pending</td>
+                                            <td style="color: #2F3478;">Sify</td>
+                                            <td style="color: #2F3478;">
+                                                <a href="salesDetails.html">View</a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+    <!--End row-->
+
+    </div>
+    <!-- End Wrapper-->
+
+
+    </div>
+    <!--End main content -->
+
+
+    <!--Begin core plugin -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/moment/moment.js"></script>
+    <script src="assets/js/jquery.slimscroll.js "></script>
+    <script src="assets/js/jquery.nicescroll.js"></script>
+    <script src="assets/js/functions.js"></script>
+
+    <script src="assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="assets/pages/table-data.js"></script>
+    <!-- End core plugin -->
+
+    <!--Begin Page Level Plugin-->
+    <script src="assets/plugins/morris-chart/morris.js"></script>
+    <script src="assets/plugins/morris-chart/raphael-min.js"></script>
+    <script src="assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <script src="assets/pages/dashboard.js"></script>
+
+    <script src="assets/plugins/morris-chart/morris.js"></script>
+    <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/plugins/morris-chart/raphael-min.js"></script>
+    <script src="assets/pages/morris-custom.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCn8TFXGg17HAUcNpkwtxxyT9Io9B_NcM" defer></script>
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/plugins/toaster/toastr.min.js"></script>
+    <script src="assets/plugins/slimscrollbar/jquery.slimscroll.min.js"></script>
+    <script src="assets/plugins/charts/Chart.min.js"></script>
+    <script src="assets/plugins/ladda/spin.min.js"></script>
+    <script src="assets/plugins/ladda/ladda.min.js"></script>
+    <script src="assets/plugins/jquery-mask-input/jquery.mask.min.js"></script>
+    <script src="assets/plugins/select2/js/select2.min.js"></script>
+    <script src="assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
+    <script src="assets/plugins/jvectormap/jquery-jvectormap-world-mill.js"></script>
+    <script src="assets/plugins/daterangepicker/moment.min.js"></script>
+    <script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="assets/plugins/jekyll-search.min.js"></script>
+    <script src="assets/js/sleek.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/date-range.js"></script>
+    <script src="assets/js/map.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+
+    <script src="helper.js"></script>
+    <!--End Page Level Plugin-->
+
+
+</body>
+
+</html>
