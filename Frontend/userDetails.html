@@ -221,11 +221,129 @@
         </div>
         <!-- header section end-->
 
+        <div class="row">
+
+            <div id="modal-user-access" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-sm">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h5 class="modal-title">Update User Access</h5>
+                        </div>
+
+
+                        <div style="display: flex; justify-content: center;" class="modal-body">
+
+                            <div class="white-box">
+
+                                <div style="margin: 10px;" class="checkbox danger">
+                                    <input type="checkbox" checked id="checkbox-6">
+                                    <label for="checkbox-6">Dashboard</label>
+                                </div>
+                                <!-- /.checkbox -->
+
+                                <div style="margin: 10px;" class="checkbox primary">
+                                    <input type="checkbox" checked id="checkbox-2">
+                                    <label for="checkbox-2">Products</label>
+                                </div>
+                                <!-- /.checkbox -->
+
+                                <div style="margin: 10px;" class="checkbox success">
+                                    <input type="checkbox" checked id="checkbox-3">
+                                    <label for="checkbox-3">Customers</label>
+                                </div>
+                                <!-- /.checkbox -->
+
+                                <div style="margin: 10px;" class="checkbox inverse">
+                                    <input type="checkbox" checked id="checkbox-9">
+                                    <label for="checkbox-9">Accounting</label>
+                                </div>
+                                <!-- /.checkbox -->
+
+                            </div>
+                        </div>
+
+
+                        <div class="modal-footer" style="display: flex; justify-content: center;">
+                            <div>
+                                <button style="background-color: #43A047; border-radius: 5px; color: whitesmoke;" class="btn" data-dismiss="modal">Update</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="modal-user-details" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-sm">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h5 class="modal-title">Update User Details</h5>
+                        </div>
+
+                        <div style="display: flex; justify-content: center;" class="modal-body">
+
+                            <div>
+
+                                <div style="display: flex; justify-content: center;">
+                                    <img style="width: 80px; height: 80px; border-radius: 100px;" src="assets/images/users/avatar-1.jpg" alt="Profile Photo">
+                                    <i style="color: #2F3478; cursor: pointer;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </div>
+
+                                <div style="margin: 10px;">
+                                    <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Name">
+                                    <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </div>
+
+                                <div style="margin: 10px;">
+                                    <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Number">
+                                    <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </div>
+
+                                <div style="margin: 10px;">
+                                    <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Address">
+                                    <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </div>
+
+                                <div style="margin: 10px;">
+                                    <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Username">
+                                    <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </div>
+
+                                <div style="margin: 10px;">
+                                    <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Password">
+                                    <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </div>
+
+                                <div style="margin: 10px;">
+                                    <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Confirm Password">
+                                    <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="modal-footer" style="display: flex; justify-content: center;">
+                            <div>
+                                <button style="background-color: #43A047; border-radius: 5px; color: whitesmoke;" class="btn" data-dismiss="modal">Update</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
 
         <!--body wrapper start-->
         <div class="wrapper">
-
-
 
             <div style="display: flex; align-items: center;">
                 <i style="margin-left: 20px; font-size: 15px;" class="fa fa-long-arrow-left backButton" aria-hidden="true"></i>
@@ -280,7 +398,7 @@
                         </div>
 
                         <div style="margin: 10px;">
-                            <i style="color: #2F3478; cursor: pointer;" class="fa fa-pencil-square-o" aria-hidden="true"><span style="margin-left: 5px;">Edit</span></i>
+                            <i data-toggle="modal" data-target="#modal-user-details" style="color: #2F3478; cursor: pointer;" class="fa fa-pencil-square-o" aria-hidden="true"><span style="margin-left: 5px;">Edit</span></i>
                         </div>
 
                     </div>
@@ -342,7 +460,7 @@
                         <!-- /.checkbox -->
 
                         <div style="margin: 10px;">
-                            <i style="color: #2F3478; cursor: pointer;" class="fa fa-pencil-square-o" aria-hidden="true"><span style="margin-left: 5px;">Edit</span></i>
+                            <i data-toggle="modal" data-target="#modal-user-access" style="color: #2F3478; cursor: pointer;" class="fa fa-pencil-square-o" aria-hidden="true"><span style="margin-left: 5px;">Edit</span></i>
                         </div>
 
                     </div>
