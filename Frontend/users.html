@@ -254,381 +254,61 @@
 
                     <div class="row" style="margin-top: 50px; margin-bottom: 30px;">
 
-                        <!-- Shipment Update Modal -->
-                        <div id="modal-normal" class="modal fade" role="dialog">
+                        <div id="modal-user-details" class="modal fade" role="dialog">
                             <div class="modal-dialog modal-sm">
 
                                 <!-- Modal content-->
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h5 class="modal-title">Update Shipment</h5>
+                                        <h5 class="modal-title">Update User Details</h5>
                                     </div>
 
 
                                     <div style="display: flex; justify-content: center;" class="modal-body">
 
-                                        <div style="margin-left: 30px;">
 
-                                            <div style="margin: 10px;">
-                                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Container Name">
-                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                            </div>
-
-                                            <div style="margin: 10px;">
-                                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="From">
-                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                            </div>
-
-                                            <div style="margin: 10px;">
-                                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Dipatch Date">
-                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                            </div>
-
-                                            <div style="margin: 10px;">
-                                                <select style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding-left: 5px; font-size: 13px;" name=”color”>
-                                                    <option value=”red”>To</option>
-                                                    <option value=”red”>Store A</option>
-                                                    <option value=”purple”>Store B</option>
-                                                    <option value=”purple”>International</option>
-                                                </select> <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                            </div>
-
-                                            <div style="margin: 10px;">
-                                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Arrival Date">
-                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                            </div>
-
-                                            <div style="margin: 10px;">
-                                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Total Products">
-                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                            </div>
-
-                                            <div style="margin: 10px;">
-                                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Amount (N)">
-                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                            </div>
-
-                                            <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;">
-                                                <div>
-                                                    <p style="color: #2F3478; font-size: 10px; font-weight: bold; margin: 0px 10px;">Confirm Arrival</p>
-                                                    <label style="margin: 0px 22px;" class="switch">
-                                                        <input type="checkbox">
-                                                        <span class="slider round"></span>
-                                                      </label>
-                                                </div>
-
-                                                <div>
-                                                    <p style="color: #2F3478; font-size: 10px; font-weight: bold; margin: 0px 35px;">Confirm Products</p>
-                                                    <label style="margin: 0px 50px;" class="switch">
-                                                        <input type="checkbox">
-                                                        <span class="slider round"></span>
-                                                      </label>
-                                                </div>
-                                            </div>
-
-                                        </div>
 
                                     </div>
 
 
                                     <div class="modal-footer" style="display: flex; justify-content: center;">
                                         <div>
-                                            <button style="background-color: #2F3478; border-radius: 5px; color: whitesmoke;" class="btn" data-dismiss="modal" id="sa-close">Update</button>
+                                            <button style="background-color: #43A047; border-radius: 5px; color: whitesmoke;" class="btn" data-dismiss="modal" id="sa-close">Update</button>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
-                        <!-- END Shipment Update Modal -->
 
-                        <!-- Shipment Product Listing Modal -->
-                        <div id="modal-product-listing" class="modal fade" role="dialog">
-                            <div class="modal-dialog modal-lg">
+                        <div id="modal-user-access" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-sm">
 
                                 <!-- Modal content-->
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h5 class="modal-title">Product Listing</h5>
+                                        <h5 class="modal-title">Update User Access</h5>
                                     </div>
 
 
-                                    <div style="display: flex; justify-content: center; overflow-y: scroll; height: 75vh;" class="modal-body">
+                                    <div style="display: flex; justify-content: center;" class="modal-body">
 
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="white-box">
-                                                    <div class="table-responsive">
-                                                        <table id="example" class="display table">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Container Name</th>
-                                                                    <th>Product Number</th>
-                                                                    <th>Bale Type</th>
-                                                                    <th>Buying Price</th>
-                                                                    <th>Quantity</th>
-                                                                    <th>Amount</th>
-                                                                </tr>
-                                                            </thead>
 
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>Good Shampo</td>
-                                                                    <td>20282025G</td>
-                                                                    <td>200Y(10Y)</td>
-                                                                    <td>47,000</td>
-                                                                    <td>102</td>
-                                                                    <td>97,000</td>
-                                                                </tr>
 
-                                                                <tr>
-                                                                    <td>Good Shampo</td>
-                                                                    <td>20282025G</td>
-                                                                    <td>200Y(10Y)</td>
-                                                                    <td>47,000</td>
-                                                                    <td>102</td>
-                                                                    <td>97,000</td>
-                                                                </tr>
+                                    </div>
 
-                                                                <tr>
-                                                                    <td>Good Shampo</td>
-                                                                    <td>20282025G</td>
-                                                                    <td>200Y(10Y)</td>
-                                                                    <td>47,000</td>
-                                                                    <td>102</td>
-                                                                    <td>97,000</td>
-                                                                </tr>
 
-                                                                <tr>
-                                                                    <td>Good Shampo</td>
-                                                                    <td>20282025G</td>
-                                                                    <td>200Y(10Y)</td>
-                                                                    <td>47,000</td>
-                                                                    <td>102</td>
-                                                                    <td>97,000</td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>Good Shampo</td>
-                                                                    <td>20282025G</td>
-                                                                    <td>200Y(10Y)</td>
-                                                                    <td>47,000</td>
-                                                                    <td>102</td>
-                                                                    <td>97,000</td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>Good Shampo</td>
-                                                                    <td>20282025G</td>
-                                                                    <td>200Y(10Y)</td>
-                                                                    <td>47,000</td>
-                                                                    <td>102</td>
-                                                                    <td>97,000</td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>Good Shampo</td>
-                                                                    <td>20282025G</td>
-                                                                    <td>200Y(10Y)</td>
-                                                                    <td>47,000</td>
-                                                                    <td>102</td>
-                                                                    <td>97,000</td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>Good Shampo</td>
-                                                                    <td>20282025G</td>
-                                                                    <td>200Y(10Y)</td>
-                                                                    <td>47,000</td>
-                                                                    <td>102</td>
-                                                                    <td>97,000</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Good Shampo</td>
-                                                                    <td>20282025G</td>
-                                                                    <td>200Y(10Y)</td>
-                                                                    <td>47,000</td>
-                                                                    <td>102</td>
-                                                                    <td>97,000</td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>Good Shampo</td>
-                                                                    <td>20282025G</td>
-                                                                    <td>200Y(10Y)</td>
-                                                                    <td>47,000</td>
-                                                                    <td>102</td>
-                                                                    <td>97,000</td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>Good Shampo</td>
-                                                                    <td>20282025G</td>
-                                                                    <td>200Y(10Y)</td>
-                                                                    <td>47,000</td>
-                                                                    <td>102</td>
-                                                                    <td>97,000</td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>Good Shampo</td>
-                                                                    <td>20282025G</td>
-                                                                    <td>200Y(10Y)</td>
-                                                                    <td>47,000</td>
-                                                                    <td>102</td>
-                                                                    <td>97,000</td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>Good Shampo</td>
-                                                                    <td>20282025G</td>
-                                                                    <td>200Y(10Y)</td>
-                                                                    <td>47,000</td>
-                                                                    <td>102</td>
-                                                                    <td>97,000</td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>Good Shampo</td>
-                                                                    <td>20282025G</td>
-                                                                    <td>200Y(10Y)</td>
-                                                                    <td>47,000</td>
-                                                                    <td>102</td>
-                                                                    <td>97,000</td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>Good Shampo</td>
-                                                                    <td>20282025G</td>
-                                                                    <td>200Y(10Y)</td>
-                                                                    <td>47,000</td>
-                                                                    <td>102</td>
-                                                                    <td>97,000</td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>Good Shampo</td>
-                                                                    <td>20282025G</td>
-                                                                    <td>200Y(10Y)</td>
-                                                                    <td>47,000</td>
-                                                                    <td>102</td>
-                                                                    <td>97,000</td>
-                                                                </tr>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    <div class="modal-footer" style="display: flex; justify-content: center;">
+                                        <div>
+                                            <button style="background-color: #43A047; border-radius: 5px; color: whitesmoke;" class="btn" data-dismiss="modal" id="sa-close">Update</button>
                                         </div>
-
                                     </div>
-
                                 </div>
 
                             </div>
                         </div>
-                        <!-- END Shipment Product Listing Modal -->
-
-
-                        <div class="col-lg-12">
-
-                            <h4 style="font-size: 14px;">Shipment History</h4>
-
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div style="overflow-y: scroll; height: 45vh;" class="white-box card">
-                                        <div class="table-responsive">
-                                            <table id="example" class="display table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Container Number</th>
-                                                        <th>Dispatch Date</th>
-                                                        <th>Arrival Date</th>
-                                                        <th>Destination</th>
-                                                        <th>Products</th>
-                                                        <th>Amount</th>
-                                                        <th>Action</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Container Name</td>
-                                                        <td>02/12.2021</td>
-                                                        <td>02/12.2021</td>
-                                                        <td>Nigeria</td>
-                                                        <td><button data-toggle="modal" data-target="#modal-product-listing" style="background-color: transparent; border: none; color: #03a9f3; padding: 0;">549 bale</button></td>
-                                                        <td>83,090,209</td>
-                                                        <td><button data-toggle="modal" data-target="#modal-normal" style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important; outline: none;"
-                                                                type="button" class="btn btn-success outline-btn"> <span>Update <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                        </span></button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Container Name</td>
-                                                        <td>02/12.2021</td>
-                                                        <td>02/12.2021</td>
-                                                        <td>Nigeria</td>
-                                                        <td><button data-toggle="modal" data-target="#modal-product-listing" style="background-color: transparent; border: none; color: #03a9f3; padding: 0;">549 bale</button></td>
-                                                        <td>83,090,209</td>
-                                                        <td><button data-toggle="modal" data-target="#modal-normal" style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important; outline: none;"
-                                                                type="button" class="btn btn-success outline-btn"> <span>Update <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                        </span></button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Container Name</td>
-                                                        <td>02/12.2021</td>
-                                                        <td style="color: #F47C7C;">02/12.2021</td>
-                                                        <td>Nigeria</td>
-                                                        <td><button data-toggle="modal" data-target="#modal-product-listing" style="background-color: transparent; border: none; color: #03a9f3; padding: 0;">549 bale</button></td>
-                                                        <td>83,090,209</td>
-                                                        <td><button data-toggle="modal" data-target="#modal-normal" style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important; outline: none;"
-                                                                type="button" class="btn btn-success outline-btn"> <span>Update <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                        </span></button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Container Name</td>
-                                                        <td>02/12.2021</td>
-                                                        <td>02/12.2021</td>
-                                                        <td>Nigeria</td>
-                                                        <td><button data-toggle="modal" data-target="#modal-product-listing" style="background-color: transparent; border: none; color: #03a9f3; padding: 0;">549 bale</button></td>
-                                                        <td>83,090,209</td>
-                                                        <td><button data-toggle="modal" data-target="#modal-normal" style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important; outline: none;"
-                                                                type="button" class="btn btn-success outline-btn"> <span>Update <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                        </span></button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Container Name</td>
-                                                        <td>02/12.2021</td>
-                                                        <td style="color: #F47C7C;">02/12.2021</td>
-                                                        <td>Nigeria</td>
-                                                        <td><button data-toggle="modal" data-target="#modal-product-listing" style="background-color: transparent; border: none; color: #03a9f3; padding: 0;">549 bale</button></td>
-                                                        <td>83,090,209</td>
-                                                        <td><button data-toggle="modal" data-target="#modal-normal" style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important; outline: none;"
-                                                                type="button" class="btn btn-success outline-btn"> <span>Update <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                        </span></button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Container Name</td>
-                                                        <td>02/12.2021</td>
-                                                        <td>02/12.2021</td>
-                                                        <td>Nigeria</td>
-                                                        <td><button data-toggle="modal" data-target="#modal-product-listing" style="background-color: transparent; border: none; color: #03a9f3; padding: 0;">549 bale</button></td>
-                                                        <td>83,090,209</td>
-                                                        <td><button data-toggle="modal" data-target="#modal-normal" style="height: 25px !important; border-radius: 4px !important; padding: 0px !important; padding-right: 5px !important; padding-left: 5px !important; outline: none;"
-                                                                type="button" class="btn btn-success outline-btn"> <span>Update <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                        </span></button></td>
-                                                    </tr>
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
 
                     </div>
 
@@ -644,6 +324,191 @@
                     <button class="btn right-side-btn"><i class="fa fa-plus-circle" aria-hidden="true" style="margin-right: 7px !important;"></i>User</button>
                 </a>
 
+            </div>
+
+
+            <div class="col-lg-12">
+
+                <h4 style="font-size: 14px;">Users</h4>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div style="overflow-y: scroll; height: 45vh;" class="white-box card">
+                            <div class="table-responsive">
+                                <table id="example" class="display table">
+                                    <thead>
+                                        <tr>
+                                            <th>User Name</th>
+                                            <th>Last Login</th>
+                                            <th>Status</th>
+                                            <th>Access</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>Idris Haggai</td>
+                                            <td>02/12.2021</td>
+                                            <td style="color: #43A047;">Active</td>
+                                            <td style="color: #03a9f3;">View</td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                        </button>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li data-toggle="modal" data-target="#modal-normal">
+                                                            <a href="#">
+                                                                    Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="productMove.html">
+                                                                    Deactivate <span><i style="margin: 5px;" class="fa fa-cancel" aria-hidden="true"></i></span>
+                                                                </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Idris Haggai</td>
+                                            <td>02/12.2021</td>
+                                            <td style="color: #43A047;">Active</td>
+                                            <td style="color: #03a9f3;">View</td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                        </button>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li data-toggle="modal" data-target="#modal-normal">
+                                                            <a href="#">
+                                                                    Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="productMove.html">
+                                                                    Deactivate <span><i style="margin: 5px;" class="fa fa-cancel" aria-hidden="true"></i></span>
+                                                                </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Idris Haggai</td>
+                                            <td>02/12.2021</td>
+                                            <td style="color: #F47C7C;">Inactive</td>
+                                            <td style="color: #03a9f3;">View</td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                        </button>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li data-toggle="modal" data-target="#modal-normal">
+                                                            <a href="#">
+                                                                    Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="productMove.html">
+                                                                    Activate <span><i style="margin: 5px;" class="fa fa-cancel" aria-hidden="true"></i></span>
+                                                                </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Idris Haggai</td>
+                                            <td>02/12.2021</td>
+                                            <td style="color: #43A047;">Active</td>
+                                            <td style="color: #03a9f3;">View</td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                        </button>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li data-toggle="modal" data-target="#modal-normal">
+                                                            <a href="#">
+                                                                    Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="productMove.html">
+                                                                    Deactivate <span><i style="margin: 5px;" class="fa fa-cancel" aria-hidden="true"></i></span>
+                                                                </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Idris Haggai</td>
+                                            <td>02/12.2021</td>
+                                            <td style="color: #43A047;">Active</td>
+                                            <td style="color: #03a9f3;">View</td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                        </button>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li data-toggle="modal" data-target="#modal-normal">
+                                                            <a href="#">
+                                                                    Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="productMove.html">
+                                                                    Deactivate <span><i style="margin: 5px;" class="fa fa-cancel" aria-hidden="true"></i></span>
+                                                                </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Idris Haggai</td>
+                                            <td>02/12.2021</td>
+                                            <td style="color: #F47C7C;">Inactive</td>
+                                            <td style="color: #03a9f3;">View</td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                        </button>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li data-toggle="modal" data-target="#modal-normal">
+                                                            <a href="#">
+                                                                    Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                                                </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="productMove.html">
+                                                                    Activate <span><i style="margin: 5px;" class="fa fa-cancel" aria-hidden="true"></i></span>
+                                                                </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
