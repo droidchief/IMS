@@ -272,7 +272,7 @@
                                                 <img style="width: 225px; height: 150px; border-radius: 5px;" src="assets/images/users/avatar-1.jpg" alt="Profile Photo">
                                             </div>
                                             <div>
-                                                <button style="border-radius: 5px; margin-top: 20px; outline: none;" class="btn btn-warning" type="button" id="addrow">Upload</button>
+                                                <button style="border-radius: 5px; margin-top: 20px; outline: none;" class="btn btn-warning" type="button" id="addrow">Select</button>
                                             </div>
                                         </div>
 
@@ -281,90 +281,66 @@
 
                                 </section>
 
-                                <h3>Product Listing</h3>
+                                <h3>User Access</h3>
                                 <section>
 
-                                    <form style="overflow-y: scroll; height: 52vh;" method="POST" action="processTransaction.php" name="addTransaction">
-                                        <table class="order-list table">
+                                    <div>
 
-                                            <thead>
-                                                <tr style="background-color: #2f347825;">
-                                                    <th scope="col">Product Name</th>
-                                                    <th scope="col">Bale Type</th>
-                                                    <th scope="col">Buying Price</th>
-                                                    <th scope="col">Quantity</th>
-                                                    <th scope="col">Amount</th>
-                                                    <th scope="col">Action</th>
-                                                </tr>
-                                            </thead>
-
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <select class="ss" id="item" name="stock[]" required>
-                                                                <option selected value="">Item...</option>
-
-                                                            </select>
-                                                    </td>
-                                                    <td><select class="ss" id="type" name="type[]" required>
-                                                                <option selected value="">Form...</option>
-                                                                <option value="Injection">Injection</option>
-                                                                <option value="Tablet">Tablet</option>
-                                                                <option value="Syrup">Syrup</option>
-
-                                                            </select></td>
-                                                    <td>
-                                                        <input class="ss" type="text" required placeholder="Unit Price" class="form-control" name="uPrice[]" id="uPrice">
-                                                    </td>
-                                                    <td><input class="ss" type="number" required placeholder="Quantity" class="form-control" name="quantity[]" id="quantity">
-                                                    </td>
-                                                    <td> <input class="ss" type="text" required placeholder="Total Price" class="form-control" name="price[]" id="price" readonly>
-                                                    </td>
-                                                    <td>
-                                                        <a class="deleteRow"> <button type="button" class="btn btn-danger">Delete</button></a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                            <tr>
-                                                <td colspan="5" style="text-align: center;">
-                                                    <button style="border-radius: 5px; margin-top: 20px; outline: none;" class="btn btn-warning" type="button" id="addrow">Add Transaction</button>
-                                                </td>
-                                            </tr>
-
-                                            <tbody>
-                                                <thead>
-                                                    <tr style="background-color: #2f347825;">
-                                                        <th scope="col">Total Amount</th>
-                                                        <th scope="col">Paid</th>
-                                                        <th scope="col">Balance</th>
-                                                        <th scope="col">Due Date</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tfoot>
-
-                                                    <tr>
-                                                        <td><input type="text" class="form-control ss" id="total" name="totalAmount" placeholder="0" readonly="readonly" onkeyup="sum()" required>
-                                                        </td>
-
-                                                        <td>
-                                                            <input type="number" class="form-control ss" id="tPaid" name="totalPaid" placeholder="0" onkeyup="sum()" required>
-                                                        </td>
-
-                                                        <td><input type="text" class="form-control ss" id="oBalance" name="outstanding" placeholder="0" readonly="readonly" required></td>
-
-                                                        <td><input type="date" max="3000-12-31" min="1000-01-01" class="form-control ss" id="tDate" name="transactionDate" placeholder="Due Date" required></td>
-                                                    </tr>
-                                                </tfoot>
-                                        </table>
-                                        <br />
-                                        <br />
-                                        <div class="text-right">
-
-                                            <input type="SUBMIT" value="Process Transaction" name="processT" class="btn btn-primary" />
+                                        <div style="margin: 10px;" class="checkbox danger">
+                                            <input type="checkbox" checked id="checkbox-6">
+                                            <label for="checkbox-6">Dashboard</label>
                                         </div>
-                                        <input name="h" type="hidden" id="h" value="0" />
-                                    </form>
+                                        <!-- /.checkbox -->
+
+                                        <div style="margin: 10px;" class="checkbox primary">
+                                            <input type="checkbox" checked id="checkbox-2">
+                                            <label for="checkbox-2">Products</label>
+                                        </div>
+                                        <!-- /.checkbox -->
+
+                                        <div style="margin: 10px;" class="checkbox warning">
+                                            <input type="checkbox" checked id="checkbox-2">
+                                            <label for="checkbox-2">Transactions</label>
+                                        </div>
+                                        <!-- /.checkbox -->
+
+                                        <div style="margin: 10px;" class="checkbox info">
+                                            <input type="checkbox" checked id="checkbox-3">
+                                            <label for="checkbox-3">Customers</label>
+                                        </div>
+                                        <!-- /.checkbox -->
+
+                                        <div style="margin: 10px;" class="checkbox info">
+                                            <input type="checkbox" checked id="checkbox-2">
+                                            <label for="checkbox-2">Vendors</label>
+                                        </div>
+                                        <!-- /.checkbox -->
+
+                                        <div style="margin: 10px;" class="checkbox info">
+                                            <input type="checkbox" checked id="checkbox-2">
+                                            <label for="checkbox-2">Stores</label>
+                                        </div>
+                                        <!-- /.checkbox -->
+
+                                        <div style="margin: 10px;" class="checkbox success">
+                                            <input type="checkbox" checked id="checkbox-2">
+                                            <label for="checkbox-2">Shipments</label>
+                                        </div>
+                                        <!-- /.checkbox -->
+
+                                        <div style="margin: 10px;" class="checkbox inverse">
+                                            <input type="checkbox" checked id="checkbox-9">
+                                            <label for="checkbox-9">Accounting</label>
+                                        </div>
+                                        <!-- /.checkbox -->
+
+                                        <div style="margin: 10px;" class="checkbox danger">
+                                            <input type="checkbox" checked id="checkbox-2">
+                                            <label for="checkbox-2">Users</label>
+                                        </div>
+                                        <!-- /.checkbox -->
+
+                                    </div>
                             </div>
 
                         </div>
