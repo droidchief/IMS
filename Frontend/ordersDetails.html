@@ -301,9 +301,22 @@
 
             <h5 style="display: flex; justify-content: center; margin: 60px 0 20px; color: #2F3478;">Create Order</h5>
 
+            <div>
+                <select style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 150px; padding-left: 5px; font-size: 13px; margin: 0 20px; color: rgb(184, 184, 184);" name=”color”>
+                    <option value=”red”>Store</option>
+                    <option value=”red”>Store A</option>
+                    <option value=”purple”>Store B</option>
+                    <option value=”purple”>International</option>
+                </select>
+            </div>
 
+            <div>
+                <select style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 150px; padding-left: 5px; font-size: 13px; margin: 10px 20px; color: rgb(184, 184, 184);" name=”color”>
+                    <option value=”red”>Order</option>
+                </select>
+            </div>
 
-            <div class="col-md-12">
+            <div style="margin-top: 10px;" class="col-md-12">
                 <form style="overflow-y: scroll; height: 52vh;" method="POST" action="processTransaction.php" name="addTransaction">
                     <table class="order-list table">
 
