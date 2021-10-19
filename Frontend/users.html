@@ -254,14 +254,14 @@
 
                     <div class="row" style="margin-top: 50px; margin-bottom: 30px;">
 
-                        <div id="modal-user-details" class="modal fade" role="dialog">
+                        <div id="modal-user-access" class="modal fade" role="dialog">
                             <div class="modal-dialog modal-sm">
 
                                 <!-- Modal content-->
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h5 class="modal-title">Update User Details</h5>
+                                        <h5 class="modal-title">Update User Access</h5>
                                     </div>
 
 
@@ -282,20 +282,56 @@
                             </div>
                         </div>
 
-                        <div id="modal-user-access" class="modal fade" role="dialog">
+                        <div id="modal-user-details" class="modal fade" role="dialog">
                             <div class="modal-dialog modal-sm">
 
                                 <!-- Modal content-->
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h5 class="modal-title">Update User Access</h5>
+                                        <h5 class="modal-title">Update User Details</h5>
                                     </div>
-
 
                                     <div style="display: flex; justify-content: center;" class="modal-body">
 
+                                        <div>
 
+                                            <div style="display: flex; justify-content: center;">
+                                                <img style="width: 80px; height: 80px; border-radius: 100px;" src="assets/images/users/avatar-1.jpg" alt="Profile Photo">
+                                                <i style="color: #2F3478; cursor: pointer;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            </div>
+
+                                            <div style="margin: 10px;">
+                                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Name">
+                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            </div>
+
+                                            <div style="margin: 10px;">
+                                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Number">
+                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            </div>
+
+                                            <div style="margin: 10px;">
+                                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Address">
+                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            </div>
+
+                                            <div style="margin: 10px;">
+                                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Username">
+                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            </div>
+
+                                            <div style="margin: 10px;">
+                                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Password">
+                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            </div>
+
+                                            <div style="margin: 10px;">
+                                                <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 30px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Confirm Password">
+                                                <i style="color: #2F3478;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            </div>
+
+                                        </div>
 
                                     </div>
 
@@ -357,15 +393,15 @@
                                                     <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                                         </button>
                                                     <ul class="dropdown-menu pull-right">
-                                                        <li data-toggle="modal" data-target="#modal-normal">
+                                                        <li data-toggle="modal" data-target="#modal-user-details">
                                                             <a href="#">
                                                                     Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
                                                                 </a>
                                                         </li>
 
                                                         <li>
-                                                            <a href="productMove.html">
-                                                                    Deactivate <span><i style="margin: 5px;" class="fa fa-cancel" aria-hidden="true"></i></span>
+                                                            <a href="#">
+                                                                Deactivate <span><i style="margin: 5px;" class="fa fa-cancel" aria-hidden="true"></i></span>
                                                                 </a>
                                                         </li>
                                                     </ul>
@@ -374,7 +410,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>Idris Haggai</td>
+                                            <td>Sam Odey</td>
                                             <td>02/12.2021</td>
                                             <td style="color: #43A047;">Active</td>
                                             <td style="color: #03a9f3;">View</td>
@@ -383,15 +419,15 @@
                                                     <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                                         </button>
                                                     <ul class="dropdown-menu pull-right">
-                                                        <li data-toggle="modal" data-target="#modal-normal">
+                                                        <li data-toggle="modal" data-target="#modal-user-details">
                                                             <a href="#">
                                                                     Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
                                                                 </a>
                                                         </li>
 
                                                         <li>
-                                                            <a href="productMove.html">
-                                                                    Deactivate <span><i style="margin: 5px;" class="fa fa-cancel" aria-hidden="true"></i></span>
+                                                            <a href="#">
+                                                                Deactivate <span><i style="margin: 5px;" class="fa fa-cancel" aria-hidden="true"></i></span>
                                                                 </a>
                                                         </li>
                                                     </ul>
@@ -400,7 +436,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>Idris Haggai</td>
+                                            <td>Aisha Bala</td>
                                             <td>02/12.2021</td>
                                             <td style="color: #F47C7C;">Inactive</td>
                                             <td style="color: #03a9f3;">View</td>
@@ -409,15 +445,15 @@
                                                     <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                                         </button>
                                                     <ul class="dropdown-menu pull-right">
-                                                        <li data-toggle="modal" data-target="#modal-normal">
+                                                        <li data-toggle="modal" data-target="#modal-user-details">
                                                             <a href="#">
                                                                     Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
                                                                 </a>
                                                         </li>
 
                                                         <li>
-                                                            <a href="productMove.html">
-                                                                    Activate <span><i style="margin: 5px;" class="fa fa-cancel" aria-hidden="true"></i></span>
+                                                            <a href="#">
+                                                                Activate <span><i style="margin: 5px;" class="fa fa-cancel" aria-hidden="true"></i></span>
                                                                 </a>
                                                         </li>
                                                     </ul>
@@ -426,7 +462,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>Idris Haggai</td>
+                                            <td>Kwado Usman</td>
                                             <td>02/12.2021</td>
                                             <td style="color: #43A047;">Active</td>
                                             <td style="color: #03a9f3;">View</td>
@@ -435,15 +471,15 @@
                                                     <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                                         </button>
                                                     <ul class="dropdown-menu pull-right">
-                                                        <li data-toggle="modal" data-target="#modal-normal">
+                                                        <li data-toggle="modal" data-target="#modal-user-details">
                                                             <a href="#">
                                                                     Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
                                                                 </a>
                                                         </li>
 
                                                         <li>
-                                                            <a href="productMove.html">
-                                                                    Deactivate <span><i style="margin: 5px;" class="fa fa-cancel" aria-hidden="true"></i></span>
+                                                            <a href="#">
+                                                                Deactivate <span><i style="margin: 5px;" class="fa fa-cancel" aria-hidden="true"></i></span>
                                                                 </a>
                                                         </li>
                                                     </ul>
@@ -452,7 +488,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>Idris Haggai</td>
+                                            <td>Yaji Sani</td>
                                             <td>02/12.2021</td>
                                             <td style="color: #43A047;">Active</td>
                                             <td style="color: #03a9f3;">View</td>
@@ -461,15 +497,15 @@
                                                     <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                                         </button>
                                                     <ul class="dropdown-menu pull-right">
-                                                        <li data-toggle="modal" data-target="#modal-normal">
+                                                        <li data-toggle="modal" data-target="#modal-user-details">
                                                             <a href="#">
                                                                     Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
                                                                 </a>
                                                         </li>
 
                                                         <li>
-                                                            <a href="productMove.html">
-                                                                    Deactivate <span><i style="margin: 5px;" class="fa fa-cancel" aria-hidden="true"></i></span>
+                                                            <a href="#">
+                                                                Deactivate <span><i style="margin: 5px;" class="fa fa-cancel" aria-hidden="true"></i></span>
                                                                 </a>
                                                         </li>
                                                     </ul>
@@ -478,7 +514,7 @@
                                         </tr>
 
                                         <tr>
-                                            <td>Idris Haggai</td>
+                                            <td>Uba Lahira</td>
                                             <td>02/12.2021</td>
                                             <td style="color: #F47C7C;">Inactive</td>
                                             <td style="color: #03a9f3;">View</td>
@@ -487,14 +523,14 @@
                                                     <button style="height: 25px; width: 25px; border-radius: 100px; padding: 0px; padding-right: 5px; padding-left: 5px; outline: none; background-color: #2F3478; color: whitesmoke;" type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                                         </button>
                                                     <ul class="dropdown-menu pull-right">
-                                                        <li data-toggle="modal" data-target="#modal-normal">
+                                                        <li data-toggle="modal" data-target="#modal-user-details">
                                                             <a href="#">
                                                                     Manage <span><i style="margin: 5px 0 5px 17px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
                                                                 </a>
                                                         </li>
 
                                                         <li>
-                                                            <a href="productMove.html">
+                                                            <a href="#">
                                                                     Activate <span><i style="margin: 5px;" class="fa fa-cancel" aria-hidden="true"></i></span>
                                                                 </a>
                                                         </li>
