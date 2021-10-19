@@ -51,7 +51,6 @@
                 var newRow = $("<tr>");
                 var cols = "";
                 cols += '<td><select class="ss" id="item" name = "stock[]" required><option selected value="">Item...</option>uuu</option></select></td>';
-                cols += '<td><select class="ss" id="type" name = "type[]" required> <option selected value="">Form...</option> <option value="Injection">Injection</option> <option value="Tablet">Tablet</option>            <option value="Syrup">Syrup</option>           </select></td>';
                 cols += '<td><input class="ss" type="text" required="required" placeholder ="Unit Price" class="form-control" name="uPrice[]" id="uPrice"></td>';
                 cols += '<td><input class="ss" type="number" required="required" placeholder ="Quantity" class="form-control" name="quantity[]" id="quantity" ></td>';
                 cols += '<td><input class="ss" type="text" required="required" placeholder ="Total Price" class="form-control" name="price[]" id="price" readonly = "readonly"></td>';
@@ -311,7 +310,6 @@
                         <thead>
                             <tr style="background-color: #2f347825;">
                                 <th scope="col">Product</th>
-                                <th scope="col">Store</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Quantity</th>
                                 <th scope="col">Amount</th>
@@ -327,12 +325,6 @@
 
                                         </select>
                                 </td>
-                                <td><select class="ss" id="type" name="type[]" required>
-                                            <option value="Injection">International</option>
-                                            <option value="Tablet">Store B</option>
-                                            <option value="Syrup">Store A</option>
-
-                                        </select></td>
                                 <td>
                                     <input class="ss" type="text" required placeholder="Unit Price" class="form-control" name="uPrice[]" id="uPrice">
                                 </td>
