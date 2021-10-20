@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <title>Kwari IMS</title>
+
+    <!--Begin  Page Level  CSS -->
+    <link href="assets/plugins/morris-chart/morris.css" rel="stylesheet">
+    <link href="assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <link href="assets/plugins/datatables/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/datatables/css/jquery.dataTables-custom.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/jquery-toast/jquery.toast.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link href="assets/plugins/datatables/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/datatables/css/jquery.dataTables-custom.css" rel="stylesheet" type="text/css" />
+    <!-- END PAGE LEVEL STYLES -->
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link href="assets/css/icons.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    <!-- END PAGE LEVEL STYLES -->
+
+    <script src="transactionTable/vendor/jquery-1.12.4.min.js"></script>
+
+    <style>
+        .ss {
+            border: 0.5px solid #000;
+            border-radius: 5px;
+            height: 23px;
+            width: 150px;
+            padding-left: 5px;
+            font-size: 13px;
+            margin: 0;
+            color: rgb(184, 184, 184);
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+
+            $("#addrow").on("click", function() {
+
+                var newRow = $("<tr>");
+                var cols = "";
+                cols += '<td><select class="ss" id="item" name = "stock[]" required><option selected value="">Item...</option>uuu</option></select></td>';
+                cols += '<td><select class="ss" id="item" name = "stock[]" required><option selected value="">Ado...</option>uuu</option></select></td>';
+                cols += '<td><input class="ss" type="text" required="required" placeholder ="0" class="form-control" name="uPrice[]" id="uPrice"></td>';
+                cols += '<td><input class="ss" type="text" required="required" placeholder ="Genarator Repair" class="form-control" name="uPrice[]" id="uPrice"></td>';
+                cols += '<td><a class="deleteRow"><button type="button" class="btn btn-danger">Delete</button></a></td>';
+                newRow.append(cols);
+
+                $("table.order-list").append(newRow);
+            });
+
+            $("table.order-list").on("change", 'input[id^="uPrice"], input[id^="quantity"]', function(event) {
+                calculateRow($(this).closest("tr"));
+                calculateGrandTotal();
+            });
+
+            $("table.order-list").on("click", "a.deleteRow", function(event) {
+                $(this).closest("tr").remove();
+                calculateGrandTotal();
+            });
+        });
+
+        function calculateRow(row) {
+            var price = +row.find('input[id^="uPrice"]').val();
+            var qty = +row.find('input[id^="quantity"]').val();
+            row.find('input[id^="price"]').val((price * qty).toFixed(2));
+        }
+
+        function calculateGrandTotal() {
+            var grandTotal = 0;
+            $("table.order-list").find('input[id^="price"]').each(function() {
+                grandTotal += +$(this).val();
+            });
+            $("#grandtotal").text(grandTotal.toFixed(2));
+            var total = document.getElementById('total');
+            total.value = grandTotal;
+
+        }
+
+        function sum() {
+            var total = document.getElementById('total').value;
+            var totalPaid = document.getElementById('tPaid').value;
+            if (total == "")
+                total = 0;
+            if (totalPaid == "")
+                totalPaid = 0;
+
+            var result = parseInt(total) - parseInt(totalPaid);
+            if (!isNaN(result)) {
+                document.getElementById('oBalance').value = result;
+            }
+        }
+    </script>
+
+</head>
+
+<body class="sticky-header">
+
+
+    <!--Start left side Menu-->
+    <div class="left-side sticky-left-side">
+
+        <!--logo-->
+        <div class="logo">
+            <a href="index.html"><img src="assets/images/logo.svg" alt="Logo"></a>
+        </div>
+
+        <div class="logo-icon text-center">
+            <a href="index.html"><img src="assets/images/logo-icon.png" alt=""></a>
+        </div>
+        <!--logo-->
+
+        <div class="left-side-inner">
+            <!--Sidebar nav-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+
+
+                <li>
+                    <a href="index.html"> <i class="fa fa-th-large" aria-hidden="true"></i>
+                        <span>Dashboard</span></a>
+                </li>
+                <li><a href="product.html"><i class="fa fa-th" aria-hidden="true"></i>
+                    <span>Products</span></a></li>
+
+                <li class="menu-list active">
+                    <a href="#"> <i class="fa fa-exchange" aria-hidden="true"></i>
+                        <span>Transactions</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="sales.html"> Sales</a></li>
+                        <li><a href="orders.html"> Orders</a></li>
+                        <li><a href="purchases.html"> Purchases</a></li>
+                        <li><a style="color: white;" href="expenses.html"> Expenses</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="customers.html"> <i class="fa fa-male" aria-hidden="true"></i><span>Customers</span></a>
+                </li>
+
+                <li>
+                    <a href="vendors.html"> <i class="fa fa-compress" aria-hidden="true"></i><span>Vendors</span></a>
+                </li>
+
+                <li>
+                    <a href="stores.html"> <i class="fa fa-university" aria-hidden="true"></i> <span>Stores</span></a>
+                </li>
+
+                <li>
+                    <a href="shipment.html"> <i class="fa fa-truck" aria-hidden="true"></i> <span>Shipments</span></a>
+                </li>
+
+                <li>
+                    <a href="accounting.html"> <i class="fa fa-calculator" aria-hidden="true"></i> <span>Accounting</span></a>
+                </li>
+
+                <li>
+                    <a href="users.html"> <i class="fa fa-users" aria-hidden="true"></i><span>Users</span></a>
+                </li>
+
+
+            </ul>
+            <!--End sidebar nav-->
+
+        </div>
+    </div>
+    <!--End left side menu-->
+
+
+    <!-- main content start-->
+    <div class="main-content">
+
+        <!-- header section start-->
+        <div class="header-section">
+
+            <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+
+            <form class="searchform">
+                <input style="width: 400px;" type="text" class="form-control" name="keyword" placeholder="Search..." />
+            </form>
+
+            <!--notification menu start -->
+            <div class="menu-right">
+                <ul class="notification-menu">
+
+
+                    <li>
+                        <a data-toggle="popover" title="POS" data-placement="bottom" data-content="" style="background-color: white; border: none;" href="pos.html" class="btn btn-default">
+                            <img style="width: 22px; height: 22px; margin-top: 7px;" src="assets/images/ic_outline-point-of-sale.svg" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a data-toggle="popover" title="Sync" data-placement="bottom" data-content="Synchronize data with online server" style="background-color: white; border: none;" href="#" class="btn btn-default">
+                            <img style="width: 22px; height: 22px; margin-top: 7px;" src="assets/images/sync_icon.svg" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a data-toggle="popover" title="Notifications" data-placement="bottom" data-content="" href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i style="color: #2F3478;" class="fa fa-bell" aria-hidden="true"></i>
+                            <span class="badge">4</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">Notifications</h5>
+                            <ul class="dropdown-list normal-list">
+                                <li class="message-list message-scroll-list">
+                                    <a href="#">
+                                        <span class="photo"> <img src="assets/images/users/avatar-8.jpg" class="img-circle" alt="img"></span>
+                                        <span class="subject">John Doe</span>
+                                        <span class="message"> New tasks needs to be done</span>
+                                        <span class="time">15 minutes ago</span>
+                                    </a>
+
+                                    <a href="#">
+                                        <span class="photo"> <img src="assets/images/users/avatar-7.jpg" class="img-circle" alt="img"></span>
+                                        <span class="subject">John Doe</span>
+                                        <span class="message"> New tasks needs to be done</span>
+                                        <span class="time">10 minutes ago</span>
+                                    </a>
+
+                                    <a href="#">
+                                        <span class="photo"> <img src="assets/images/users/avatar-6.jpg" class="img-circle" alt="img"></span>
+                                        <span class="subject">John Doe</span>
+                                        <span class="message"> New tasks needs to be done</span>
+                                        <span class="time">20 minutes ago</span>
+                                    </a>
+
+                                    <a href="#">
+                                        <span class="photo"> <img src="assets/images/users/avatar-6.jpg" class="img-circle" alt="img"></span>
+                                        <span class="subject">John Doe</span>
+                                        <span class="message"> New tasks needs to be done</span>
+                                        <span class="time">20 minutes ago</span>
+                                    </a>
+
+                                    <a href="#">
+                                        <span class="photo"> <img src="assets/images/users/avatar-6.jpg" class="img-circle" alt="img"></span>
+                                        <span class="subject">John Doe</span>
+                                        <span class="message"> New tasks needs to be done</span>
+                                        <span class="time">20 minutes ago</span>
+                                    </a>
+
+                                    <a href="#">
+                                        <span class="photo"> <img src="assets/images/users/avatar-6.jpg" class="img-circle" alt="img"></span>
+                                        <span class="subject">John Doe</span>
+                                        <span class="message"> New tasks needs to be done</span>
+                                        <span class="time">20 minutes ago</span>
+                                    </a>
+                                </li>
+                                <li class="last"> <a href="#">All Messages</a> </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <img src="assets/images/users/avatar-6.jpg" alt="" /> Logout
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                            <li>
+                                <a href="#"> <i class="fa fa-wrench"></i> Settings </a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa fa-user"></i> Profile </a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa fa-info"></i> Help </a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa fa-lock"></i> Logout </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <!--notification menu end -->
+
+        </div>
+        <!-- header section end-->
+
+
+        <!--body wrapper start-->
+        <div class="wrapper">
+
+            <div style="display: flex; align-items: center;">
+                <i style="margin-left: 20px; font-size: 15px;" class="fa fa-long-arrow-left backButton" aria-hidden="true"></i>
+
+                <h4>Expenses</h4>
+            </div>
+
+            <h5 style="display: flex; justify-content: center; margin: 60px 0 20px; color: #2F3478;">Add Multiple Expenses</h5>
+
+
+            <div style="margin-top: 10px;" class="col-md-12">
+                <form style="overflow-y: scroll; height: 52vh;" method="POST" action="processTransaction.php" name="addTransaction">
+                    <table class="order-list table">
+
+                        <thead>
+                            <tr style="background-color: #2f347825;">
+                                <th scope="col">Book</th>
+                                <th scope="col">Client</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">Remark</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <select class="ss" id="item" name="stock[]" required>
+                                            <option selected value="">Item...</option>
+
+                                        </select>
+                                </td>
+                                <td><select class="ss" id="type" name="type[]" required>
+                                            <option selected value="">Ado...</option>
+                                        </select></td>
+                                <td>
+                                    <input class="ss" type="text" required placeholder="0" class="form-control" name="uPrice[]" id="uPrice">
+                                </td>
+                                <td>
+                                    <input class="ss" type="text" required placeholder="Generator Repair" class="form-control" name="uPrice[]" id="uPrice">
+                                </td>
+                                <td>
+                                    <a class="deleteRow"> <button type="button" class="btn btn-danger">Delete</button></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tr>
+                            <td colspan="5" style="text-align: center;">
+                                <button style="border-radius: 5px; margin-top: 20px; outline: none;" class="btn btn-warning" type="button" id="addrow">Add Expenses</button>
+                            </td>
+                        </tr>
+
+                        <tbody>
+                            <tfoot>
+
+                                <tr>
+                                    <td>
+                                        <input type="text" class="form-control ss" id="total" name="totalAmount" placeholder="Total Amount" readonly="readonly" onkeyup="sum()" required>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                    </table>
+
+                </form>
+            </div>
+
+            <div style="float: right; margin: 30px 40px;">
+                <button style="border-radius: 5px; color: whitesmoke;" class="btn btn-success" data-dismiss="modal" id="sa-close">Done</button>
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+    </div>
+    <!--End row-->
+
+    </div>
+    <!-- End Wrapper-->
+
+
+    </div>
+    <!--End main content -->
+
+
+    <!--Begin core plugin -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/moment/moment.js"></script>
+    <script src="assets/js/jquery.slimscroll.js "></script>
+    <script src="assets/js/jquery.nicescroll.js"></script>
+    <script src="assets/js/jquery.slimscroll.js" type="text/javascript"></script>
+    <script src="assets/js/functions.js"></script>
+    <!-- End core plugin -->
+    <!--Begin Page Level Plugin-->
+    <script src="assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="assets/pages/table-data.js"></script>
+    <!--End Page Level Plugin-->
+
+    <script src="assets/plugins/jquery-toast/jquery.toast.min.js"></script>
+    <script src="assets/pages/notifications.js"></script>
+
+    <script src="assets/plugins/sweetalert/sweet-alert.js"></script>
+    <script src="assets/pages/jquery.sweet-alert.custom.js"></script>
+
+    <script src="transactionTable/vendor/jquery/jquery.min.js"></script>
+    <script src="transactionTable/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="helper.js"></script>
+
+
+
+    <!--End Page Level Plugin-->
+
+
+</body>
+
+</html>
