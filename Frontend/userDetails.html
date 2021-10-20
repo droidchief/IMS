@@ -404,36 +404,38 @@
 
                     <div style="border: 1px solid #fff; border-radius: 5px; width: 200px;">
                         <div style="margin: 10px;">
-                            <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 40px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Name">
+                            <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 35px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Name">
                         </div>
 
                         <div style="margin: 10px;">
-                            <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 40px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Number">
+                            <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 35px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Number">
                         </div>
 
                         <div style="margin: 10px;">
-                            <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 40px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Address">
+                            <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 35px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Address">
                         </div>
 
                         <div style="margin: 10px;">
-                            <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 40px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Username">
+                            <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 35px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Username">
                         </div>
 
                         <div style="margin: 10px;">
-                            <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 40px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Password">
+                            <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 35px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Password">
                         </div>
 
                         <div style="margin: 10px;">
-                            <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 40px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Confirm Password">
+                            <input style="border: 1px solid #2f34787b; border-radius: 5px; height: 35px; width: 200px; padding: 10px; font-size: 13px;" type="text" placeholder="Confirm Password">
                         </div>
 
                         <div style="margin: 10px;">
-                            <i data-toggle="modal" data-target="#modal-user-details" style="color: #2F3478; cursor: pointer;" class="fa fa-pencil-square-o" aria-hidden="true"><span style="margin-left: 5px;">Edit</span></i>
+                            <div style="margin: 10px 0;">
+                                <button style="background-color: #03a9f3; border-radius: 5px; color: whitesmoke; width: 200px;" class="btn" data-dismiss="modal">Update</button>
+                            </div>
                         </div>
 
                     </div>
 
-                    <div style="border: 1px solid #fff; border-radius: 5px; width: 200px;">
+                    <div style="border: 1px solid #fff; border-radius: 5px; width: 200px; overflow-y: scroll; height: 46vh;">
 
                         <div style="margin: 10px;" class="checkbox danger">
                             <input type="checkbox" checked id="checkbox-6">
@@ -448,8 +450,32 @@
                         <!-- /.checkbox -->
 
                         <div style="margin: 10px;" class="checkbox warning">
-                            <input type="checkbox" checked id="checkbox-2">
-                            <label for="checkbox-2">Transactions</label>
+
+                            <ol style="margin-left: -60px;" class="menu-list">
+                                <a style="color: rgb(123, 123, 123); text-decoration: none;" href="#">Transactions</a>
+                                <ul style="margin-left: 20px;" class="sub-menu-list">
+                                    <li>
+                                        <input type="checkbox" checked id="checkbox-2">
+                                        <label for="checkbox-2">Sales</label>
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" checked id="checkbox-2">
+                                        <label for="checkbox-2">Orders</label>
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" checked id="checkbox-2">
+                                        <label for="checkbox-2">Purchases</label>
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox" checked id="checkbox-2">
+                                        <label for="checkbox-2">Expenses</label>
+                                    </li>
+                                </ul>
+                            </ol>
+
                         </div>
                         <!-- /.checkbox -->
 
@@ -490,7 +516,7 @@
                         <!-- /.checkbox -->
 
                         <div style="margin: 10px;">
-                            <i data-toggle="modal" data-target="#modal-user-access" style="color: #2F3478; cursor: pointer;" class="fa fa-pencil-square-o" aria-hidden="true"><span style="margin-left: 5px;">Edit</span></i>
+                            <button style="background-color: #03a9f3; border-radius: 5px; color: whitesmoke; width: 200px;" class="btn" data-dismiss="modal">Update</button>
                         </div>
 
                     </div>
