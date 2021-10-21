@@ -113,11 +113,11 @@
 
         <!--logo-->
         <div class="logo">
-            <a href="index.html"><img src="assets/images/logo.svg" alt="Logo"></a>
+            <a href="dashboard.html"><img src="assets/images/logo.svg" alt="Logo"></a>
         </div>
 
         <div class="logo-icon text-center">
-            <a href="index.html"><img src="assets/images/logo-icon.png" alt=""></a>
+            <a href="dashboard.html"><img src="assets/images/logo-icon.png" alt=""></a>
         </div>
         <!--logo-->
 
@@ -127,7 +127,7 @@
 
 
                 <li>
-                    <a href="index.html"> <i class="fa fa-th-large" aria-hidden="true"></i>
+                    <a href="dashboard.html"> <i class="fa fa-th-large" aria-hidden="true"></i>
                         <span>Dashboard</span></a>
                 </li>
                 <li><a href="product.html"><i class="fa fa-th" aria-hidden="true"></i>
@@ -502,15 +502,15 @@
             headerTag: "h3",
             bodyTag: "section",
             transitionEffect: "slideLeft",
-            onStepChanging: function(event, currentIndex, newIndex) {
+            onStepChanging: function(event, currentdashboard, newdashboard) {
                 form.validate().settings.ignore = ":disabled,:hidden";
                 return form.valid();
             },
-            onFinishing: function(event, currentIndex) {
+            onFinishing: function(event, currentdashboard) {
                 form.validate().settings.ignore = ":disabled";
                 return form.valid();
             },
-            onFinished: function(event, currentIndex) {
+            onFinished: function(event, currentdashboard) {
                 alert("Submitted!");
             }
         });
